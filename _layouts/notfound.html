@@ -1,0 +1,21 @@
+---
+layout: page
+---
+{% if site.notfound.404page.enable %}
+<header class="intro-header" 
+	style="
+		background-image: url('{{site.notfound.404page.src}}')">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<div class="site-heading" id="tag-heading">
+					<h1>404</h1>
+					<a href="{{ site.notfound.404page.home }}">
+						<span class="subheading">{{ site.notfound.404page.description  }}</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+{% endif %}
