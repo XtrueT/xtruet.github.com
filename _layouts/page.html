@@ -103,16 +103,6 @@
       </div>
       {% endif %}
 
-      {% if site.jekyll_table_of_contents.enable %}
-      <div id="toc"></div>
-      <script src="{{ site.jekyll_table_of_contents.src }}"></script>
-      <script>
-        $(document).ready(function () {
-          $('#toc').toc();
-        });
-      </script>
-      {% endif %}
-
       {% if site.run_time.enable %}
       <div>
         {{ site.run_time.alert }}

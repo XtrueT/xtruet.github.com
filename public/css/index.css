@@ -235,6 +235,7 @@ h3 {
   border-bottom:1px #55afca solid; 
   color: black;
 }
-.tags-list:hover{
+.tags-list li:hover{
+  padding: 1em;
   background: rgb(191, 238, 232);
 }
