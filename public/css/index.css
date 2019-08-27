@@ -37,7 +37,7 @@ h3 {
   background-image: none;
 }
 #search-input {
-  background: #777777;
+  background: none;
   border-bottom: 1px #fff solid;
   color: #fff;
   width: 100%;
