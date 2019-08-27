@@ -1,0 +1,55 @@
+---
+layout: page
+showtag:
+  - 日常
+  - JavaScript
+  - python
+  - Mysql
+  - java
+  - Linux
+  - 娱乐
+  - 游戏
+---
+{% for tag in page.showtag %}
+
+<header>{{ tag }}</header>
+<section>
+	<ul>
+	{% for post in site.tags[tag] %}
+	<li class="tags-list">
+	<a href={{ post.url }}>{{ post.title }}</a>
+	</li>
+
+	{% if post.description %}
+
+	<span>{{ post.description }}</span>
+
+	{% endif %}
+
+	{% endfor %}
+	</ul>
+</section>
+
+{% endfor %}
+<hr/>
+<header>近期</header>
+<section>
+	{% for post in site.posts limit:5 %}
+
+	<p>
+		<a href="{{ post.url }} ">
+			<span>{{ post.title }}{{ post.date | date_to_string }}</span>
+		</a>
+	{% if post.description %}
+		<span>{{ post.description }}</span>
+	{% endif %}
+	</p>
+{% endfor %}
+
+<p><a href="/archive">更多…</a></p>
+</section>
+
+
+
+
+

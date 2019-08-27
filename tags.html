@@ -1,0 +1,20 @@
+---
+layout: page
+title: 标签
+---
+{% for tag in site.tags %}
+
+<header>
+    <h2>{{ tag[0] }}</h2>
+</header> 
+<section>
+    {% for post in tag[1] %}
+	<p>
+        <a href="{{ post.url }} ">
+            <span>{{ post.title }}{{ post.date | date_to_string }}</span>
+        </a>
+    </p>
+    {% endfor %}
+</section>
+
+{% endfor %}
