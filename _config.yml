@@ -7,99 +7,99 @@ permalink: /posts/:categories/:title # 博文目录
 
 head: # 删改前确定知道自己在做什么
 - tag: meta # Enable responsiveness on mobile devices
-var:
-- key: name
-    value: viewport
-- key: content
-    value: width=device-width, initial-scale=1.0, maximum-scale=1
+    var:
+    - key: name
+        value: viewport
+    - key: content
+        value: width=device-width, initial-scale=1.0, maximum-scale=1
 - tag: meta
-var:
-- key: http-equiv
-    value: X-UA-Compatible
-- key: content
-    value: IE=edge
+    var:
+    - key: http-equiv
+        value: X-UA-Compatible
+    - key: content
+        value: IE=edge
 - tag: meta
-var:
-- key: http-equiv
-    value: content-type
-- key: content
-    value: 'text/html; charset=utf-8'
+    var:
+    - key: http-equiv
+        value: content-type
+    - key: content
+        value: 'text/html; charset=utf-8'
 - tag: meta # google站点验证
-var:
-- key: name
-    value: google-site-verification
-- key: content
-    value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
+    var:
+    - key: name
+        value: google-site-verification
+    - key: content
+        value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
 - tag: meta # baidu站点验证
-var:
-- key: name
-    value: baidu-site-verification
-- key: content
-    value: bEFDJ1LvXb
+    var:
+    - key: name
+        value: baidu-site-verification
+    - key: content
+        value: bEFDJ1LvXb
 - tag: meta # yandex站点验证
-var:
-- key: name
-    value: yandex-verification
-- key: content
-    value: 52253e02830b443c
+    var:
+    - key: name
+        value: yandex-verification
+    - key: content
+        value: 52253e02830b443c
 - tag: link
-var:
-- key: rel
-    value: profile
-- key: href
-    value: //gmpg.org/xfn/11
+    var:
+    - key: rel
+        value: profile
+    - key: href
+        value: //gmpg.org/xfn/11
 - tag: link # rss
-var:
-- key: rel
-    value: alternate
-- key: href
-    value: /atom.xml
-- key: title
-    value: RSS
-- key: type
-    value: application/rss+xml
+    var:
+    - key: rel
+        value: alternate
+    - key: href
+        value: /atom.xml
+    - key: title
+        value: RSS
+    - key: type
+        value: application/rss+xml
 - tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
-var:
-- key: rel
-    value: apple-touch-icon-precomposed
-- key: href
-    value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
+    var:
+    - key: rel
+        value: apple-touch-icon-precomposed
+    - key: href
+        value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
 - tag: link # 小图标，同上
-var:
-- key: rel
-    value: 'shortcut icon'
-- key: href
-    value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
+    var:
+    - key: rel
+        value: 'shortcut icon'
+    - key: href
+        value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
 - tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面。无脑cdn加速了。
-var:
-- key: rel
-    value: stylesheet
-- key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/poole.css # 用cdn加速会出问题，暂时不知道为什么
+    var:
+    - key: rel
+        value: stylesheet
+    - key: href
+        value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/poole.css # 用cdn加速会出问题，暂时不知道为什么
 - tag: link
-var:
-- key: rel
-    value: stylesheet
-- key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/syntax.css
+    var:
+    - key: rel
+        value: stylesheet
+    - key: href
+        value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/syntax.css
 - tag: link
-var:
-- key: rel
-    value: stylesheet
-- key: href
-    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/lanyon.css
+    var:
+    - key: rel
+        value: stylesheet
+    - key: href
+        value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/lanyon.css
 - tag: link
-var:
-- key: rel
-    value: stylesheet
-- key: href
-    value: /public/css/wu-kan.css
+    var:
+    - key: rel
+        value: stylesheet
+    - key: href
+        value: /public/css/wu-kan.css
 - tag: link
-var:
-- key: rel
-    value: stylesheet
-- key: href
-    value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css # 在https://fontawesome.com/icons 查看支持的图标
+    var:
+    - key: rel
+        value: stylesheet
+    - key: href
+        value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css # 在https://fontawesome.com/icons 查看支持的图标
 
 body:
     theme-base: theme-base-0d # 可选的值08~0f
