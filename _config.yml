@@ -154,7 +154,7 @@ sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
     img: /public/image/default.jpg # 头像的地址
-    info: <p>没有梦想的咸鱼</p> # 头像背后的信息
+    info: #<p>没有梦想的咸鱼</p> # 头像背后的信息
   description: 
   social:
 #  - title: rss

@@ -38,7 +38,7 @@ h3 {
 }
 #search-input {
   background: none;
-  border-bottom: none;
+  border: none;
   color: #fff;
   width: 100%;
 }
