@@ -1,9 +1,9 @@
-    title: 一眼离花
-    url: http://xtruet.github.io
-    baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
-    author: 霁
+title: 一眼离花
+url: http://xtruet.github.io
+baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
+author: 霁
 
-    permalink: /posts/:categories/:title # 博文目录
+permalink: /posts/:categories/:title # 博文目录
 
     head: # 删改前确定知道自己在做什么
     - tag: meta # Enable responsiveness on mobile devices
@@ -103,23 +103,23 @@
 
     body:
     theme-base: theme-base-0d # 可选的值08~0f
-    layout-reverse: true # 开启后sidebar在右边，反之左边
+    layout-reverse: false # 开启后sidebar在右边，反之左边
     sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修，当前这个选项仅能对sidebar的阴影产生影响
 
     script: # 需要在正文后调用的脚本
     - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-    - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+    # - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
     - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
     - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
     - src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
     - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
-    - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
+    # - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
     - src: /public/js/prism.js
     - src: /public/js/mermaid.js
     - src: /public/js/katex.js
     - src: /public/js/baidu_push.js
 
-    mermaid: # https://github.com/knsv/mermaid
+    mermaid: # https://github.com
     enable: true
     src: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
     stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
