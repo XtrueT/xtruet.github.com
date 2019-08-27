@@ -37,9 +37,9 @@ h3 {
   background-image: none;
 }
 #search-input {
-  background: none;
+  background: #eee;
   border: none;
-  color: #fff;
+  color: rgb(0, 0, 0);
   width: 100%;
 }
 .post-date {
