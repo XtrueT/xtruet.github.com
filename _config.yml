@@ -5,7 +5,7 @@ author: 霁
 
 permalink: /posts/:categories/:title # 博文目录
 
-    head: # 删改前确定知道自己在做什么
+head: # 删改前确定知道自己在做什么
     - tag: meta # Enable responsiveness on mobile devices
     var:
     - key: name
@@ -101,31 +101,31 @@ permalink: /posts/:categories/:title # 博文目录
     - key: href
         value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css # 在https://fontawesome.com/icons 查看支持的图标
 
-    body:
+body:
     theme-base: theme-base-0d # 可选的值08~0f
     layout-reverse: false # 开启后sidebar在右边，反之左边
     sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修，当前这个选项仅能对sidebar的阴影产生影响
 
-    script: # 需要在正文后调用的脚本
-    - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-    # - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
-    - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
-    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
-    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-    - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
-    # - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
-    - src: /public/js/prism.js
-    - src: /public/js/mermaid.js
-    - src: /public/js/katex.js
-    - src: /public/js/baidu_push.js
+script: # 需要在正文后调用的脚本
+- src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+# - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
+# - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
+- src: /public/js/prism.js
+- src: /public/js/mermaid.js
+- src: /public/js/katex.js
+- src: /public/js/baidu_push.js
 
-    mermaid: # https://github.com
+mermaid: # https://github.com
     enable: true
     src: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
     stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
     markdown_expand: true
 
-    PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
+PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
     enable: true
     src:
         - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
@@ -135,50 +135,50 @@ permalink: /posts/:categories/:title # 博文目录
         line_numbers: true
         autoloader: //cdn.jsdelivr.net/npm/prismjs/components/ # 根据语言自动加载的高亮插件
         toolbar:
-        show_language:
-            enable: true
-            text: 查看语言
-            alert: 用的是
-        select_code:
-            enable: true
-            innerHTML: 选中
+            show_language:
+                enable: true
+                text: 查看语言
+                alert: 用的是
+            select_code:
+                enable: true
+                innerHTML: 选中
 
-    katex: # KaTeX
+katex: # KaTeX
     enable: true
     stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
     src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
     auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
     delimiters: true # 开启行内公式$\KaTeX$支持
 
-    sidebar:
+sidebar:
     avatar: # 侧边栏显示的头像
         enable: true
-        img: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
-        info: <br>SYSU17级在读<br>计科超算方向<br>永远喜欢水野爱<br>田宫例四驱车<br>ACMer # 头像背后的信息
-    description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
+        img: //avatars0.githubusercontent.com/u/45960616?s=460&v=4 # 头像的地址
+        info: # 头像背后的信息
+    description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/m/song?id=26114928&userid=379928778"></iframe>'
     social:
-    #  - title: rss
-    #    href: /atom.xml
-    #    class: 'fas fa-rss fa-fw' # rss图标加载不了不知道为什么
-    - title: wu.kan@foxmail.com # email
-        href: mailto:wu.kan@foxmail.com
+    - title: rss
+        href: /atom.xml
+        class: 'fas fa-rss fa-fw' # rss图标加载不了不知道为什么
+    - title: 2640272466@qq.com # email
+        href: mailto:2640272466@qq.com
         class: 'fas fa-envelope fa-fw'
-    - title: 942759535 # qq
+    - title: 2640272466 # qq
         class: 'fab fa-qq fa-fw'
-    - title: Wu-_-Kan # weixin
+    - title: XRF2640272466 # weixin
         class: 'fab fa-weixin fa-fw'
-    - title: zhihu
-        href: //www.zhihu.com/people/wu.kan/activities
-        class: 'fab fa-zhihu fa-fw'
+    # - title: zhihu
+    #     href: //www.zhihu.com/people/wu.kan/activities
+    #     class: 'fab fa-zhihu fa-fw'
     - title: github # email
-        href: //github.com/wu-kan
+        href: //github.com/XtrueT
         class: 'fab fa-github fa-fw'
-    - title: WuK # codeforces
-        href: //codeforces.com/profile/WuK
-        class: 'far fa-chart-bar fw'
-    - title: WuK # vjudge
-        href: //vjudge.net/user/WuK
-        class: 'far fa-smile fa-fw'
+    # - title: WuK # codeforces
+    #     href: //codeforces.com/profile/WuK
+    #     class: 'far fa-chart-bar fw'
+    # - title: WuK # vjudge
+    #     href: //vjudge.net/user/WuK
+    #     class: 'far fa-smile fa-fw'
     nav:
     - title: '<i class="fas fa-home fa-fw"></i> 首页'
         href: /
@@ -191,17 +191,17 @@ permalink: /posts/:categories/:title # 博文目录
     - title: '<i class="fas fa-archive fa-fw"></i> 归档'
         href: /archive
 
-    simple_jekyll_search:
+simple_jekyll_search:
     enable: true
     src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
-    placeholder: 搜索博文
+    placeholder: <span>搜索博文<hr/></span>
     json: /public/simple-jekyll-search/search.json
 
-    jekyll_table_of_contents:
+jekyll_table_of_contents:
     enable: true
     src: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.js
 
-    busuanzi:
+busuanzi:
     enable: true
     src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.js
     page_pv: # 页面访问量
@@ -214,61 +214,61 @@ permalink: /posts/:categories/:title # 博文目录
         alert: <i class="fas fa-user-friends fa-fw"></i>
         unit: 人
 
-    run_time:
+run_time:
     enable: true
-    start_time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
+    start_time: '27/08/2019 07:07:07'
     alert: <i class="fas fa-cog fa-spin fa-fw"></i>
     day: 天
     hour: 时
     minute: 分
     second: 秒
 
-    copyright:
+copyright:
     enable: true
-    text: <a href="//github.com/wu-kan/wu-kan.github.io">View on GitHub</a>
+    text: <a href="//github.com/XtrueT/xtruet.github.io">View on GitHub</a>
 
-    post:
+post:
     meta:
         enable: true
         date: true
         wordcount:
-        enable: true
-        unit: 字
+            enable: true
+            unit: 字
         readtime:
-        enable: true
-        unit: 分
-        divided_by: 300
+            enable: true
+            unit: 分
+            divided_by: 300
         visitor: # 需要开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
-        enable: true
-        unit: 次
+            enable: true
+            unit: 次
         copyright: '<i class="fab fa-creative-commons"></i> <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
     related:
-        enable: false
+        enable: true
         title: 相关博文
     reward:
         enable: true
-        text: 如果我的博客帮助到你，可以请我喝一杯咖啡~
+        text: 有帮助，激励一下！
         img: # 万一真的有人打赏呢~
         - id: wechat
-        src: /public/image/wechatpay.jpg
+            src: /public/image/wechatpay.png
         - id: alipay
-        src: /public/image/alipay.jpg
+            src: /public/image/alipay.jpg
 
-    valine:
+valine:
     enable: true
     src: //cdn.jsdelivr.net/npm/valine
-    appId: 9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz
-    appKey: NJ7RwmgrxsF7KDzlqU7YewlL
+    appId: SrzzGzdqbBXFOBE3ia8dVAnc-gzGzoHsz
+    appKey: 0L9sFb0zNzyK7dRMunmGxbhx
     notify: true # 评论回复邮件提醒
     verify: true # 验证码服务
     avatar: identicon
-    placeholder: 在这里评论吧！
+    placeholder: 添加评论！
     visitor: true # 文章访问量统计
     highlight: true # 代码高亮
     avatarForce: false # 每次访问强制拉取最新的评论列表头像
     recordIP: true # 记录评论者IP
 
-    notfound:
+notfound:
     404page: 
         enable: true
         src: /public/image/404.jpg
