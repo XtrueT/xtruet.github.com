@@ -1,206 +1,144 @@
----
-layout: default
----
+<!DOCTYPE html>
 
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">{{ page.description }}</span>
-                </div>
-            </div>
-        </div>
+<head>
+  <title>
+    {% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}
+  </title>
+  {% for node in site.head %}
+  <{{ node.tag }}{% for var in node.var %} {{ var.key }}="{{ var.value }}" {% endfor %} />
+  {% endfor %}
+</head>
+
+<body
+  class="{{ site.body.theme-base }}{% if site.body.layout-reverse %} layout-reverse{% endif %}{% if site.body.sidebar-overlay %} sidebar-overlay{% endif %}">
+  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+  <div class="wrap">
+    <h1 class="masthead masthead-title">
+      <div class="container">
+        {{ page.title }}
+        <a href="{{ site.baseurl }}/">
+          <small>{{ site.title }}</small>
+        </a>
+      </div>
+    </h1>
+    <div class="container content">
+      {{ content }}
     </div>
-</header>
+  </div>
+  {% for s in site.script %}
+  <script src="{{ s.src }}"></script>
+  {% endfor %}
+  <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+  <!-- Toggleable sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-item">
+      {% if site.sidebar.avatar.enable %}
+      <div class="ih-item circle effect right_to_left">
+        <a class="blog-button" title="{{ site.author }}">
+          <img class="img" src="{{ site.sidebar.avatar.img }}" alt="img" />
+          <small class="info info-back">
+            {{ site.sidebar.avatar.info }}
+          </small>
+        </a>
+      </div>
+      {% endif %}
+      {{ site.sidebar.description }}
+      <div class="social">
+        {% for s in site.sidebar.social %}
+        <a href="{{ s.href }}" class="{{ s.class }}" title="{{ s.title }}"></a>
+        {% endfor %}
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      {% for node in site.sidebar.nav %}
+      <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">
+        {{ node.title }}
+      </a>
+      {% endfor %}
+    </nav>
+    <div class="sidebar-item">
+      {% if site.simple_jekyll_search.enable %}
+      <div>
+        <input id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}">
+        <div id="results-container"></div>
+        <script src="{{ site.simple_jekyll_search.src }}"></script>
+        <script>
+          SimpleJekyllSearch({
+            json: '{{ site.simple_jekyll_search.json }}',
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container')
+          });
+        </script>
+      </div>
+      {% endif %}
+      {% if site.jekyll_table_of_contents.enable %}
+      <div id="toc"></div>
+      <script src="{{ site.jekyll_table_of_contents.src }}"></script>
+      <script>
+        $(document).ready(function () {
+          $('#toc').toc();
+        });
+      </script>
+      {% endif %}
+      {% if site.run_time.enable %}
+      <div>
+        {{ site.run_time.alert }}
+        <span id="run_time"></span>
+        <script>
+          function run_time() {
+            function setzero(i) {
+              if (i < 10) { i = "0" + i };
+              return i;
+            }
+            window.setTimeout("run_time()", 1000);
+            BirthDay = new Date("{{ site.run_time.start_time }}");
+            today = new Date();
+            timeold = (today.getTime() - BirthDay.getTime());
+            sectimeold = timeold / 1000
+            secondsold = Math.floor(sectimeold);
+            msPerDay = 24 * 60 * 60 * 1000
+            e_daysold = timeold / msPerDay
+            daysold = Math.floor(e_daysold);
+            e_hrsold = (e_daysold - daysold) * 24;
+            hrsold = setzero(Math.floor(e_hrsold));
+            e_minsold = (e_hrsold - hrsold) * 60;
+            minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
+            seconds = setzero(Math.floor((e_minsold - minsold) * 60));
+            document.getElementById('run_time').innerHTML = daysold + "{{ site.run_time.day }}" + hrsold + "{{ site.run_time.hour }}" + minsold + "{{ site.run_time.minute }}" + seconds + "{{ site.run_time.second }}";
+          }
+          run_time();
+        </script>
+      </div>
+      {% endif %}
+      {% if site.busuanzi.enable %}
+      <div>
+        {{ site.busuanzi.page_pv.alert }}
+        <span id="busuanzi_value_page_pv"></span>{{ site.busuanzi.page_pv.unit }}
+      </div>
+      <div>
+        {{ site.busuanzi.site_pv.alert }}
+        <span id="busuanzi_value_site_pv"></span>{{ site.busuanzi.site_pv.unit }}
+      </div>
+      <div>
+        {{ site.busuanzi.site_uv.alert }}
+        <span id="busuanzi_value_site_uv"></span>{{ site.busuanzi.site_uv.unit }}
+      </div>
+      <script src="{{ site.busuanzi.src }}"></script>
+      {% endif %}
+      {% if site.copyright.enable %}
+      <div>
+        <i class="fas fa-copyright fa-fw"></i>
+        {{ site.time | date: '%Y' }}
+        {{ site.author }}
+        {{ site.copyright.text }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
+</body>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-        {% if site.sidebar == false %}
-<!-- NO SIDEBAR -->
-    <!-- PostList Container -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
-                {{ content }}
-            </div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                {% if site.featured-tags %}
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
-                    <div class="tags">
-        				{% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-        				{% endfor %}
-        			</div>
-                </section>
-                {% endif %}
-
-                <!-- Friends Blog -->
-                {% if site.friends %}
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </div>
-        {% else %}
-
-<!-- USE SIDEBAR -->
-    <!-- PostList Container -->
-    		<div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                postlist-container
-            ">
-    			{{ content }}
-    		</div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-                <!-- Featured Tags -->
-                {% if site.featured-tags %}
-                <section>
-                    <hr class="hidden-sm hidden-xs">
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                        {% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                                <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </section>
-                {% endif %}
-
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
-                    <div class="short-about">
-                        {% if site.sidebar-avatar %}
-                            <a href="{{ site.baseurl }}/about">
-                                <img src="{{site.sidebar-avatar}}"/>
-                            </a>
-                        {% endif %}
-                        {% if site.sidebar-about-description %}
-                            <p>{{site.sidebar-about-description}}</p>
-                        {% endif %}
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                            {% if site.RSS %}
-                            <li>
-                                <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            <!-- add jianshu add target = "_blank" to <a> by BY -->
-                            {% if site.jianshu_username %}
-                            <li>
-                                <a target="_blank" href="https://www.jianshu.com/u/{{ site.jianshu_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.twitter_username %}
-                            <li>
-                                <a href="https://twitter.com/{{ site.twitter_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.zhihu_username %}
-                            <li>
-                                <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.weibo_username %}
-                            <li>
-                                <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.facebook_username %}
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% if site.github_username %}
-                            <li>
-                                <a target="_blank" href="https://github.com/{{ site.github_username }}">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            {% endif %}
-                            
-                        </ul>
-                        {% if site.email %}
-                            <p>✉️ {{site.email}}</p>
-                        {% endif %}
-                    </div>
-                </section>
-                <!-- Friends Blog -->
-                {% if site.friends %}
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-    		</div>
-        {% endif %}
-	</div>
-</div>
+</html>

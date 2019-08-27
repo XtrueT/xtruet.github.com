@@ -1,112 +1,277 @@
-# Site settings
-title: XtrueT Bolg
-SEOTitle: 一眼离花的博客 | Bolg
-header-img: img/post-bg-desk.jpg
-email: 2640272466@qq.com
-description: "Every failure is leading towards success."
-keyword: "JavaScript "
-url: "http://xtruet.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/XtrueT/xtruet.github.io.git" # you code repository
+title: wu-kan
+url: http://wu-kan.github.io
+baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
+author: WuK
 
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+permalink: /posts/:categories/:title # 博文目录
 
+head: # 删改前确定知道自己在做什么
+- tag: meta # Enable responsiveness on mobile devices
+  var:
+  - key: name
+    value: viewport
+  - key: content
+    value: width=device-width, initial-scale=1.0, maximum-scale=1
+- tag: meta
+  var:
+  - key: http-equiv
+    value: X-UA-Compatible
+  - key: content
+    value: IE=edge
+- tag: meta
+  var:
+  - key: http-equiv
+    value: content-type
+  - key: content
+    value: 'text/html; charset=utf-8'
+- tag: meta # google站点验证
+  var:
+  - key: name
+    value: google-site-verification
+  - key: content
+    value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
+- tag: meta # baidu站点验证
+  var:
+  - key: name
+    value: baidu-site-verification
+  - key: content
+    value: bEFDJ1LvXb
+- tag: meta # yandex站点验证
+  var:
+  - key: name
+    value: yandex-verification
+  - key: content
+    value: 52253e02830b443c
+- tag: link
+  var:
+  - key: rel
+    value: profile
+  - key: href
+    value: //gmpg.org/xfn/11
+- tag: link # rss
+  var:
+  - key: rel
+    value: alternate
+  - key: href
+    value: /atom.xml
+  - key: title
+    value: RSS
+  - key: type
+    value: application/rss+xml
+- tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
+  var:
+  - key: rel
+    value: apple-touch-icon-precomposed
+  - key: href
+    value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=144
+- tag: link # 小图标，同上
+  var:
+  - key: rel
+    value: 'shortcut icon'
+  - key: href
+    value: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=32
+- tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面。无脑cdn加速了。
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/poole.css # 用cdn加速会出问题，暂时不知道为什么
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/syntax.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: //cdn.jsdelivr.net/gh/wu-kan/wu-kan.github.io/public/css/lanyon.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: /public/css/wu-kan.css
+- tag: link
+  var:
+  - key: rel
+    value: stylesheet
+  - key: href
+    value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css # 在https://fontawesome.com/icons 查看支持的图标
 
+body:
+  theme-base: theme-base-0d # 可选的值08~0f
+  layout-reverse: true # 开启后sidebar在右边，反之左边
+  sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修，当前这个选项仅能对sidebar的阴影产生影响
 
-# SNS settings
-RSS: false
-# weibo_username:     xtruet
-zhihu_username:     xtruet
-github_username:    xtruet
+script: # 需要在正文后调用的脚本
+- src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+- src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+- src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
+- src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
+- src: /public/js/prism.js
+- src: /public/js/mermaid.js
+- src: /public/js/katex.js
+- src: /public/js/baidu_push.js
 
+mermaid: # https://github.com/knsv/mermaid
+  enable: true
+  src: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+  stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
+  markdown_expand: true
 
+PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
+  enable: true
+  src:
+    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
+    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
+    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
+  plugins:
+    line_numbers: true
+    autoloader: //cdn.jsdelivr.net/npm/prismjs/components/ # 根据语言自动加载的高亮插件
+    toolbar:
+      show_language:
+        enable: true
+        text: 猜猜这是什么语言？
+        alert: 用的是
+      select_code:
+        enable: true
+        innerHTML: 选中这段代码？
 
+katex: # KaTeX
+  enable: true
+  stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+  src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
+  auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+  delimiters: true # 开启行内公式$\KaTeX$支持
 
+sidebar:
+  avatar: # 侧边栏显示的头像
+    enable: true
+    img: //www.gravatar.com/avatar/a12c5fff23dde00df79af9aca4e7b6e4?d=wavatar&s=600 # 头像的地址
+    info: <br>SYSU17级在读<br>计科超算方向<br>永远喜欢水野爱<br>田宫例四驱车<br>ACMer # 头像背后的信息
+  description: '<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=0&id=155059595&auto=0&height=32"></iframe>'
+  social:
+#  - title: rss
+#    href: /atom.xml
+#    class: 'fas fa-rss fa-fw' # rss图标加载不了不知道为什么
+  - title: wu.kan@foxmail.com # email
+    href: mailto:wu.kan@foxmail.com
+    class: 'fas fa-envelope fa-fw'
+  - title: 942759535 # qq
+    class: 'fab fa-qq fa-fw'
+  - title: Wu-_-Kan # weixin
+    class: 'fab fa-weixin fa-fw'
+  - title: zhihu
+    href: //www.zhihu.com/people/wu.kan/activities
+    class: 'fab fa-zhihu fa-fw'
+  - title: github # email
+    href: //github.com/wu-kan
+    class: 'fab fa-github fa-fw'
+  - title: WuK # codeforces
+    href: //codeforces.com/profile/WuK
+    class: 'far fa-chart-bar fw'
+  - title: WuK # vjudge
+    href: //vjudge.net/user/WuK
+    class: 'far fa-smile fa-fw'
+  nav:
+  - title: '<i class="fas fa-home fa-fw"></i> 首页'
+    href: /
+  - title: '<i class="fab fa-readme fa-fw"></i> 关于'
+    href: /about
+  - title: '<i class="fas fa-comments fa-fw"></i> 留言'
+    href: /comments
+  - title: '<i class="fas fa-tags fa-fw"></i> 标签'
+    href: /tags
+  - title: '<i class="fas fa-archive fa-fw"></i> 归档'
+    href: /archive
 
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+simple_jekyll_search:
+  enable: true
+  src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
+  placeholder: 搜索博文
+  json: /public/simple-jekyll-search/search.json
 
+jekyll_table_of_contents:
+  enable: true
+  src: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.js
 
+busuanzi:
+  enable: true
+  src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.js
+  page_pv: # 页面访问量
+    alert: <i class="fas fa-eye fa-fw"></i>
+    unit: 次
+  site_pv: # 站点访问量
+    alert: <i class="fas fa-paw fa-fw"></i>
+    unit: 枚
+  site_uv: # 访客量
+    alert: <i class="fas fa-user-friends fa-fw"></i>
+    unit: 人
 
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+run_time:
+  enable: true
+  start_time: '10/04/2017 11:03:56' # 这是我第一篇CSDN博客的时间
+  alert: <i class="fas fa-cog fa-spin fa-fw"></i>
+  day: 天
+  hour: 时
+  minute: 分
+  second: 秒
 
+copyright:
+  enable: true
+  text: <a href="//github.com/wu-kan/wu-kan.github.io">View on GitHub</a>
 
+post:
+  meta:
+    enable: true
+    date: true
+    wordcount:
+      enable: true
+      unit: 字
+    readtime:
+      enable: true
+      unit: 分
+      divided_by: 300
+    visitor: # 需要开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
+      enable: true
+      unit: 次
+    copyright: '<i class="fab fa-creative-commons"></i> <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
+  related:
+    enable: false
+    title: 相关博文
+  reward:
+    enable: true
+    text: 如果我的博客帮助到你，可以请我喝一杯咖啡~
+    img: # 万一真的有人打赏呢~
+    - id: wechat
+      src: /public/image/wechatpay.jpg
+    - id: alipay
+      src: /public/image/alipay.jpg
 
+valine:
+  enable: true
+  src: //cdn.jsdelivr.net/npm/valine
+  appId: 9hABRddSuEkTgqLrt1VSK5B1-gzGzoHsz
+  appKey: NJ7RwmgrxsF7KDzlqU7YewlL
+  notify: true # 评论回复邮件提醒
+  verify: true # 验证码服务
+  avatar: identicon
+  placeholder: 在这里评论吧！
+  visitor: true # 文章访问量统计
+  highlight: true # 代码高亮
+  avatarForce: false # 每次访问强制拉取最新的评论列表头像
+  recordIP: true # 记录评论者IP
 
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
-
-
-# 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: xtruet
-
-# Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID:                        #生成的clientID
-  clientSecret:     #生成的clientSecret
-  repo: xtruet.github.io    #仓库名称
-  owner: xtruet    #github用户名
-  admin: xtruet
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
-
-
-# 统计
-
-# Analytics settings
-# Baidu Analytics
-ba_track_id: 
-
-# Google Analytics
-ga_track_id: ''            # Format: UA-xxxxxx-xx
-ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
-
-
-
-
-
-# Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
-
-
-
-# Friends
-friends: [
-    {
-        title: "WY",
-        href: "http://zhengwuyang.com"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
-    },{
-        title: "Apple",
-        href: "https://apple.com"
-    },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
-    }
-]
+page404:
+  search_children: # 腾讯公益
+    enable: true
+    src: //qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js
+    charset: utf-8
+    homePageUrl: '/'
+    homePageName: 回到我的主页
