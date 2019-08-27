@@ -2,11 +2,23 @@
 layout: page
 title: 归档
 ---
-<ul>
+<!-- <ul>
     {% for post in site.posts %}
 
         - *{{ post.date | date_to_string }}*, [{{ post.title }}]({{ post.url }})
 
     {% endfor %}
 
-</ul>
+</ul> -->
+
+<hr/>
+<header>近期</header>
+<section>
+	{% for post in site.posts %}
+	<p>
+		<a href="{{ post.url }} ">
+			<span>{{ post.title }}{{ post.date | date_to_string }}</span>
+		</a>
+	</p>
+    {% endfor %}
+</section>
