@@ -229,7 +229,8 @@ h3 {
 /* tags-list */
 .tags-list{
   list-style: none;
-  display: inline-block;
+  display: inline;
+  margin-right: 3em;
   border-bottom:1px #55afca solid; 
   color: black;
 }
