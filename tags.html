@@ -2,12 +2,20 @@
 layout: page
 title: 标签
 ---
+
+<!-- 标签云 -->
+<div class="tags">
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+    {% endfor %}
+</div>
 {% for tag in site.tags %}
 
-<header>
-    <h2>{{ tag[0] }}</h2>
-</header> 
+<!-- 标签列表 -->
 <section>
+    <header>
+        <h2>{{ tag[0] }}</h2>
+    </header> 
     {% for post in tag[1] %}
 	<p>
         <a href="{{ post.url }} ">
