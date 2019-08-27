@@ -225,3 +225,14 @@ h3 {
 }
 }
 /*头像效果-end*/
+
+/* tags-list */
+.tags-list{
+  list-style: none;
+  display: inline-block;
+  border-bottom:1px #55afca solid; 
+  color: black;
+}
+.tags-list:hover{
+  background: rgb(191, 238, 232);
+}
