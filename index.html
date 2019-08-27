@@ -38,7 +38,7 @@ showtag:
 
 	<p>
 		<a href="{{ post.url }} ">
-			<span>{{ post.title }}{{ post.date | date_to_string }}</span>
+			<span>{{ post.title }}--{{ post.date | date_to_string }}</span>
 		</a>
 	{% if post.description %}
 		<span>{{ post.description }}</span>

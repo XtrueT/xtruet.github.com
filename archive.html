@@ -11,13 +11,11 @@ title: 归档
 
 </ul> -->
 
-<hr/>
-<header>近期</header>
 <section>
 	{% for post in site.posts %}
 	<p>
 		<a href="{{ post.url }} ">
-			<span>{{ post.title }}{{ post.date | date_to_string }}</span>
+			<span>{{ post.title }}--{{ post.date | date_to_string }}</span>
 		</a>
 	</p>
     {% endfor %}
