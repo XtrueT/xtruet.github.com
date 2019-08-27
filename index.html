@@ -1,20 +1,22 @@
 ---
 layout: page
 title: 首页
-showtag:
-  - 日常
-  - JavaScript
-  - python
-  - Mysql
-  - java
-  - Linux
-  - 娱乐
-  - 游戏
 ---
+
+<section>
+		<header>所有标签</header>
+		<div class="tags">
+			{% for tag in site.tags %}
+			<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+			{% endfor %}
+		</div>
+</section>
+<hr/>
+
 {% for tag in page.showtag %}
 
-<header>{{ tag }}</header>
 <section>
+	<header>{{ tag }}</header>
 	<ul>
 	{% for post in site.tags[tag] %}
 	<li class="tags-list">
@@ -33,8 +35,8 @@ showtag:
 
 {% endfor %}
 <hr/>
-<header>近期</header>
 <section>
+	<header>近期</header>
 	{% for post in site.posts limit:5 %}
 
 	<p>
