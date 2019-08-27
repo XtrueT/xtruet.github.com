@@ -128,7 +128,7 @@ mermaid: # https://github.com/knsv/mermaid
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
   src:
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-coy.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
+    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow-night.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
     - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
     - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
   plugins:
@@ -136,7 +136,7 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
     autoloader: //cdn.jsdelivr.net/npm/prismjs/components/ # 根据语言自动加载的高亮插件
     toolbar:
       show_language:
-        enable: true
+        enable: false
         text: 查看语言
         alert: 
       select_code:
@@ -194,7 +194,7 @@ sidebar:
 simple_jekyll_search:
   enable: true
   src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
-  placeholder: <span>搜索博文<hr/></span>
+  placeholder: 搜索博文
   json: /public/simple-jekyll-search/search.json
 
 jekyll_table_of_contents:
@@ -216,7 +216,7 @@ busuanzi:
 
 run_time:
   enable: true
-  start_time: '27/08/2019 07:07:07' # 这是我第一篇CSDN博客的时间
+  start_time: '27/08/2019 10:10:10' # 这是我第一篇CSDN博客的时间
   alert: <i class="fas fa-cog fa-spin fa-fw"></i>
   day: 天
   hour: 时
@@ -269,7 +269,7 @@ valine:
   recordIP: true # 记录评论者IP
 
 notfound:
-  404page: # 腾讯公益
+  404page:
     enable: true
     src: /public/image/404.jpg
     home: '/'

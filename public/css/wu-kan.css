@@ -37,8 +37,8 @@ h3 {
   background-image: none;
 }
 #search-input {
-  background: none;
-  border: none;
+  background: #777777;
+  border-bottom: 1px #fff solid;
   color: #fff;
   width: 100%;
 }
@@ -54,7 +54,7 @@ h3 {
   text-align: center;
 }
 #rewardButton {
-  background-color: #ec6149;
+  background-color: #55afca;
   color: #fff;
   font-size: 1rem;
   padding: 0.5rem 1rem;
