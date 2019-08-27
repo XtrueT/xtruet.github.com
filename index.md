@@ -1,8 +1,14 @@
 ---
 layout: page
 showtag:
-  ios,
-  JavaScript,
+  - 日常
+  - JavaScript
+  - python
+  - Mysql
+  - java
+  - Linux
+  - 娱乐
+  - 游戏
 ---
 ## 近期
 
