@@ -13,6 +13,7 @@
       {{ var.key }}="{{ var.value }}" 
     {% endfor %} />
   {% endfor %}
+
 </head>
 
 <body
@@ -40,15 +41,20 @@
       {{ content }}
     </div>
   </div>
+
   {% for s in site.script %}
   <script src="{{ s.src }}"></script>
   {% endfor %}
+
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
     styles, `#sidebar-checkbox` for behavior. -->
   <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
   <!-- Toggleable sidebar -->
+
   <div class="sidebar" id="sidebar">
+
     <div class="sidebar-item">
+
       {% if site.sidebar.avatar.enable %}
       <div class="ih-item circle effect">
         <!-- right_to_left -->
@@ -60,21 +66,28 @@
         </a>
       </div>
       {% endif %}
+
       {{ site.sidebar.description }}
       <div class="social">
         {% for s in site.sidebar.social %}
         <a href="{{ s.href }}" class="{{ s.class }}" title="{{ s.title }}"></a>
         {% endfor %}
       </div>
+
     </div>
+
     <nav class="sidebar-nav">
+
       {% for node in site.sidebar.nav %}
       <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">
         {{ node.title }}
       </a>
       {% endfor %}
+
     </nav>
+
     <div class="sidebar-item">
+
       {% if site.simple_jekyll_search.enable %}
       <div>
         <input id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}"/>
@@ -89,7 +102,8 @@
         </script>
       </div>
       {% endif %}
-      <!-- #{% if site.jekyll_table_of_contents.enable %}
+
+      {% if site.jekyll_table_of_contents.enable %}
       <div id="toc"></div>
       <script src="{{ site.jekyll_table_of_contents.src }}"></script>
       <script>
@@ -97,7 +111,8 @@
           $('#toc').toc();
         });
       </script>
-      #{% endif %} -->
+      {% endif %}
+
       {% if site.run_time.enable %}
       <div>
         {{ site.run_time.alert }}
@@ -153,7 +168,9 @@
       {% endif %}
     </div>
   </div>
+
   <label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
+
 </body>
 
 </html>
