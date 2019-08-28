@@ -59,9 +59,9 @@ input#search-input {
   outline-style: none;/*取消外边框*/
   border: 1px solid #aa759f; 
   border-radius: 3px;
-  padding: 14px 14px;
+  padding: 10px 10px;
   width: 100%;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Microsoft soft";
 }
 input#search-input:focus{

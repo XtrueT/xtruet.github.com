@@ -81,6 +81,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (min-width: 56em) {
+  .search-container{
+    width: 80vw;
+  }
   .container {
     max-width: 38rem;
   }
@@ -156,6 +159,9 @@ h1, h2, h3, h4, h5, h6 {
           transition: all .3s ease-in-out;
 }
 @media (min-width: 30em) {
+  .search-container{
+    width: 80vw;
+  }
   .sidebar {
     font-size: .75rem; /* 14px */
   }
@@ -191,6 +197,9 @@ a.sidebar-nav-item:focus {
 }
 
 @media (min-width: 48em) {
+  .search-container{
+    width: 80vw;
+  }
   .sidebar-item {
     padding: 1.5rem;
   }
