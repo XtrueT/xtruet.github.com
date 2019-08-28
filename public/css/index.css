@@ -12,7 +12,8 @@ h3 {
   font-size: 1.05rem;
 }
 .content{
-  background-color: rgba(231, 230, 230, 0.95);
+  margin-top: 30px;
+  background-color:#fff;
 }
 .masthead {
   background-color: #fff;
@@ -36,9 +37,10 @@ h3 {
 #sidebar-checkbox:checked ~ .sidebar-toggle:before {
   background-image: none;
 }
+
 .search-container{
   left: 25%;
-  top:80px;
+  top:70px;
   position: absolute; 
   display:block; 
   width: 50vw;
