@@ -58,15 +58,19 @@ h3 {
   z-index: 100;
   margin-bottom: 3em;
 }
+.sidebar-toggle{
+  z-index: 500;
+}
 @media (max-width:480px) {
-  /* .container {
-    max-width: 32rem;
-  } */
+  .container {
+    padding-top: 40px;
+  }
   .content {
     margin-top: 2px;
     padding-top: 5px;
     background-color: rgb(235, 235, 235);
   }
+
   .search-container {
     left: 15%;
     top: 2px;
