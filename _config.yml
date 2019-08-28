@@ -192,7 +192,7 @@ sidebar:
 simple_jekyll_search:
   enable: true
   src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
-  placeholder: 搜索博文
+  placeholder: 搜索
   json: /public/simple-jekyll-search/search.json
 
 jekyll_table_of_contents:

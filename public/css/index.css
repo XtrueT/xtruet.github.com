@@ -18,7 +18,8 @@ h3 {
 .content {
   margin-top: 45px;
   padding-top: 45px;
-  background-color: rgb(235, 235, 235);
+  background-color:rgba(232, 214, 231, 0.19);
+  min-height: 95vh;
 }
 
 .masthead {
