@@ -21,16 +21,14 @@
 	<div class="wrap">
 		<!-- 全站搜索 -->
 		{% include search.html %}
-
-		<header class="masthead masthead-title">
-			<div class="container">
-				{{ page.title }}
-			</div>
-		</header>
-
-		<div class="container content">
+		<section class="container content">
+			<header class="masthead masthead-title">
+					<div class="container">
+						{{ page.title }}
+					</div>
+			</header>
 			{{ content }}
-		</div>
+		</section>
 
 	</div>
 
