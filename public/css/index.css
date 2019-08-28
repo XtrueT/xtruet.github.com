@@ -39,7 +39,7 @@ h3 {
 .search-container{
   margin-left: auto;
   margin-right: auto;
-  /* position: absolute;  */
+  position: absolute; 
   display:block; 
   width: 50vw;
   height: 50px;
