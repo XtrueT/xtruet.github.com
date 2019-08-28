@@ -18,15 +18,16 @@
 		We wrap the content to avoid any CSS collisions with our real content. 
 	-->
 
-	<div class="wrap">
+	<div class="wrap">			
 		<!-- 全站搜索 -->
 		{% include search.html %}
-		<section class="container content">
-			<header class="masthead masthead-title">
-					<div class="container">
+		<header class="masthead masthead-title">
+				<div class="container">
 						{{ page.title }}
-					</div>
-			</header>
+				</div>
+		</header>
+		<section class="container content">
+
 			{{ content }}
 		</section>
 
