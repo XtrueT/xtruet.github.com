@@ -41,6 +41,7 @@ h3 {
   display: block;
   position: absolute; */
   width: 25vw;
+
 }
 #search-input {
   background: #eee;
@@ -50,7 +51,17 @@ h3 {
 }
 #results-container{
   background: #eee3f0;
-  max-height: 25vh;
+  display:block; 
+  left: 56px; 
+  position: absolute; 
+  top: 68px; 
+  z-index: 999; 
+  background: #fff; 
+  border: 1px solid #ccc; 
+  padding: 2px; 
+  width: 180px; 
+  height: 150px; 
+  overflow:auto;
 }
 
 
