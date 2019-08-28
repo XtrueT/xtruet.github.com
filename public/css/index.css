@@ -41,6 +41,7 @@ h3 {
   margin-right: auto;
   width: 50vw;
   height: 50px;
+  z-index: 999; 
 }
 #search-input {
   background: #aa759f;
@@ -54,7 +55,6 @@ h3 {
   /* left: 56px;  */
   /* position: absolute;  */
   /* top: 68px;  */
-  z-index: 999; 
   border: 1px solid #ccc; 
   padding: 2px; 
   width: 100%; 
