@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style and "hide" the sidebar */
 .sidebar {
-  position: fixed;
+  position: absolute;
   z-index: 999;
   top: 0;
   bottom: 0;
