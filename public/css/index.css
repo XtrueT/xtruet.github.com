@@ -57,7 +57,7 @@ h3 {
 }
 input#search-input {
   outline-style: none;/*取消外边框*/
-  border: 1px solid #ccc; 
+  border: 1px solid #aa759f; 
   border-radius: 3px;
   padding: 14px 14px;
   width: 100%;
