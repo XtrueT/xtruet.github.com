@@ -31,9 +31,9 @@
   <div class="wrap">
     <header class="masthead masthead-title">
       <div class="container">
-        <a href="{{ site.baseurl }}/">
+        <!-- <a href="{{ site.baseurl }}/">
           <small>{{ site.title }}</small>
-        </a>
+        </a> -->
         {{ page.title }}
       </div>
 
@@ -57,10 +57,6 @@
       {{ content }}
     </div>
   </div>
-
-  {% for s in site.script %}
-  <script src="{{ s.src }}"></script>
-  {% endfor %}
 
   <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
     styles, `#sidebar-checkbox` for behavior. -->
@@ -182,6 +178,10 @@
 
   <label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
 
+  {% for s in site.script %}
+  <script src="{{ s.src }}"></script>
+  {% endfor %}
+  
 </body>
 
 </html>
