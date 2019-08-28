@@ -38,7 +38,7 @@
       </div>
 
       {% if site.simple_jekyll_search.enable %}
-      <div>
+      <div class="search-container">
         <input id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}"/>
         <div id="results-container"></div>
         <script src="{{ site.simple_jekyll_search.src }}"></script>
@@ -51,7 +51,7 @@
         </script>
       </div>
       {% endif %}
-      
+
     </header>
     <div class="container content">
       {{ content }}

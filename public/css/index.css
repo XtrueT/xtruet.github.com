@@ -36,12 +36,26 @@ h3 {
 #sidebar-checkbox:checked ~ .sidebar-toggle:before {
   background-image: none;
 }
+.search-container{
+  top: 0;
+  right: 50%;
+  display: block;
+  position: absolute;
+}
 #search-input {
   background: #eee;
   border: none;
   color: rgb(0, 0, 0);
-  width: 100%;
+  width: 50%;
 }
+#results-container{
+  background: #dea0eb;
+  list-style: none;
+  line-height: 5em;
+}
+
+
+
 .post-date {
   margin-top: 0px;
 }
