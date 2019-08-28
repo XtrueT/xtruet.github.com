@@ -13,6 +13,7 @@ h3 {
 }
 .content{
   margin-top: 30px;
+  padding-top:20px; 
   background-color:#fff;
 }
 .masthead {
@@ -45,7 +46,7 @@ h3 {
   display:block; 
   width: 50vw;
   height: 50px;
-  z-index: 999;
+  z-index: 990;
   margin-bottom: 3em; 
 }
 #search-input {
@@ -81,7 +82,7 @@ h3 {
   text-align: center;
 }
 #rewardButton {
-  background-color: #55afca;
+  background-color: #aa759f;
   color: #fff;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -257,12 +258,14 @@ h3 {
 
 .tags-list{
   list-style: none;
-  display: inline;
-  margin-right: 3em;
-  border-bottom:1px #55afca solid; 
+  display: block;
   color: black;
 }
 .tags-list li:hover{
   padding: 1em;
-  background: rgb(191, 238, 232);
+  display: inline-block;
+  margin-right: 2em;
+  margin-left: 2em;
+  background: #aa759f;
+  border-radius: 2px;
 }
