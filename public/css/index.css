@@ -331,7 +331,7 @@ input#search-input:focus {
 
 .tagcloud a {
   display:inline-table;
-  padding: 6px 6px;
+  padding: 6px 12px;
   margin:3px; 
   font-size: 14px;
   border: 1px solid #e6e7e8;
@@ -351,7 +351,6 @@ input#search-input:focus {
 }
 
 .tagcloud a:hover {
-  background: #aa759f;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
 }
