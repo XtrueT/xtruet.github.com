@@ -59,7 +59,18 @@ h3 {
   z-index: 100;
   margin-bottom: 3em;
 }
-
+@media (max-width:480px) {
+  .search-container {
+    left: 2%;
+    top: 70px;
+    position: absolute;
+    display: block;
+    width: 90vw;
+    height: 50px;
+    z-index: 100;
+    margin-bottom: 3em;
+  }
+}
 #search-input {
   background: #f0f0f0;
   border: none;
