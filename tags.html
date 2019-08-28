@@ -4,16 +4,16 @@ title: 标签
 ---
 
 <!-- 标签云 -->
-
-<section>
+<hr/>
+<section  class="tagcloud" >
     <header>所有标签</header>
-    <div class="tags-list">
+    <div>
         {% for tag in site.tags %}
         <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
         {% endfor %}
     </div>
 </section>
-<hr/>
+<hr />
 
 <!-- 标签列表 -->
 {% for tag in site.tags %}
@@ -21,9 +21,9 @@ title: 标签
 <section>
     <header>
         <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
-    </header> 
+    </header>
     {% for post in tag[1] %}
-	<p>
+    <p>
         <a href="{{ post.url }} ">
             <span>{{ post.title }}{{ post.date | date_to_string }}</span>
         </a>
@@ -32,3 +32,4 @@ title: 标签
 </section>
 
 {% endfor %}
+
