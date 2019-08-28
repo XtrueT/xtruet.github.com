@@ -29,9 +29,9 @@
 		<!-- 全站搜索 -->
 		{% include search.html %}
 
-		<!-- <div class="container content">
-
-		</div> -->
+		<div class="container content">
+			{{ content }}
+		</div>
 
 	</div>
 
@@ -68,12 +68,6 @@
 
 	</div>
 	<label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
-
-	<div class="wrap">
-			<div class="container content">
-				{{ content }}
-			</div>
-	</div>
 
 	{% for s in site.script %}
 		<script src="{{ s.src }}"></script>
