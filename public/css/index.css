@@ -46,7 +46,7 @@ h3 {
   display:block; 
   width: 50vw;
   height: 50px;
-  z-index: 990;
+  z-index: 100;
   margin-bottom: 3em; 
 }
 #search-input {
