@@ -68,11 +68,11 @@ h3 {
     background-color: rgb(235, 235, 235);
   }
   .search-container {
-    left: 5%;
+    left: 15%;
     top: 2px;
     position: absolute;
     display: block;
-    width: 90vw;
+    width: 80vw;
     height: 50px;
     z-index: 100;
     margin-bottom: 3em;
