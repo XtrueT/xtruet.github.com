@@ -29,14 +29,18 @@
 		<!-- 全站搜索 -->
 		{% include time.html %}
 
-		<div class="container content">
+		<!-- <div class="container content">
 			{{ content }}
-		</div>
+		</div> -->
 
 	</div>
 
-	<!-- 侧边导航 -->	
-	<label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
+	<!-- 侧边导航 -->
+	<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+	styles, `#sidebar-checkbox` for behavior. -->
+	<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+	<!-- Toggleable sidebar -->	
+	
 
 	<div class="sidebar" id="sidebar">
 
@@ -62,6 +66,13 @@
 			{% include github.html %}
 		</div>
 
+	</div>
+	<label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
+
+	<div class="wrap">
+			<div class="container content">
+				{{ content }}
+			</div>
 	</div>
 
 	{% for s in site.script %}
