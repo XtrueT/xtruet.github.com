@@ -37,11 +37,9 @@ h3 {
   background-image: none;
 }
 .search-container{
-  /* right: 25%;
-  display: block;
-  position: absolute; */
+  margin-left: auto;
+  margin-right: auto;
   width: 25vw;
-
 }
 #search-input {
   background: #aa759f;
@@ -51,15 +49,14 @@ h3 {
 }
 #results-container{
   background: #eee3f0;
-  display:block; 
-  left: 56px; 
-  position: absolute; 
-  top: 68px; 
+  /* display:block;  */
+  /* left: 56px;  */
+  /* position: absolute;  */
+  /* top: 68px;  */
   z-index: 999; 
-  background: #fff; 
   border: 1px solid #ccc; 
   padding: 2px; 
-  width: 180px; 
+  width: 100%; 
   height: 150px; 
   overflow:auto;
 }
