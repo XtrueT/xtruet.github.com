@@ -48,11 +48,8 @@ h3 {
   background-image: none;
 }
 
-.search-section{
-  text-align:right; 
-}
 .search-container {
-  right: 0;
+  right:0px;
   top:5px;
   position: absolute;
   display: block;
@@ -64,7 +61,7 @@ h3 {
 @media (max-width:480px) {
   .search-container {
     left: 5%;
-    top: 0;
+    top: 60;
     position: absolute;
     display: block;
     width: 90vw;
