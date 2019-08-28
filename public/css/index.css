@@ -48,14 +48,14 @@ h3 {
   color: rgb(0, 0, 0);
   width: 100%;
 }
-#results-container{
+#search-input:focus #results-container{
   background: #eee3f0;
   /* display:block;  */
   /* left: 56px;  */
   /* position: absolute;  */
   /* top: 68px;  */
-  /* z-index: 999;  */
-  /* border: 1px solid #ccc;  */
+  z-index: 999; 
+  border: 1px solid #ccc; 
   padding: 2px; 
   width: 100%; 
   max-height: 150px; 
