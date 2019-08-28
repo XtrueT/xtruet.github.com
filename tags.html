@@ -5,9 +5,9 @@ title: 标签
 
 <!-- 标签云 -->
 <hr/>
-<section  class="tagcloud" >
+<section  class="tagcloud-section" >
     <header>所有标签</header>
-    <div>
+    <div class="tagcloud">
         {% for tag in site.tags %}
         <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
         {% endfor %}
