@@ -82,6 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 56em) {
   .search-container{
+    left: 5%;
+    top:70px;
+    position: absolute; 
+    display:block; 
+    height: 50px;
     width: 80vw;
   }
   .container {
@@ -159,7 +164,13 @@ h1, h2, h3, h4, h5, h6 {
           transition: all .3s ease-in-out;
 }
 @media (min-width: 30em) {
+
   .search-container{
+    left: 5%;
+    top:70px;
+    position: absolute; 
+    display:block; 
+    height: 50px;
     width: 80vw;
   }
   .sidebar {
@@ -198,6 +209,11 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .search-container{
+    left: 5%;
+    top:70px;
+    position: absolute; 
+    display:block; 
+    height: 50px;
     width: 80vw;
   }
   .sidebar-item {
