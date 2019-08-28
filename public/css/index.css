@@ -346,7 +346,7 @@ input#search-input:focus {
 
 .tagcloud-section {
     width: 100%;
-    height: 152px;
+    height: auto;
     margin: 0 auto;
     float: left;
     text-align: justify;
