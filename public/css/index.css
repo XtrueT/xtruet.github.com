@@ -37,10 +37,9 @@ h3 {
   background-image: none;
 }
 .search-container{
-  top: 0;
-  right: 25%;
+  /* right: 25%;
   display: block;
-  position: absolute;
+  position: absolute; */
   width: 25vw;
 }
 #search-input {
