@@ -319,11 +319,12 @@ input#search-input:focus {
     height: 152px;
     margin: 0 auto;
     float: left;
+    text-align: justify;
 }
 
 .tagcloud {
   position: relative;
-  margin-top: -150px;
+  /* margin-top: -150px; */
 }
 
 .tagcloud a {
