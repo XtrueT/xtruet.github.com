@@ -17,7 +17,7 @@ h3 {
 
 .content {
   margin-top: 45px;
-  padding-top: 20px;
+  padding-top: 45px;
   background-color: rgb(235, 235, 235);
 }
 
@@ -49,8 +49,7 @@ h3 {
 }
 
 .search-container {
-  right: 15px;
-  /* top: 70px; */
+  right: 0;
   top:5px;
   position: absolute;
   display: block;
@@ -61,7 +60,7 @@ h3 {
 }
 @media (max-width:480px) {
   .search-container {
-    left: 2%;
+    left: 5%;
     top: 70px;
     position: absolute;
     display: block;
