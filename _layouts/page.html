@@ -25,43 +25,6 @@
 	{% if site.body.sidebar-overlay %} 
 		sidebar-overlay
 	{% endif %}">
-	<!-- 
-		Wrap is the content to shift when toggling the sidebar. 
-		We wrap the content to avoid any CSS collisions with our real content. 
-	-->
-
-	<div class="wrap">
-		<header class="masthead masthead-title">
-			<div class="container">
-				<!-- <a href="{{ site.baseurl }}/">
-				<small>{{ site.title }}</small>
-				</a> -->
-				{{ page.title }}
-			</div>
-		</header>
-
-		<section class="search-section" >
-			{% if site.simple_jekyll_search.enable %}
-			<div class="search-container">
-				<input id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}"/>
-				<div id="results-container"></div>
-				<script src="{{ site.simple_jekyll_search.src }}"></script>
-				<script>
-				SimpleJekyllSearch({
-					json: '{{ site.simple_jekyll_search.json }}',
-					searchInput: document.getElementById('search-input'),
-					resultsContainer: document.getElementById('results-container')
-				});
-				</script>
-			</div>
-			{% endif %}
-		</section>
-
-		<div class="container content">
-			{{ content }}
-		</div>
-
-	</div>
 
 	<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
 		styles, `#sidebar-checkbox` for behavior. -->
@@ -182,6 +145,45 @@
 	</div>
 
 	<label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
+
+	<!-- 
+		Wrap is the content to shift when toggling the sidebar. 
+		We wrap the content to avoid any CSS collisions with our real content. 
+	-->
+
+	<div class="wrap">
+
+		<header class="masthead masthead-title">
+			<div class="container">
+				<!-- <a href="{{ site.baseurl }}/">
+				<small>{{ site.title }}</small>
+				</a> -->
+				{{ page.title }}
+			</div>
+		</header>
+
+		<section class="search-section" >
+			{% if site.simple_jekyll_search.enable %}
+			<div class="search-container">
+				<input id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}"/>
+				<div id="results-container"></div>
+				<script src="{{ site.simple_jekyll_search.src }}"></script>
+				<script>
+				SimpleJekyllSearch({
+					json: '{{ site.simple_jekyll_search.json }}',
+					searchInput: document.getElementById('search-input'),
+					resultsContainer: document.getElementById('results-container')
+				});
+				</script>
+			</div>
+			{% endif %}
+		</section>
+
+		<div class="container content">
+			{{ content }}
+		</div>
+
+	</div>
 
 	{% for s in site.script %}
 	<script src="{{ s.src }}"></script>
