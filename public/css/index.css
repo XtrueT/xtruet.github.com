@@ -328,10 +328,7 @@ input#search-input:focus {
 }
 
 .tagcloud a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
+  display:inline-table;
   padding: 11px 30px;
   color: #333;
   font-size: 16px;
