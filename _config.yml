@@ -115,15 +115,13 @@ script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
 # - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
 - src: /public/js/prism.js
-- src: /public/js/mermaid.js
-- src: /public/js/katex.js
 - src: /public/js/baidu_push.js
 
-mermaid: # https://github.com/knsv/mermaid
-  enable: true
-  src: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
-  stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
-  markdown_expand: true
+# mermaid: # https://github.com/knsv/mermaid
+#   enable: true
+#   src: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+#   stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
+#   markdown_expand: true
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
@@ -143,19 +141,19 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
         enable: true
         innerHTML: 选中
 
-katex: # KaTeX
-  enable: true
-  stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
-  src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
-  auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
-  delimiters: true # 开启行内公式$\KaTeX$支持
+# katex: # KaTeX
+#   enable: true
+#   stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
+#   src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
+#   auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
+#   delimiters: true # 开启行内公式$\KaTeX$支持
 
 sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
     img: /public/image/default.jpg # 头像的地址
-    info: #<p>没有梦想的咸鱼</p> # 头像背后的信息
-  description: 
+    info: #<p></p> # 头像背后的信息
+  description: 没有梦想的咸鱼
   social:
 #  - title: rss
 #    href: /atom.xml
