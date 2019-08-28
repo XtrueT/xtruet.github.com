@@ -38,7 +38,7 @@ h3 {
 }
 .search-container{
   top: 0;
-  right: 50%;
+  right: 25%;
   display: block;
   position: absolute;
   width: 25vw;
@@ -51,6 +51,7 @@ h3 {
 }
 #results-container{
   background: #eee3f0;
+  max-height: 25vh;
 }
 
 
