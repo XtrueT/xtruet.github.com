@@ -48,7 +48,7 @@ h3 {
   color: rgb(0, 0, 0);
   width: 100%;
 }
-#search-input:focus #results-container{
+#search-input:focus:active #results-container{
   background: #eee3f0;
   /* display:block;  */
   /* left: 56px;  */
