@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+	{% include header.html %}
+</head>
+
+<body
+	class="{{ site.body.theme-base }}
+	{% if site.body.layout-reverse %} 
+		layout-reverse
+	{% endif %}
+	{% if site.body.sidebar-overlay %} 
+		sidebar-overlay
+	{% endif %}">
+
+	<!-- 
+		Wrap is the content to shift when toggling the sidebar. 
+		We wrap the content to avoid any CSS collisions with our real content. 
+	-->
+
+	<div class="wrap">
+		
+		<header class="masthead masthead-title">
+			<div class="container">
+				{{ page.title }}
+			</div>
+		</header>
+
+		<!-- 全站搜索 -->
+		{% include time.html %}
+
+		<div class="container content">
+			{{ content }}
+		</div>
+
+	</div>
+
+	<!-- 侧边导航 -->	
+	<label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
+
+	<div class="sidebar" id="sidebar">
+
+		<div class="sidebar-item">
+			{% include time.html %}
+		</div>
+
+		<nav class="sidebar-nav">
+			{% include nav.html %}
+		</nav>
+
+		<div class="sidebar-item">
+			<!-- 生成目录 -->
+			{% include jekyll_table_of_contents.html %}
+
+			<!-- 统计运行时间格式化 -->
+			{% include time.html %}
+
+			<!-- 统计浏览量和访问人数 -->
+			{% include busuanzi.html %}
+
+			<!-- github信息 -->
+			{% include github.html %}
+		</div>
+
+	</div>
+
+	{% for s in site.script %}
+		<script src="{{ s.src }}"></script>
+	{% endfor %}
+
+	{% include footer.html %}
+
+</body>
+
+</html>

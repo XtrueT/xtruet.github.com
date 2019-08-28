@@ -1,5 +1,5 @@
 ---
-layout: comments
+layout: default
 ---
 <div class="post">
 	<!-- 文章信息 -->
@@ -32,12 +32,6 @@ layout: comments
 		{% endif %}
 			{{ site.post.meta.copyright }}
 		</small>
-
-		{% if page.background_music %}
-			<div>
-				{{ page.background_music }}
-			</div>
-		{% endif %}
 
 	{% endif %}
 
@@ -98,4 +92,6 @@ layout: comments
 
 	{% endif %}
 
+	{% include valine.html %}
+	
 </div>

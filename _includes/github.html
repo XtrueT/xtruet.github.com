@@ -1,0 +1,9 @@
+<!-- github 信息 -->
+{% if site.copyright.enable %}
+    <div>
+        <i class="fas fa-copyright fa-fw"></i>
+        {{ site.time | date: '%Y' }}
+        {{ site.author }}
+        {{ site.copyright.text }}
+    </div>
+{% endif %}

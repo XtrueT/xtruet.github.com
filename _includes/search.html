@@ -1,0 +1,17 @@
+<!-- 全站搜索 -->
+<section class="search-section" >
+    {% if site.simple_jekyll_search.enable %}
+        <div class="search-container">
+            <input id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}"/>
+            <div id="results-container"></div>
+            <script src="{{ site.simple_jekyll_search.src }}"></script>
+            <script>
+            SimpleJekyllSearch({
+                json: '{{ site.simple_jekyll_search.json }}',
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container')
+            });
+            </script>
+        </div>
+    {% endif %}
+</section>
