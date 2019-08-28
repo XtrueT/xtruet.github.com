@@ -1,0 +1,9 @@
+<button id="back-top">返回顶部</button>
+<script>
+    var btn = document.getElementById('back-top');
+//    var scrollTop  = document.documentElement.scrollTop||document.body.scrollTop;
+//兼容性写法，并且在滚动事件内可以实时获得滚动条距顶部的距离 ;
+    btn.onclick = function(){
+        $('body,html').animate({scrollTop:0},300)
+    }
+</script>

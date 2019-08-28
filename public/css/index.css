@@ -353,3 +353,13 @@ input#search-input:focus {
 .tagcloud a:hover {
   color: #aa759f;
 }
+
+#back-top{
+  width: 35px;
+  height: 35px;
+  background: #aa759f;
+  position:fixed;
+  bottom: 5%;
+  right: 10%;
+  color: #fff;
+}
