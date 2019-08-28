@@ -48,7 +48,9 @@ h3 {
   background-image: none;
 }
 
-
+.search-section{
+  text-align:right; 
+}
 .search-container {
   right: 0;
   top:5px;
