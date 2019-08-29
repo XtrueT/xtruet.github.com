@@ -29,19 +29,19 @@ head: # 删改前确定知道自己在做什么
   - key: name
     value: google-site-verification
   - key: content
-    value: YIKi1rBnyUaS-DMYiluseI5kZzTwjCkTFmKkSkMZDJk
+    value: 
 - tag: meta # baidu站点验证
   var:
   - key: name
     value: baidu-site-verification
   - key: content
-    value: bEFDJ1LvXb
+    value: 
 - tag: meta # yandex站点验证
   var:
   - key: name
     value: yandex-verification
   - key: content
-    value: 52253e02830b443c
+    value: 
 - tag: link
   var:
   - key: rel
