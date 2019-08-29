@@ -3,7 +3,7 @@
     function backTop(minHeight) {
         // var backTopHtml = '<div >返回</div>'
         // $('#page').append(backTopHtml)
-        
+
         $('#backTopBtn').click(function () {
             $('html, body').animate({
                 scrollTop: 0
@@ -17,7 +17,7 @@
             }
         )
 
-        minHeight ? minHeight = minHeight : minHeight = 600
+        minHeight ? minHeight = minHeight : minHeight = 0
 
         $(window).scroll(function () {
             var s = $(window).scrollTop()
