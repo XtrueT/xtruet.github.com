@@ -387,6 +387,7 @@ input#search-input:focus {
 }
 
 #backTopBtn{
+  display: none;
   width: 35px;
   height: 35px;
   background: #aa759f;
