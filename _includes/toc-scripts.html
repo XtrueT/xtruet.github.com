@@ -1,0 +1,8 @@
+{% if site.jekyll_table_of_contents.enable %}
+<script src="{{ site.jekyll_table_of_contents.src }}"></script>
+<script>
+    $(document).ready(function () {
+        $('#toc').toc();
+    });
+</script>
+{% endif %}
