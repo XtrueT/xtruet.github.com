@@ -1,20 +1,34 @@
-<button id="back-top">返回</button>
 <script>
-    var btn = document.getElementById('back-top');
-//    var scrollTop  = document.documentElement.scrollTop||document.body.scrollTop;
-//兼容性写法，并且在滚动事件内可以实时获得滚动条距顶部的距离 ;
-    btn.onclick = function(){
-        $('body,html').animate({scrollTop:0},300)
-    }
-    //返回顶部  只在未显示时，判断是否显示并返回顶部
-    function showBackToTop() {
-        if ($("#back-top").is(":hidden")) {
-            if ($(document).height() - $(window).scrollTop() - $(window).height() > 100) {
-                $("#back-top").show();
+    function backTop(minHeight) {
+        var backTopHtml = '<div id="backTopBtn">返回</div>'
+
+        $('#page').append(backTopHtml)
+
+        $('#backTopBtn').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 300)
+        }).hover(
+            function () {
+                $(this).addClass('hover')
+            },
+            function () {
+                $(this).removeClass('hover')
             }
-        }else{
-            $("#back-top").hidden();
-        }
+        )
+
+        minHeight ? minHeight = minHeight : minHeight = 600
+
+        $(window).scroll(function () {
+            var s = $(window).scrollTop()
+
+            if (s > minHeight) {
+                $('#backTopBtn').fadeIn(100)
+            } else {
+                $('#backTopBtn').fadeOut(100)
+            }
+        })
     }
-    showBackToTop();
+
+    backTop();
 </script>
