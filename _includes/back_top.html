@@ -1,34 +1,43 @@
 <button id="backTopBtn">Top</button>
 <script>
-    function backTop(minHeight) {
-        // var backTopHtml = '<div >返回</div>'
-        // $('#page').append(backTopHtml)
+    window.onload=function(){
+    var obtn= document.getElementById("backTopBtn");
+    //文档高度
+    var clientHeight=document.documentElement.clientHeight;
+    var time=null;
+    var isTop=true,
+        cancelScroll = false;
 
-        $('#backTopBtn').click(function () {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 300)
-        }).hover(
-            function () {
-                $(this).addClass('hover')
-            },
-            function () {
-                $(this).removeClass('hover')
-            }
-        )
-        // 何时出现
-        minHeight ? minHeight = minHeight : minHeight = 600
+    window.onscroll = function(){
 
-        $(window).scroll(function () {
-            var s = $(window).scrollTop()
-
-            if (s > minHeight) {
-                $('#backTopBtn').fadeIn(100)
-            } else {
-                $('#backTopBtn').fadeOut(100)
-            }
-        })
+        var osTop=document.documentElement.scrollTop||document.body.scrollTop;
+        if(osTop>=clientHeight){
+            obtn.style.display='block';
+        }else{
+            obtn.style.display='none';
+        }
+        if(!isTop){
+            clearInterval(time);
+        }
+        isTop=false;
     }
 
-    backTop();
+    obtn.onclick=function(){
+        //点击事件
+        if(cancelScroll == false) {
+            time=setInterval(function(){
+                var osTop=document.documentElement.scrollTop||document.body.scrollTop;
+                var ispeed=Math.floor(-osTop/10);
+                document.documentElement.scrollTop=document.body.scrollTop=osTop+ispeed;
+                isTop=true;
+                if(osTop==0){
+                    clearInterval(time);
+                }
+            },30);
+        }else {
+            clearInterval(time);
+            cancelScroll = true;
+        }
+    }
+}
 </script>
