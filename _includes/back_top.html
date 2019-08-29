@@ -16,13 +16,13 @@
                 $(this).removeClass('hover')
             }
         )
-
-        minHeight ? minHeight = minHeight : minHeight = 0
+        // 何时出现
+        minHeight ? minHeight = minHeight : minHeight = 100
 
         $(window).scroll(function () {
             var s = $(window).scrollTop()
-
-            if (s > minHeight) {
+            console.log(s);
+            if ($(document).height() - $(window).scrollTop() - $(window).height() > minHeight) {
                 $('#backTopBtn').fadeIn(100)
             } else {
                 $('#backTopBtn').fadeOut(100)
