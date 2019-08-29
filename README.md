@@ -53,11 +53,11 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 - [x] 加入可以自动展开、标号的目录
   - [x] 目录标号
   - [ ] 自动展开
-- [] mermaid
-  - [] Markdown代码扩展
-- [] $\KaTeX$
-- [] Live2D
-  - [] 加上切换Live2D显示/关闭的按钮
+- [ ] mermaid
+  - [ ] Markdown代码扩展
+- [ ] $\KaTeX$
+- [ ] Live2D
+  - [ ] 加上切换Live2D显示/关闭的按钮
   - [ ] 使用自己搭建的Live2D后端API
     - [ ] 收集一些Live2D Model
 
@@ -68,13 +68,13 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 #### TodoList
 
 - [ ] 所有脚本和插件JSLoader化，增加移植性和访问速度
-  - [] katex
-  - [] mermaid
+  - [ ] katex
+  - [ ] mermaid
   - [x] baidu_push
-  - [] prismjs
+  - [ ] prismjs
 - [x] 升级fontaswsomev4.7.0至fontawesome-freev5.10.1，支持的图标数量由675增加至1535
 - [x] 界面调整
-  - [] 正文部分增加背景，从而减少动态ribbon背景的阅读体验
+  - [ ] 正文部分增加背景，从而减少动态ribbon背景的阅读体验
   - [x] sidebar微调
   - [x] sidebar搜索分离
 
