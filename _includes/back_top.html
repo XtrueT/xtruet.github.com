@@ -17,12 +17,12 @@
             }
         )
         // 何时出现
-        minHeight ? minHeight = minHeight : minHeight = 0
+        minHeight ? minHeight = minHeight : minHeight = 600
 
         $(window).scroll(function () {
             var s = $(window).scrollTop()
-            console.log(s);
-            if ($(document).height() - $(window).scrollTop() - $(window).height() > minHeight) {
+
+            if (s > minHeight) {
                 $('#backTopBtn').fadeIn(100)
             } else {
                 $('#backTopBtn').fadeOut(100)
