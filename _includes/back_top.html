@@ -6,4 +6,13 @@
     btn.onclick = function(){
         $('body,html').animate({scrollTop:0},300)
     }
+    //返回顶部  只在未显示时，判断是否显示并返回顶部
+    function showBackToTop() {
+            if ($("#back-top").is(":hidden")) {
+                if ($(document).height() - $(window).scrollTop() - $(window).height() > 100) {
+                    $("#back-top").show();
+                }
+            }
+    }
+    showBackToTop();
 </script>
