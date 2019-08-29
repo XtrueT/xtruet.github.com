@@ -83,7 +83,7 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 - 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
 - fontaswsome的rss图标和rss-square图标均失效，暂时去掉博客页面中的rss图标
 
-### 2019-02-23 v2.0.0
+### 2019-08-28 v2.0.0
 
 - 重构完成
 
