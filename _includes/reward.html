@@ -8,11 +8,6 @@
             onclick="show_reward()">
             {{ site.post.reward.text }}
         </button>
-        <script>
-            function show_reward(){
-                document.getElementById('rewardQRs').style.display = document.getElementById('show').style.display==="none"?"block":"none";
-            }
-        </script>
         <div id="rewardQRs">
             <table>
                 <tr>
@@ -24,6 +19,11 @@
                 </tr>
             </table>
         </div>
+        <script>
+                function show_reward(){
+                    document.getElementById('rewardQRs').style.display = document.getElementById('show').style.display==="none"?"block":"none";
+                }
+        </script>
     </div>
 
 {% endif %}
