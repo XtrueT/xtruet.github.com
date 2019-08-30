@@ -9,18 +9,18 @@
             {{ site.post.reward.text }}
         </button>
         <div id="rewardQRs" style="display: none">
-        </div>
-        <script>
-            function show_reward(){
-                document.getElementById('rewardQRs').innerHTML = `<table>
+            <table>
                 <tr>
                     {% for node in site.post.reward.img %}
                         <td id="{{ node.id }}" class="reward_qr">
-                            <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}">
+                            <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}" width=100% hight=150px>
                         </td>
                     {% endfor %}
                 </tr>
-                </table>`;
+            </table>
+        </div>
+        <script>
+            function show_reward(){
                 document.getElementById('rewardQRs').style.display = document.getElementById('rewardQRs').style.display==="none"?"block":"none";
             }
         </script>
