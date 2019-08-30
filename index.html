@@ -24,37 +24,16 @@ title: 首页
 				</a>
 			</h1>
 			<span class="post-date">{{ post.date | date_to_string }}</span>
+
 			<span class="post-meta">
-				Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%Y %M, %D" }}
+				Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
 			</span>
+			<div class="post-content-preview">
+					{{ post.content | strip_html | truncate:200 }}
+			</div>
 		</div>
 		{% endfor %}
 	</div>
-
-	<div class="pagination">
-		{% if paginator.next_page %}
-		<a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
-		{% else %}
-		<span class="pagination-item older">Older</span>
-		{% endif %}
-		{% if paginator.previous_page %}
-		{% if paginator.page == 2 %}
-		<a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
-		{% else %}
-		<a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
-		{% endif %}
-		{% else %}
-		<span class="pagination-item newer">Newer</span>
-		{% endif %}
-	</div>
-
-	<!-- 遍历分页后的文章 -->
-	{% for post in paginator.posts %}
-	<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-	<p class="author">
-		<span class="date">{{ post.date }}</span>
-	</p>
-	{% endfor %}
 
 	<!-- 分页链接 -->
 	{% if paginator.total_pages > 1 %}
