@@ -77,8 +77,8 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
   - [ ] 正文部分增加背景，从而减少动态ribbon背景的阅读体验
   - [x] sidebar微调
   - [x] sidebar搜索分离
-  - [ ] 首页整改
-  - [ ] 文章分页
+  - [x] 首页整改
+  - [x] 文章分页
 
 #### 已知bug
 

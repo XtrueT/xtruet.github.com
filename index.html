@@ -23,13 +23,11 @@ title: 首页
 					{{ post.title }}
 				</a>
 			</h1>
-			<span class="post-date">{{ post.date | date_to_string }}</span>
-
-			<span class="post-meta">
-				Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+			<span class="post-date">
+					Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%M %-d, %Y" }}
 			</span>
 			<div class="post-content-preview">
-					{{ post.content | strip_html | truncate:200 }}
+					{{ post.content | strip_html | truncate:100 }}
 			</div>
 		</div>
 		{% endfor %}
