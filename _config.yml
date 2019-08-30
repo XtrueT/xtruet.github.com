@@ -110,8 +110,8 @@ body:
   sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修，当前这个选项仅能对sidebar的阴影产生影响
   bgimg : true # 开启背景图
   background-img: /public/image/bgimg.jpg
-  opacityable: true #开启透明度 越小越透明（建议0.1-0.9）
-  opacity: 0.9
+  opacityable: true #开启透明度 越小越透明（建议0.1-0.9）需去head.html 指定
+
 
 script: # 需要在正文后调用的脚本
 - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
