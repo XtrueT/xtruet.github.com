@@ -48,7 +48,7 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 - [x] 加入不蒜子统计
 - [x] <i class="fab fa-font-awesome"></i> Font Awesome
 - [x] 全站搜索
-- [] 移植[原博客的ribbon动态背景](https://github.com/theme-next/theme-next-canvas-ribbon)
+- [ ] 移植[原博客的ribbon动态背景](https://github.com/theme-next/theme-next-canvas-ribbon)
 - [x] 调整代码块风格，并加上代码选中按钮
 - [x] 加入可以自动展开、标号的目录
   - [x] 目录标号
