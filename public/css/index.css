@@ -22,9 +22,9 @@ h3 {
   margin-top: 0px;
   padding-top: 10px;
   background-color:#fff;
-  min-height: 95vh;
+  min-height: 90vh;
+  transition: .1s;
 }
-
 .masthead {
   background-color: #fff;
   padding-top: .8rem;
@@ -405,16 +405,18 @@ input#search-input:focus {
 }
 
 .post{
-  background: azure;
+  background: white;
   padding: 10px;
   border: aliceblue 1px solid;
+  transition: .1s;
 }
-.post:active{
+.post:hover{
   -webkit-box-shadow:0px 3px 3px #c8c8c8 ;
   -moz-box-shadow:0px 3px 3px #c8c8c8 ;
   box-shadow:0px 3px 3px #c8c8c8 ;
-  background: azure;
+  background: white;
   padding: 10px;
   border: aliceblue 1px solid;
+  transition: .1s;
 }
 
