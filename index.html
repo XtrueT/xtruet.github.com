@@ -24,7 +24,7 @@ title: 首页
 				</a>
 			</h1>
 			<span class="post-date">
-					Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%M %-d, %Y" }}
+					Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
 			</span>
 			<div class="post-content-preview">
 					{{ post.content | strip_html | truncate:100 }}
