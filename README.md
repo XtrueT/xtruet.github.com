@@ -86,7 +86,7 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 - 可将内容区块移动自sidebar下修复，但是我并不想怎么做，暂时就先这样
 - fontaswsome的rss图标和rss-square图标均失效，暂时去掉博客页面中的rss图标
 
-### 2019-08-28 v2.0.1
+### 2019-08-28 v2.0.2
 
 - 引入背景图
 - 透明UI （css属性）
