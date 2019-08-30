@@ -2,6 +2,17 @@
 {% if site.post.reward.enable %}
 
     <div class="reward">
+        <div id="rewardQRs">
+            <table>
+                <tr>
+                    {% for node in site.post.reward.img %}
+                        <td id="{{ node.id }}" class="reward_qr">
+                            <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}">
+                        </td>
+                    {% endfor %}
+                </tr>
+            </table>
+        </div>
         <button 
             id="rewardButton" 
             disable="enable"
@@ -14,17 +25,7 @@
         }">
             {{ site.post.reward.text }}
         </button>
-        <div id="rewardQRs">
-            <table>
-                <tr>
-                    {% for node in site.post.reward.img %}
-                        <td id="{{ node.id }}" class="reward_qr">
-                            <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}">
-                        </td>
-                    {% endfor %}
-                </tr>
-            </table>
-        </div>
+        
     </div>
 
 {% endif %}

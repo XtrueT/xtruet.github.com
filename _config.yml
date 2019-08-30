@@ -251,7 +251,7 @@ post:
     - id: wechat
       src: /public/image/wechatpay.png
     - id: alipay
-      src: /public/image/alipay.jpg
+      src: /public/image/alipay.png
 
 valine:
   enable: true
