@@ -2,6 +2,17 @@
 {% if site.post.reward.enable %}
 
     <div class="reward">
+        <button 
+            id="rewardButton" 
+            disable="enable"
+            onclick="show_reward()">
+            {{ site.post.reward.text }}
+        </button>
+        <script>
+            function show_reward(){
+                document.getElementById('show').style.display = document.getElementById('show').style.display=="none"?"block":"none";
+            }
+        </script>
         <div id="rewardQRs">
             <table>
                 <tr>
@@ -13,19 +24,6 @@
                 </tr>
             </table>
         </div>
-        <button 
-            id="rewardButton" 
-            disable="enable"
-            onclick="
-            var qr = document.getElementById('rewardQRs'); 
-            if (qr.style.display === 'none') {
-                qr.style.display='block';
-            } else {
-                qr.style.display='none';
-        }">
-            {{ site.post.reward.text }}
-        </button>
-        
     </div>
 
 {% endif %}
