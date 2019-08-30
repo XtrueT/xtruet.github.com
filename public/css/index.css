@@ -407,16 +407,17 @@ input#search-input:focus {
 .post{
   background: white;
   padding: 10px;
-  border: aliceblue 1px solid;
+  border: #d7d9db 1px solid;
   transition: .1s;
+  border-radius: 5px;
 }
 .post:hover{
-  -webkit-box-shadow:0px 3px 3px #c8c8c8 ;
-  -moz-box-shadow:0px 3px 3px #c8c8c8 ;
-  box-shadow:0px 3px 3px #c8c8c8 ;
+  -webkit-box-shadow: 0px 3px 3px #c8c8c8;
+  -moz-box-shadow: 0px 3px 3px #c8c8c8;
+  box-shadow: 3px 3px 3px 3px #c8c8c8;
   background: white;
   padding: 10px;
-  border: aliceblue 1px solid;
+  border: #85b3db 1px solid;
   transition: .1s;
 }
 
