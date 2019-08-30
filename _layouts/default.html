@@ -18,6 +18,12 @@
 		We wrap the content to avoid any CSS collisions with our real content. 
 	-->
 
+	<!-- 引入 js  -->
+	<!-- 修复在模版后引入时模版组件里的脚本未引用jQuery -->
+	{% for s in site.script %}
+		<script src="{{ s.src }}"></script>
+	{% endfor %}
+
 	<div class="wrap">			
 		<!-- 全站搜索 -->
 		{% include search.html %}
@@ -66,10 +72,6 @@
 
 	</div>
 	<label for="sidebar-checkbox" class="sidebar-toggle fa fa-bars fa-fw"></label>
-
-	{% for s in site.script %}
-		<script src="{{ s.src }}"></script>
-	{% endfor %}
 
 	{% include footer.html %}
 
