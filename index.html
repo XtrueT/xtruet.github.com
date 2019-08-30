@@ -15,7 +15,7 @@ title: 首页
 
 <section>
 	<header>近期</header>
-	{% for post in site.posts limit:5 %}
+	{% for post in site.posts limit:0 %}
 
 	<p>
 		<a href="{{ post.url }} ">
@@ -29,7 +29,7 @@ title: 首页
 	{% endfor %}
 
 	<p><a href="/archive">更多…</a></p>
-	
+
 	<div class="posts">
 		{% for post in paginator.posts %}
 		<div class="post">
@@ -38,10 +38,7 @@ title: 首页
 					{{ post.title }}
 				</a>
 			</h1>
-
 			<span class="post-date">{{ post.date | date_to_string }}</span>
-
-			{{ post.content }}
 		</div>
 		{% endfor %}
 	</div>
