@@ -7,12 +7,10 @@
 </head>
 <body
 	class="{{ site.body.theme-base }}
-	{% if site.body.layout-reverse %} 
-		layout-reverse
-	{% endif %}
-	{% if site.body.sidebar-overlay %} 
-		sidebar-overlay
-	{% endif %}">
+	{% if site.body.layout-reverse %} layout-reverse {% endif %}
+	{% if site.body.sidebar-overlay %} sidebar-overlay {% endif %}
+	{% if site.body.opacityable %} page-opacity {% endif %}
+	">
 
 	<!-- 
 		Wrap is the content to shift when toggling the sidebar. 
@@ -25,7 +23,7 @@
 		<script src="{{ s.src }}"></script>
 	{% endfor %}
 
-	<div class="wrap  {% if site.body.opacityable %} page-opacity {% endif %} ">			
+	<div class="wrap">			
 		<!-- 全站搜索 -->
 		{% include search.html %}
 		<header class="masthead masthead-title">
@@ -47,7 +45,7 @@
 	<!-- Toggle able sidebar -->	
 	
 
-	<div class="sidebar {% if site.body.opacityable %} page-opacity {% endif %}" id="sidebar">
+	<div class="sidebar" id="sidebar">
 
 		<div class="sidebar-item">
 			{% include avatar.html %}
