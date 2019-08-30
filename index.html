@@ -4,14 +4,14 @@ title: 首页
 ---
 
 <section class="tagcloud-section">
-		<header>所有标签</header>
-		<div class="tagcloud">
-			{% for tag in site.tags %}
-			<a href="tags#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-			{% endfor %}
-		</div>
+	<header>所有标签</header>
+	<div class="tagcloud">
+		{% for tag in site.tags %}
+		<a href="tags#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+		{% endfor %}
+	</div>
 </section>
-<hr/>
+<hr />
 
 <section>
 	<header>近期</header>
@@ -21,16 +21,45 @@ title: 首页
 		<a href="{{ post.url }} ">
 			<span>{{ post.title }}--{{ post.date | date_to_string }}</span>
 		</a>
-	{% if post.description %}
+		{% if post.description %}
 		<span>{{ post.description }}</span>
-	{% endif %}
+		{% endif %}
 	</p>
-{% endfor %}
 
-<p><a href="/archive">更多…</a></p>
+	{% endfor %}
+
+	<p><a href="/archive">更多…</a></p>
+	
+	<div class="posts">
+		{% for post in paginator.posts %}
+		<div class="post">
+			<h1 class="post-title">
+				<a href="{{ site.baseurl }}/{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h1>
+
+			<span class="post-date">{{ post.date | date_to_string }}</span>
+
+			{{ post.content }}
+		</div>
+		{% endfor %}
+	</div>
+
+	<div class="pagination">
+		{% if paginator.next_page %}
+		<a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
+		{% else %}
+		<span class="pagination-item older">Older</span>
+		{% endif %}
+		{% if paginator.previous_page %}
+		{% if paginator.page == 2 %}
+		<a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+		{% else %}
+		<a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
+		{% endif %}
+		{% else %}
+		<span class="pagination-item newer">Newer</span>
+		{% endif %}
+	</div>
 </section>
-
-
-
-
-
