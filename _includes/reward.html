@@ -9,7 +9,10 @@
             {{ site.post.reward.text }}
         </button>
         <div id="rewardQRs">
-            <table>
+        </div>
+        <script>
+            function show_reward(){
+                document.getElementById('rewardQRs').innerHTML = `<table>
                 <tr>
                     {% for node in site.post.reward.img %}
                         <td id="{{ node.id }}" class="reward_qr">
@@ -17,12 +20,9 @@
                         </td>
                     {% endfor %}
                 </tr>
-            </table>
-        </div>
-        <script>
-                function show_reward(){
-                    document.getElementById('rewardQRs').style.display = document.getElementById('rewardQRs').style.display==="none"?"block":"none";
-                }
+                </table>`;
+                document.getElementById('rewardQRs').style.display = document.getElementById('rewardQRs').style.display==="none"?"block":"none";
+            }
         </script>
     </div>
 
