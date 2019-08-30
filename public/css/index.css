@@ -16,9 +16,9 @@ h3 {
 }
 
 .content {
-  -webkit-box-shadow:0px 3px 3px #c8c8c8 ;
-  -moz-box-shadow:0px 3px 3px #c8c8c8 ;
-  box-shadow:0px 3px 3px #c8c8c8 ;
+  -webkit-box-shadow:3px 3px 3px 3px #c8c8c8 ;
+  -moz-box-shadow:3px 3px 3px 3px #c8c8c8 ;
+  box-shadow:3px 3px 3px 3px #c8c8c8 ;
   margin-top: 0px;
   padding-top: 10px;
   background-color:#fff;
@@ -393,7 +393,7 @@ input#search-input:focus {
   display: none;
   width: 35px;
   height: 35px;
-  background: #aa759f;
+  background: #d3c6d0;
   position:fixed;
   bottom: 5%;
   right: 5%;
@@ -412,8 +412,8 @@ input#search-input:focus {
   border-radius: 5px;
 }
 .post:hover{
-  -webkit-box-shadow: 0px 3px 3px #c8c8c8;
-  -moz-box-shadow: 0px 3px 3px #c8c8c8;
+  -webkit-box-shadow: 3px 3px 3px 3px #c8c8c8;
+  -moz-box-shadow: 3px 3px 3px 3px #c8c8c8;
   box-shadow: 3px 3px 3px 3px #c8c8c8;
   background: white;
   padding: 10px;
