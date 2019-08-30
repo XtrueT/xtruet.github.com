@@ -25,7 +25,7 @@
 		<script src="{{ s.src }}"></script>
 	{% endfor %}
 
-	<div class="wrap">			
+	<div class="wrap" {% if site.body.opacityable %} style=" opacity:'{{site.body.opacity}}';" {% endif %}>			
 		<!-- 全站搜索 -->
 		{% include search.html %}
 		<header class="masthead masthead-title">
@@ -47,7 +47,7 @@
 	<!-- Toggle able sidebar -->	
 	
 
-	<div class="sidebar" id="sidebar">
+	<div class="sidebar" id="sidebar" {% if site.body.opacityable %} style=" opacity:'{{site.body.opacity}}';" {% endif %}>
 
 		<div class="sidebar-item">
 			{% include avatar.html %}
