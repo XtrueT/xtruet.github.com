@@ -6,7 +6,7 @@ paginate: 5
 permalink: /posts/:categories/:title # 博文目录
 
 SEO:
-- SEOTitle: 霁的博客 | 一眼离花的博客 
+- description: 霁的博客 | 一眼离花的博客 
 - keyword: "BY, BY Blog, XtrueT的博客, 学习, 日常, 借鉴"
 
 head: # 删改前确定知道自己在做什么
