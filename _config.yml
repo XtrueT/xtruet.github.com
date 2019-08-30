@@ -3,7 +3,8 @@ url: http://xtruet.github.io
 #baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
 author: 霁
 description: 霁的博客 | 一眼离花的博客 | XtrueT的博客
-keyword: "BY, BY Blog, XtrueT的博客, 学习, 日常, 借鉴" 
+keyword: "BY, BY Blog, XtrueT的博客, 学习, 日常, 借鉴"
+background-img: /public/image/bgimg.jpg
 paginate: 5
 permalink: /posts/:categories/:title # 博文目录
 
