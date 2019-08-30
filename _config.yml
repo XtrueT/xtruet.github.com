@@ -197,8 +197,8 @@ simple_jekyll_search:
 
 jekyll_table_of_contents:
   enable: true
-  src: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.js
-  # src: /public/js/toc.js
+  # src: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.js
+  src: /public/js/toc.js
 
 busuanzi:
   enable: true
