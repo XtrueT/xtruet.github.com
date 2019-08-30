@@ -14,27 +14,12 @@ title: 首页
 <hr />
 
 <section>
-	<header>近期</header>
-	{% for post in site.posts limit:0 %}
-
-	<p>
-		<a href="{{ post.url }} ">
-			<span>{{ post.title }}--{{ post.date | date_to_string }}</span>
-		</a>
-		{% if post.description %}
-		<span>{{ post.description }}</span>
-		{% endif %}
-	</p>
-
-	{% endfor %}
-
-	<p><a href="/archive">更多…</a></p>
-
+	<header>文章</header>
 	<div class="posts">
 		{% for post in paginator.posts %}
 		<div class="post">
 			<h1 class="post-title">
-				<a href="{{ site.baseurl }}/{{ post.url }}">
+				<a href="{{ post.url }}">
 					{{ post.title }}
 				</a>
 			</h1>
@@ -57,6 +42,29 @@ title: 首页
 		{% endif %}
 		{% else %}
 		<span class="pagination-item newer">Newer</span>
+		{% endif %}
+	</div>
+
+	<!-- 遍历分页后的文章 -->
+	{% for post in paginator.posts %}
+	<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+	<p class="author">
+		<span class="date">{{ post.date }}</span>
+	</p>
+	{% endfor %}
+
+	<!-- 分页链接 -->
+	<div class="pagination">
+		{% if paginator.previous_page %}
+		<a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+		{% else %}
+		<span class="previous">Previous</span>
+		{% endif %}
+		<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+		{% if paginator.next_page %}
+		<a href="/page{{ paginator.next_page }}" class="next">Next</a>
+		{% else %}
+		<span class="next ">Next</span>
 		{% endif %}
 	</div>
 </section>
