@@ -1,43 +1,45 @@
 <button id="backTopBtn">Top</button>
 <script>
-    window.onload=function(){
-    var obtn= document.getElementById("backTopBtn");
-    //文档高度
-    var clientHeight=document.documentElement.clientHeight;
-    var time=null;
-    var isTop=true,cancelScroll = false;
-    console.log(clientHeight);
-    window.onscroll = function(){
+    window.onload = function () {
+        var obtn = document.getElementById("backTopBtn");
+        //文档高度
+        var client_height = document.documentElement.clientHeight;
+        var time = null;
+        var isTop = true,
+            cancelScroll = false;
+        console.log(client_height);
+        
+        window.onscroll = function () {
 
-        var osTop=document.documentElement.scrollTop||document.body.scrollTop;
-        console.log(osTop);
-        if(osTop>=clientHeight){
-            obtn.style.display='block';
-        }else{
-            obtn.style.display='none';
+            var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+            console.log(osTop);
+            if (osTop >= client_height) {
+                obtn.style.display = 'block';
+            } else {
+                obtn.style.display = 'none';
+            }
+            if (!isTop) {
+                clearInterval(time);
+            }
+            isTop = false;
         }
-        if(!isTop){
-            clearInterval(time);
-        }
-        isTop=false;
-    }
 
-    obtn.onclick=function(){
-        //点击事件
-        if(cancelScroll == false) {
-            time=setInterval(function(){
-                var osTop=document.documentElement.scrollTop||document.body.scrollTop;
-                var ispeed=Math.floor(-osTop/10);
-                document.documentElement.scrollTop=document.body.scrollTop=osTop+ispeed;
-                isTop=true;
-                if(osTop==0){
-                    clearInterval(time);
-                }
-            },30);
-        }else {
-            clearInterval(time);
-            cancelScroll = true;
+        obtn.onclick = function () {
+            //点击事件
+            if (cancelScroll == false) {
+                time = setInterval(function () {
+                    var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    var ispeed = Math.floor(-osTop / 10);
+                    document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed;
+                    isTop = true;
+                    if (osTop == 0) {
+                        clearInterval(time);
+                    }
+                }, 30);
+            } else {
+                clearInterval(time);
+                cancelScroll = true;
+            }
         }
     }
-}
 </script>
