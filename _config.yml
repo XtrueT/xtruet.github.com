@@ -188,7 +188,7 @@ sidebar:
   nav:
   - title: '<i class="fas fa-home fa-fw"></i> 首页'
     href: /
-  - title: '<i class="fab fa-user fa-fw"></i> 关于'
+  - title: '<i class="fas fa-user-o fa-fw"></i> 关于'
     href: /about
   - title: '<i class="fas fa-comments fa-fw"></i> 留言'
     href: /comments
@@ -196,7 +196,7 @@ sidebar:
     href: /tags
   - title: '<i class="fas fa-archive fa-fw"></i> 归档'
     href: /archive
-  - title: '<i class="fas fa-readme fa-fw"></i> README'
+  - title: '<i class="fab fa-readme fa-fw"></i> README'
     href: /README
 
 simple_jekyll_search:
