@@ -1,3 +1,7 @@
+---
+layout: default
+title: README
+---
 # XtrueT.github.com
 
 ## 开始
@@ -48,22 +52,22 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 - [x] 加入不蒜子统计
 - [x] <i class="fab fa-font-awesome"></i> Font Awesome
 - [x] 全站搜索
-- [ ] 移植[原博客的ribbon动态背景](https://github.com/theme-next/theme-next-canvas-ribbon)
 - [x] 调整代码块风格，并加上代码选中按钮
 - [x] 加入可以自动展开、标号的目录
   - [x] 目录标号
   - [ ] 自动展开
 - [ ] mermaid
   - [ ] Markdown代码扩展
-- [ ] $\KaTeX$
-- [ ] Live2D
-  - [ ] 加上切换Live2D显示/关闭的按钮
-  - [ ] 使用自己搭建的Live2D后端API
-    - [ ] 收集一些Live2D Model
+- [ ] 界面
+  - [x] sidebar微调
+  - [x] sidebar搜索分离
+  - [x] 首页整改
+  - [x] 文章分页
+  - [x] 引入每日必应图作为网页背景图
 
 ## 历程
 
-### 正在进行 v2.0.3
+### 正在进行 v2.0.4
 
 #### TodoList
 
@@ -74,18 +78,22 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
   - [ ] prismjs
 - [x] 升级fontaswsomev4.7.0至fontawesome-freev5.10.1，支持的图标数量由675增加至1535
 - [x] 界面调整
-  - [ ] 正文部分增加背景，从而减少动态ribbon背景的阅读体验
   - [x] sidebar微调
   - [x] sidebar搜索分离
   - [x] 首页整改
   - [x] 文章分页
+  - [x] 引入每日必应图作为网页背景图
 
 #### 已知bug
 
 - 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
 - 可将内容区块移动自sidebar下修复，但是我并不想怎么做，暂时就先这样
 - fontaswsome的rss图标和rss-square图标均失效，暂时去掉博客页面中的rss图标
-- 开启背景图时，返回顶部失效
+
+### 2019-08-28 v2.0.3
+
+- window.onscroll 不触发的原因和解决
+-并且出现 onscroll 事件不触发的情况是html和body同时设置{overflow:auto;height:100%}导致的,两句css代码是冲突的，
 
 ### 2019-08-28 v2.0.2
 
