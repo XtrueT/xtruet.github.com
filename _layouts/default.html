@@ -22,6 +22,8 @@
 	{% for s in site.script %}
 		<script src="{{ s.src }}"></script>
 	{% endfor %}
+	
+	{% include back_top.html %}
 
 	<div class="wrap">			
 		<!-- 全站搜索 -->
@@ -74,7 +76,6 @@
 
 	{% include footer.html %}
 
-	{% include back_top.html %}
 </body>
 
 </html>
