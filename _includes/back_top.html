@@ -1,6 +1,6 @@
-<button id="backTopBtn" style="display: none">Top</button>
+<button id="backTopBtn">Top</button>
 <script>
-    $(document).ready( function () {
+    window.onload = function () {
         var obtn = document.getElementById("backTopBtn");
         //文档高度
         var client_height = document.documentElement.clientHeight;
@@ -9,7 +9,7 @@
             cancelScroll = false;
         console.log(client_height);
         
-        $(window).scroll(function () {
+        window.onscroll = function () {
 
             var osTop = document.documentElement.scrollTop || document.body.scrollTop;
             console.log(osTop);
@@ -22,7 +22,7 @@
                 clearInterval(time);
             }
             isTop = false;
-        });
+        }
 
         obtn.onclick = function () {
             //点击事件
@@ -41,5 +41,5 @@
                 cancelScroll = true;
             }
         }
-    });
+    }
 </script>
