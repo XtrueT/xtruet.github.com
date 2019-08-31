@@ -1,3 +1,4 @@
+<button id="backTopBtn">Top</button>
 <script>
     window.onload=function(){
     var obtn= document.getElementById("backTopBtn");
@@ -5,10 +6,11 @@
     var clientHeight=document.documentElement.clientHeight;
     var time=null;
     var isTop=true,cancelScroll = false;
-
+    console.log(clientHeight);
     window.onscroll = function(){
 
         var osTop=document.documentElement.scrollTop||document.body.scrollTop;
+        console.log(osTop);
         if(osTop>=clientHeight){
             obtn.style.display='block';
         }else{
