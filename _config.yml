@@ -188,7 +188,7 @@ sidebar:
   nav:
   - title: '<i class="fas fa-home fa-fw"></i> 首页'
     href: /
-  - title: '<i class="fas fa-user-o fa-fw"></i> 关于'
+  - title: '<i class="fas fa-id-badge fa-fw"></i> 关于'
     href: /about
   - title: '<i class="fas fa-comments fa-fw"></i> 留言'
     href: /comments
