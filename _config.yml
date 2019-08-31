@@ -108,8 +108,8 @@ body:
   theme-base: theme-base-0e # 可选的值08~0f
   layout-reverse: false # 开启后sidebar在右边，反之左边
   sidebar-overlay: false # 开启后正文不随sidebar移动而移动 #此选项现失效，待修，当前这个选项仅能对sidebar的阴影产生影响
-  bgimg : false # 开启背景图
-  background-img: /public/image/bgimg.jpg
+  bgimg : true # 开启背景图
+  background-img: https://api.dujin.org/bing/1920.php
   opacityable: true #开启透明度 越小越透明（建议0.1-0.9）需去head.html 指定
 
 
@@ -158,7 +158,8 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
 sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
-    img: /public/image/default.jpg # 头像的地址
+    # img: /public/image/default.jpg # 头像的地址
+    img: https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/pp.1.cd298366.xLed3zwhuhnRsSFcnjqzJQ.jpg?1567248569
     info: #<p></p> # 头像背后的信息
   description: 没有梦想的咸鱼
   social:
