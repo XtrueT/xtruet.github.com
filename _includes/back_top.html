@@ -7,12 +7,12 @@
         var time = null;
         var isTop = true,
             cancelScroll = false;
-        console.log(client_height);
+        // console.log(client_height);
         
         window.onscroll = function () {
 
             var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-            console.log(osTop);
+            // console.log(osTop);
             if (osTop >= document.documentElement.clientHeight) {
                 obtn.style.display = 'block';
             } else {
