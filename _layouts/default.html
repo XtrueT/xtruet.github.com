@@ -4,6 +4,7 @@
 	<meta name="description" content="{{ site.description }}">
     <meta name="keywords"  content="{{ site.keyword }}">
 	{% include head.html %}
+	{% include back_top.html %}
 </head>
 <body
 	class="{{ site.body.theme-base }}
@@ -22,9 +23,7 @@
 	{% for s in site.script %}
 		<script src="{{ s.src }}"></script>
 	{% endfor %}
-	
-	{% include back_top.html %}
-
+	<button id="backTopBtn">Top</button>
 	<div class="wrap">			
 		<!-- 全站搜索 -->
 		{% include search.html %}

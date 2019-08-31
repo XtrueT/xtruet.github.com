@@ -390,7 +390,7 @@ input#search-input:focus {
 
 #backTopBtn{
   text-align: center;
-  /* display: none; */
+  display: none;
   width: 35px;
   height: 35px;
   background: #aa759f;
