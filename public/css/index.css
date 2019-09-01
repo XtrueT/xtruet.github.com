@@ -420,4 +420,6 @@ input#search-input:focus {
   border: #85b3db 1px solid;
   transition: .1s;
 }
-
+.posts{
+  padding: 10px;
+}
