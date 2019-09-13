@@ -3,7 +3,7 @@ url: http://xtruet.github.io
 #baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
 author: 霁
 description: 霁的博客 | 一眼离花的博客 | XtrueT的博客
-keyword: "BY, BY Blog, XtrueT的博客, 学习, 日常, 借鉴"
+keyword: "XtrueT的博客, 学习"
 paginate: 5
 permalink: /posts/:categories/:title # 博文目录
 
@@ -161,7 +161,7 @@ sidebar:
     # img: /public/image/default.jpg # 头像的地址
     img: https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/pp.1.cd298366.xLed3zwhuhnRsSFcnjqzJQ.jpg?1567248569
     info: #<p></p> # 头像背后的信息
-  description: 没有梦想的咸鱼
+  description: 玉树临风
   social:
 #  - title: rss
 #    href: /atom.xml

@@ -2,7 +2,8 @@
 layout: default
 title: README
 ---
-# XtrueT.github.com
+
+# [博客地址](https://xtruet.github.io)
 
 ## 开始
 
