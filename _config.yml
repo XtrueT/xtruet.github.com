@@ -7,102 +7,7 @@ keyword: "XtrueT的博客, 学习"
 paginate: 5
 permalink: /posts/:categories/:title # 博文目录
 
-
-head: # 删改前确定知道自己在做什么
-- tag: meta # Enable responsiveness on mobile devices
-  var:
-  - key: name
-    value: viewport
-  - key: content
-    value: width=device-width, initial-scale=1.0, maximum-scale=1
-- tag: meta
-  var:
-  - key: http-equiv
-    value: X-UA-Compatible
-  - key: content
-    value: IE=edge
-- tag: meta
-  var:
-  - key: http-equiv
-    value: content-type
-  - key: content
-    value: 'text/html; charset=utf-8'
-- tag: meta # google站点验证
-  var:
-  - key: name
-    value: google-site-verification
-  - key: content
-    value: 
-- tag: meta # baidu站点验证
-  var:
-  - key: name
-    value: baidu-site-verification
-  - key: content
-    value: 
-- tag: meta # yandex站点验证
-  var:
-  - key: name
-    value: yandex-verification
-  - key: content
-    value: 
-- tag: link
-  var:
-  - key: rel
-    value: profile
-  - key: href
-    value: //gmpg.org/xfn/11
-- tag: link # rss
-  var:
-  - key: rel
-    value: alternate
-  - key: href
-    value: /atom.xml
-  - key: title
-    value: RSS
-  - key: type
-    value: application/rss+xml
-- tag: link # 网站大图标，我偷懒直接用gravatar了，也可以存在/public里面
-  var:
-  - key: rel
-    value: apple-touch-icon-precomposed
-  - key: href
-    value: 
-- tag: link # 小图标，同上
-  var:
-  - key: rel
-    value: 'shortcut icon'
-  - key: href
-    value: 
-- tag: link # 下面是博客的css，有些插件的css是单独在插件里引用的，假如需要自己的css可以仿照去加在后面。无脑cdn加速了。
-  var:
-  - key: rel
-    value: stylesheet
-  - key: href
-    value: /public/css/poole.css 
-- tag: link
-  var:
-  - key: rel
-    value: stylesheet
-  - key: href
-    value: /public/css/syntax.css
-- tag: link
-  var:
-  - key: rel
-    value: stylesheet
-  - key: href
-    value: /public/css/lanyon.css
-- tag: link
-  var:
-  - key: rel
-    value: stylesheet
-  - key: href
-    value: /public/css/index.css
-- tag: link
-  var:
-  - key: rel
-    value: stylesheet
-  - key: href
-    value: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css # 在https://fontawesome.com/icons 查看支持的图标
+# 在https://fontawesome.com/icons 查看支持的图标
 
 body:
   theme-base: theme-base-0e # 可选的值08~0f
@@ -114,7 +19,7 @@ body:
 
 
 script: # 需要在正文后调用的脚本
-- src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
+# - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
 # - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
 - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js

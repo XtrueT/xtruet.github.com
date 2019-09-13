@@ -18,8 +18,13 @@
 
 	<script type="text/javascript" src="/public/js/options.js"></script>
 	<script type="text/javascript" src="/public/js/main.js"></script>
-	<script type="text/javascript" src="/public/js/prism.js"></script>
-	<script type="text/javascript" src="/public/js/baidu_push.js"></script>
+
+	{% for s in site.script %}
+
+		<script src="{{ s.src }}"></script>
+
+	{% endfor %}
+	
 	<div class="ace-wrapper">
 
 		{% include top_nav.html %}
