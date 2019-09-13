@@ -85,6 +85,7 @@ a {
 
 a:hover {
     color: #5bc0de;
+    text-decoration: none;
 }
 
 /*  Typography */

@@ -1,6 +1,7 @@
 {% if site.sidebar.avatar.enable %}
 <article id="ace-card" class="ace-card bg-primary hidden-sm hidden-xs">
-        <div class="ace-card-inner text-center">
+        
+        <!-- <div class="ace-card-inner text-center">
             <img class="avatar avatar-195" src="{{ site.sidebar.avatar.img }}" width="195" height="195"
                 alt="">
             <h1>{{ site.author }}</h1>
@@ -10,7 +11,7 @@
                     <li><a href="{{ s.href }}" title="{{ s.title }}" ><span class="{{ s.class }}"></span></a></li>
                 {% endfor %}
             </ul>
-        </div>
+        </div> -->
 
         <footer class="ace-card-footer">
             <!-- 标签云 -->
@@ -25,7 +26,10 @@
                         {% endfor %}
                     </div>
             </section>
-            <a class="btn btn-lg btn-block btn-thin btn-upper " href="#">View</a>
+            <!-- 全站搜索  -->
+            {% include search.html %}
+
+            <a class="btn btn-lg btn-block btn-thin btn-upper " href="//github.com/XtrueT/xtruet.github.com">View On GitHub</a>
         </footer>
 </article>
 {% endif %}

@@ -2,12 +2,13 @@
 {% if site.post.reward.enable %}
 
     <div class="reward">
-        <button 
+        <a
+            class="btn btn-lg btn-block btn-thin btn-upper " 
             id="rewardButton" 
             disable="enable"
             onclick="show_reward()">
             {{ site.post.reward.text }}
-        </button>
+        </a>
         <div id="rewardQRs" style="display: none">
             <table>
                 <tr>
