@@ -6543,6 +6543,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
     max-height: 100vh;
     top: 0px;
+    min-height: 90vh;
 }
 #toc{
     display: block;
