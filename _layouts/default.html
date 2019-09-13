@@ -36,7 +36,7 @@
 		{% include sidebar.html %}
 		
 		<!-- 背景彩带svg -->
-		{% if !site.body.enable %}
+		{% if site.body.enable == false %}
 		<svg id="ace-bg-shape-1" class="hidden-sm hidden-xs" height="519" width="758">
 			<polygon points="0,455,693,352,173,0,92,0,0,71"
 				style="fill:#d2d2d2;stroke:purple;stroke-width:0; opacity: 0.5">
