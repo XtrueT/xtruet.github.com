@@ -13,11 +13,27 @@
         </div>
 
         <footer class="ace-card-footer">
+            <!-- 标签云 -->
+
+            <section id="tag_cloud-2" class="widget widget_tag_cloud">
+                    <h2 class="widget-title">Tags</h2>
+                    <div class="tagcloud">
+                        {% for tag in site.tags %}
+                            <a href="tags/#{{ tag[0] }}"  rel="{{ tag[1].size }}" class="tag-link-5 tag-link-position-1" title="{{ tag[0] }}"  style="font-size: 1em;">
+                                {{ tag[0] }}
+                            </a>
+                        {% endfor %}
+                    </div>
+            </section>
+            <section class="widget"> 
             <!-- 统计运行时间格式化 -->
 			{% include time.html %}
+            </section>
 
-			<!-- 统计浏览量和访问人数 -->
+            <section class="widget"> 
+            <!-- 统计浏览量和访问人数 -->
 			{% include busuanzi.html %}
+            </section>
             <a class="btn btn-lg btn-block btn-thin btn-upper " href="#">View</a>
         </footer>
 </article>

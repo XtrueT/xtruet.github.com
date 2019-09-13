@@ -2,5 +2,32 @@
 layout: default
 title: 留言
 ---
-{% include valine.html %}
+{% include index_card.html %}
+
+<div id="ace-content" class="ace-container-shift">
+        <div class="ace-container">
+            <div class="ace-paper-stock">
+                <main class="ace-paper clearfix">
+    
+                    <div class="ace-paper-cont clear-mrg">
+    
+                        <!-- START: PAGE CONTENT -->
+    
+                        <header class="page-header padd-box">
+                            <h1 class="title-lg text-upper">{{page.title}}</h1>
+                        </header>
+                        <section class="section clear-mrg">
+                            <div class="padd-box-sm clear-mrg">
+                            {% include valine.html %}
+                            </div><!-- .padd-box-sm -->
+                        </section><!-- .section -->
+                        <!-- END: PAGE CONTENT -->
+    
+                    </div><!-- .ace-paper-cont -->
+                </main><!-- .ace-paper -->
+            </div><!-- .ace-paper-stock -->
+    
+        </div><!-- .ace-container -->
+    </div><!-- #ace-content -->
+
 
