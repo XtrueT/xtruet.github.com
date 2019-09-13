@@ -1,6 +1,11 @@
 <!-- 生成目录 -->
 {% if site.jekyll_table_of_contents.enable %}
-    <div id="toc"></div>
+    <div id="toc" 
+    style="display: block;
+    line-height: initial;
+    list-style: none;
+    text-align: left;">
+    </div>
     <script src="{{ site.jekyll_table_of_contents.src }}"></script>
     <script>
         $(document).ready(function () {

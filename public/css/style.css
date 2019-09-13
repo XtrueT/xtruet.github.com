@@ -5668,7 +5668,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post-header-info a:hover,
 .post-footer-info a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .post-footer-info {
@@ -6546,10 +6546,4 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 100vh;
     top: 0px;
     min-height: 90vh;
-}
-#toc{
-    display: block;
-    line-height: initial;
-    list-style: none;
-    text-align: left;
 }

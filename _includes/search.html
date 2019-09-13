@@ -12,14 +12,14 @@
             <span class="ace-icon ace-icon-search"></span>
         </button>
     </div>    
-    <div id="results-container"></div>
+    <div id="results-container" style="list-style: none;padding: 10px;background: #f3f3f3;margin-top: 5px;"> </div>
     <script src="{{ site.simple_jekyll_search.src }}"></script>
     <script>
     SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: '{{ site.simple_jekyll_search.json }}',
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>', // 文章列表模板
+        searchResultTemplate: '<li style="padding: 5px;" ><a href="{url}" title="{title}">{title}</a></li>', // 文章列表模板
         noResultsText: '没有搜索到文章', // 无搜索数据提示语
         limit: 20, // 返回最大文章数
         fuzzy: true // 是否模糊匹配

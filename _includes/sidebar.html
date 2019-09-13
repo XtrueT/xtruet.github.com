@@ -6,7 +6,7 @@
 
         <div id="ace-sidebar-inner">
             
-            <nav id="ace-main-nav-sm" class="visible-xs visible-sm text-center">
+            <nav id="ace-main-nav-sm" class="visible-xs visible-sm text-left">
                 <ul class="clear-list">
                     {% include nav.html %}
                 </ul>
@@ -29,15 +29,11 @@
             </article><!-- #ace-card -->
 
             <aside class="widget-area">
-                
-                <section class="widget text-center"> 
-                        <!-- 统计运行时间格式化 -->
-                {% include time.html %}
-                </section>
-            
-                <section class="widget text-center"> 
-                <!-- 统计浏览量和访问人数 -->
-                {% include busuanzi.html %}
+                <!-- 全站搜索  -->
+                {% include search.html %}
+                <!-- 目录 -->
+                <section class="widget hidden-md hidden-lg"> 
+                    {% include toc.html%}
                 </section>
             </aside>
 
