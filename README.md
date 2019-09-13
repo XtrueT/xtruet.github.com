@@ -60,7 +60,7 @@ title: README
 ### 正在进行 v3.0.1
 
 #### TodoList
-
+- [ ] 统一 js 和 图标 
 - [x] 界面调整
   - [x] sidebar微调
   - [x] sidebar搜索分离
