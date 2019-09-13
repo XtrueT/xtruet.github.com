@@ -1,7 +1,7 @@
 <!-- 文章信息 -->
 {% if site.post.meta.enable %}
 
-    <small class="post-date">
+    <p class="post-header-info">
 <!-- 时间 -->
     {% if site.post.meta.date %}
         <i class="fas fa-calendar-day"></i>
@@ -27,6 +27,6 @@
         </span>
     {% endif %}
         {{ site.post.meta.copyright }}
-    </small>
+    </p>
 
 {% endif %}

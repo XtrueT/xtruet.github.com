@@ -29,8 +29,7 @@ title: 标签
                             <div class="pf-grid">
                                 <div class="pf-grid-sizer"></div><!-- used for sizing -->
                                 {% for tag in site.tags %}
-                    
-                                <section>
+                                <section class="pf-grid-item .{{ tag[0] }}">
                                     <header>
                                         <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
                                     </header>
