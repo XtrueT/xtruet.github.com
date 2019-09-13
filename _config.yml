@@ -12,7 +12,7 @@ permalink: /posts/:categories/:title # 博文目录
 body:
   enable: true # 开启背景图
   background-img: https://api.dujin.org/bing/1920.php
-  bg-style: ' style =" background: url("{{site.body.background-img}}") no-repeat fixed; background-size: 100% 100%; position: relative;opacity:0.9;" '
+  bg-style: 'style = " background: url({{site.body.background-img}}) no-repeat fixed;background-size: 100% 100%;position:relative;opacity:0.9;"'
 
 
 script: # 需要调用的脚本
