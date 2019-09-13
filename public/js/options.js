@@ -7,7 +7,7 @@ var aceOptions = {
     animations: true,
 
     nav: {
-        height: 'auto', // use 'auto' and some fixed value with px or em 480
+        height: 'fixed', // use 'auto' and some fixed value with px or em 480
         arrow: false
     },
 
@@ -24,7 +24,7 @@ var ace = {
     html: '',
     body: '',
     mobile: '',
-    themeColor: '',
+    themeColor: '#000',
 
     header: {
         head: '',

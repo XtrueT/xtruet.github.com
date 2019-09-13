@@ -80,10 +80,11 @@ a {
     -webkit-hyphens: auto;
     hyphens: auto;
     transition: all 0.2s ease-out;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
+    color: #5bc0de;
 }
 
 /*  Typography */
