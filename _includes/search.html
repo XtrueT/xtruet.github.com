@@ -15,12 +15,16 @@
     <script src="{{ site.simple_jekyll_search.src }}"></script>
     <script>
     SimpleJekyllSearch({
-        json: '{{ site.simple_jekyll_search.json }}',
         searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container')
-    });
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.simple_jekyll_search.json }}',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>', // 文章列表模板
+        noResultsText: '没有搜索到文章', // 无搜索数据提示语
+        limit: 20, // 返回最大文章数
+        fuzzy: true // 是否模糊匹配
+    })
     </script>
-    <div id="results-container search-result "></div>
+    <div id="results-container"></div>
 
 </section>  
 {% endif %}

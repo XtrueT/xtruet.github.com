@@ -176,9 +176,9 @@
         /**
          * 9.0 - Code Highlight
          */
-        $('pre').each(function (i, block) {
-            hljs.highlightBlock(block);
-        });
+        // $('pre').each(function (i, block) {
+        //     hljs.highlightBlock(block);
+        // });
 
         /**
          * 10.0 - Ace Alerts
