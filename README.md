@@ -13,7 +13,6 @@ title: README
 
 除特别声明或转载外，所有博文采用[署名-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)协议进行许可。
 
-博客基于[MIT License](https://github.com/wu-kan/wu-kan.github.io/blob/master/LICENSE)开源于[GitHub](https://github.com/wu-kan/wu-kan.github.io)。
 
 ## 致谢
 
@@ -23,7 +22,6 @@ title: README
 
 由[jekyll/jekyll](https://github.com/jekyll/jekyll)驱动，感谢。
 
-基于[poole/lanyon](https://github.com/poole/lanyon)主题进行修改，感谢。
 
 使用了[jsdelivr](https://www.jsdelivr.com/)提供的CDN加速服务，感谢。
 
@@ -39,15 +37,10 @@ title: README
 
 代码高亮及插件使用了[PrismJS](https://prismjs.com/)，感谢。
 
-Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/live2d-widget)，感谢。
-
-使用了[leopardpan/leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)的头像翻转效果，感谢。
 
 ## 功能
 
 - [x] 完成博客文章标签页
-- [ ] 完成博客文章分类页（分类暂时和标签没区别）
-- [ ] 重写博客首页，做一个有意思的封面，不再显示文章
 - [x] 加入评论系统，暂时考虑用valine+leancloud实现
   - [x] 基于valine的阅读量统计
 - [x] 加入不蒜子统计
@@ -57,44 +50,40 @@ Live2D基于[stevenjoezhang/live2d-widget](https://github.com/stevenjoezhang/liv
 - [x] 加入可以自动展开、标号的目录
   - [x] 目录标号
   - [ ] 自动展开
-- [ ] mermaid
-  - [ ] Markdown代码扩展
 - [ ] 界面
-  - [x] sidebar微调
-  - [x] sidebar搜索分离
   - [x] 首页整改
   - [x] 文章分页
   - [x] 引入每日必应图作为网页背景图
 
 ## 历程
 
-### 正在进行 v2.0.4
+### 正在进行 v3.0.1
 
 #### TodoList
 
-- [ ] 所有脚本和插件JSLoader化，增加移植性和访问速度
-  - [ ] katex
-  - [ ] mermaid
-  - [x] baidu_push
-  - [ ] prismjs
-- [x] 升级fontaswsomev4.7.0至fontawesome-freev5.10.1，支持的图标数量由675增加至1535
 - [x] 界面调整
   - [x] sidebar微调
   - [x] sidebar搜索分离
   - [x] 首页整改
   - [x] 文章分页
   - [x] 引入每日必应图作为网页背景图
+  - [ ] 统计每个Tag 的文章数
+  - [ ] 添加个人信息页面
 
 #### 已知bug
+- prismjs 代码添加行数失效
+- 移动设备上部分浏览器侧边栏卡顿严重
 
-- 配置选项body.overlay失效，正文不跟随侧边栏移动。产生原因是在page中为了加快页面内容显示，将正文移动至sidebar上面
-- 可将内容区块移动自sidebar下修复，但是我并不想怎么做，暂时就先这样
-- fontaswsome的rss图标和rss-square图标均失效，暂时去掉博客页面中的rss图标
+### 2019-09-13 v3.0.0
+
+- 更换模版
+- 修改目录
+- 修改搜索
 
 ### 2019-08-28 v2.0.3
 
 - window.onscroll 不触发的原因和解决
--并且出现 onscroll 事件不触发的情况是html和body同时设置{overflow:auto;height:100%}导致的,两句css代码是冲突的，
+- 并且出现 onscroll 事件不触发的情况是html和body同时设置{overflow:auto;height:100%}导致的,两句css代码是冲突的，
 
 ### 2019-08-28 v2.0.2
 
