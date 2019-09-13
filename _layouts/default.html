@@ -5,7 +5,7 @@
 	{% include head.html %}
 </head>
 
-<body class="category" {%if body.enable %} {{body.bg-style}} {% endif% }>
+<body class="category" {%if body.enable %} {{body.bg-style}} {% endif% } >
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="/public/js/vendor/jquery-1.12.4.min.js"></script>
@@ -23,9 +23,7 @@
 	<script type="text/javascript" src="/public/js/main.js"></script>
 
 	{% for s in site.script %}
-
 		<script src="{{ s.src }}"></script>
-
 	{% endfor %}
 	
 	<div class="ace-wrapper">
@@ -48,8 +46,8 @@
 		</svg>
 	</div>
 	<!-- .ace-wrapper -->
-
 	{% include back_top.html %}
+	
 	{% include footer.html %}
 </body>
 </html>

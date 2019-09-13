@@ -12,28 +12,17 @@ permalink: /posts/:categories/:title # 博文目录
 body:
   enable: true # 开启背景图
   background-img: https://api.dujin.org/bing/1920.php
-  bg-style: ' style =" background: url("{{site.body.background-img}}") no-repeat fixed;
-		background-size: 100% 100%;
-		position: relative;
-		opacity:0.9;" '
+  bg-style: ' style =" background: url("{{site.body.background-img}}") no-repeat fixed; background-size: 100% 100%; position: relative;opacity:0.9;" '
 
 
-script: # 需要在正文后调用的脚本
-# - src: //cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js # jQuery
-# - src: //cdn.jsdelivr.net/npm/ribbon.js/dist/ribbon.min.js # 彩带背景
+script: # 需要调用的脚本
 - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
-# - src: //cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js # live2d
 - src: /public/js/prism.js
 - src: /public/js/baidu_push.js
 
-# mermaid: # https://github.com/knsv/mermaid
-#   enable: true
-#   src: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
-#   stylesheet: //cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css
-#   markdown_expand: true
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
@@ -53,24 +42,13 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
         enable: true
         innerHTML: 选中
 
-# katex: # KaTeX
-#   enable: true
-#   stylesheet: //cdn.jsdelivr.net/npm/katex/dist/katex.min.css
-#   src: //cdn.jsdelivr.net/npm/katex/dist/katex.min.js
-#   auto-render: //cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js
-#   delimiters: true # 开启行内公式$\KaTeX$支持
 
 sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
-    # img: /public/image/default.jpg # 头像的地址
     img: https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/pp.1.cd298366.xLed3zwhuhnRsSFcnjqzJQ.jpg?1567248569
-    info: #<p></p> # 头像背后的信息
   description: 玉树临风
   social:
-#  - title: rss
-#    href: /atom.xml
-#    class: 'fas fa-rss fa-fw' # rss图标加载不了不知道为什么
   - title: 2640272466@qq.com # email
     href: mailto:2640272466@qq.com
     class: 'fas fa-envelope fa-fw'
@@ -78,18 +56,10 @@ sidebar:
     class: 'fab fa-qq fa-fw'
   - title: XRF2640272466 # weixin
     class: 'fab fa-weixin fa-fw'
-  # - title: zhihu
-  #   href: //www.zhihu.com/people/wu.kan/activities
-  #   class: 'fab fa-zhihu fa-fw'
   - title: github # email
     href: //github.com/XtrueT
     class: 'fab fa-github fa-fw'
-  # - title: WuK # codeforces
-  #   href: //codeforces.com/profile/WuK
-  #   class: 'far fa-chart-bar fw'
-  # - title: WuK # vjudge
-  #   href: //vjudge.net/user/WuK
-  #   class: 'far fa-smile fa-fw'
+
   nav:
   - title: '<i class="fas fa-home fa-fw"></i> 首页'
     href: /
