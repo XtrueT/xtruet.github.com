@@ -1,0 +1,14 @@
+{% if site.copyright.enable %}
+<footer id="ace-footer" class="ace-container-shift">
+        <div class="ace-container">
+            <div class="ace-footer-cont clear-mrg">
+                <p class="text-center">
+                    <i class="fas fa-copyright fa-fw"></i>
+                    {{ site.time | date: '%Y' }}
+                    {{ site.author }}
+                    {{ site.copyright.text }}
+                </p>
+            </div>
+        </div><!-- .ace-container -->
+</footer><!-- #ace-footer -->
+{% endif %}

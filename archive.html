@@ -2,14 +2,44 @@
 layout: default
 title: 归档
 ---
-<section>
-    {% for post in site.posts %}
-    <header>{{ post.date | date_to_string }}</header>
-	<p>
-		<a href="{{ post.url }} ">
-            {{ post.title }}
-		</a>
-	</p>
-    {% endfor %}
-</section>
+{% include card.html %}
+<div id="ace-content" class="ace-container-shift">
+    <div class="ace-container">
+        <div class="ace-paper-stock">
+            <main class="ace-paper clearfix">
 
+                <div class="ace-paper-cont clear-mrg">
+
+                    <!-- START: PAGE CONTENT -->
+
+                    <header class="page-header padd-box">
+                        <h1 class="title-lg text-upper">{{page.title}}</h1>
+                    </header>
+                    <section class="section clear-mrg">
+                        <div class="padd-box-sm clear-mrg">
+                            {% for post in site.posts %}
+                            <div class="ref-box brd-btm hreview">
+                                <div class="ref-info">
+                                    <div class="ref-author">
+                                        <strong>{{ post.date | date_to_string }} </strong>
+                                    </div>
+                                    <blockquote class="ref-cont clear-mrg">
+                                        <p>
+                                            <a href="{{ post.url }} ">
+                                                {{ post.title }}
+                                            </a>
+                                        </p>
+                                    </blockquote>
+                                </div>
+                            </div><!-- .ref-box -->
+                            {% endfor %}
+                        </div><!-- .padd-box-sm -->
+                    </section><!-- .section -->
+                    <!-- END: PAGE CONTENT -->
+
+                </div><!-- .ace-paper-cont -->
+            </main><!-- .ace-paper -->
+        </div><!-- .ace-paper-stock -->
+
+    </div><!-- .ace-container -->
+</div><!-- #ace-content -->

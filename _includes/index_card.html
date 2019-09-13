@@ -1,0 +1,27 @@
+{% if site.sidebar.avatar.enable %}
+<article id="ace-card" class="ace-card bg-primary hidden-sm hidden-xs">
+        <div class="ace-card-inner text-center">
+            <img class="avatar avatar-195" src="{{ site.sidebar.avatar.img }}" width="195" height="195"
+                alt="">
+            <h1>{{ site.author }}</h1>
+            <p class="text-muted">{{ site.sidebar.description }}</p>
+            <ul class="ace-social clear-list">
+                {% for s in site.sidebar.social %}
+                    <li><a href="{{ s.href }}" title="{{ s.title }}" ><span class="{{ s.class }}"></span></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <footer class="ace-card-footer">
+            <!-- 统计运行时间格式化 -->
+			{% include time.html %}
+
+			<!-- 统计浏览量和访问人数 -->
+			{% include busuanzi.html %}
+            <a class="btn btn-lg btn-block btn-thin btn-upper " href="#">View</a>
+        </footer>
+</article>
+{% endif %}
+<!-- #ace-card -->
+
+

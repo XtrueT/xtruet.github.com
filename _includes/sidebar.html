@@ -1,0 +1,39 @@
+<div id="ace-sidebar">
+        <!-- 侧边关闭按钮 -->
+        <button id="ace-sidebar-close" class="btn btn-icon btn-light btn-shade">
+            <span class="ace-icon ace-icon-close"></span>
+        </button>
+
+        <div id="ace-sidebar-inner">
+            
+            <nav id="ace-main-nav-sm" class="visible-xs visible-sm text-center">
+                <ul class="clear-list">
+                    {% include nav.html %}
+                </ul>
+            </nav><!-- #ace-main-nav-sm -->
+
+            <article class="ace-card bg-primary">
+                <div class="ace-card-inner text-center">
+                    <div class="ace-card-inner text-center">
+                        <img class="avatar avatar-195" src="{{ site.sidebar.avatar.img }}" width="195" height="195"
+                            alt="">
+                        <h1>{{ site.author }}</h1>
+                        <p class="text-muted">{{ site.sidebar.description }}</p>
+                        <ul class="ace-social clear-list">
+                            {% for s in site.sidebar.social %}
+                                <li><a href="{{ s.href }}" title="{{ s.title }}" ><span class="{{ s.class }}"></span></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </article><!-- #ace-card -->
+
+            <aside class="widget-area">
+                
+                <!-- 全站搜索  -->
+                {% include search.html %}
+
+            </aside>
+
+        </div><!-- #ace-sidebar-inner -->
+</div><!-- #ace-sidebar -->

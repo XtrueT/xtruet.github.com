@@ -1,31 +1,30 @@
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>
-	{% if page.title %}
-		{{ page.title }} &middot; 
-	{% endif %}
-	{{ site.title }}
-</title>
+	<meta name="description" content="{{ site.description }}|{{page.title}}">
+	<meta name="keywords"  content="{{ site.keyword }}">
 
-{% for node in site.head %}
-	<{{ node.tag }}
-	{% for var in node.var %} 
-		{{ var.key }} ="{{ var.value }}" 
-	{% endfor %}/>
-{% endfor %}
+	<title>
+        {% if page.title %}
+            {{ page.title }} &middot; 
+        {% endif %}
+        {{ site.title }}
+    </title>
 
-{% if site.body.bgimg %}
-<style>
-	html,body{
-        width:100%;
-    }
-	body{
-		background: url("{{site.body.background-img}}") no-repeat fixed;
-		background-size: 100% 100%;
-		position: relative;
-	}
-	.page-opacity{
-		opacity:0.9;
-	}
-</style>
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="shortcut icon" href="favicon.ico">
 
-{% endif %}
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+	<!-- Icon Fonts -->
+	<link href="fonts/icomoon/style.css" rel="stylesheet">
+
+	<!-- Styles -->
+	<link href="js/plugins/highlight/solarized-light.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+	<!-- Modernizer -->
+	<script type="text/javascript" src="js/vendor/modernizr-3.3.1.min.js"></script>

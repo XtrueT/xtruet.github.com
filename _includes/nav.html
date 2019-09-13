@@ -1,6 +1,8 @@
 <!-- 导航 -->
 {% for node in site.sidebar.nav %}
-    <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">
-        {{ node.title }}
-    </a>
+    <li>
+        <a class="{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">
+            {{ node.title }}
+        </a>
+    </li>
 {% endfor %}

@@ -1,20 +1,27 @@
 <!-- 相关博文3个 -->
 {% if site.post.related.enable %}
 
-<div class="related">
-    {{ site.post.related.title }}
-
-    <ul class="related-posts">
+<section id="recent-posts-3" class="widget widget_recent_entries">
+    <h4 class="widget-title"> {{ site.post.related.title }} </h4>
+    <ul>
         {% for post in site.related_posts limit:3 %}
         <li>
             <a href="{{ site.baseurl }}{{ post.url }}">
                 {{ post.title }}
             </a>
-            <small>{{ post.date | date_to_string }}</small>
+            <div class="post-category-comment">
+                {% if post.tags %}
+                    <a  rel="category tag"  class="post-category" href="/tags#{{ post.tags }}">{{ post.tags }}</a>
+                {% endif %}
+                <a href="" class="post-comments">{{ post.date | date: "%B %-d, %Y" }}</a>
+            </div>
         </li>
         {% endfor %}
     </ul>
-
-</div>
+</section>
 
 {% endif %}
+
+
+
+

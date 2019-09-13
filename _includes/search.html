@@ -1,17 +1,26 @@
 <!-- 全站搜索 -->
-<section class="search-section" >
-    {% if site.simple_jekyll_search.enable %}
-        <div class="search-container">
-            <input id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}"/>
-            <div id="results-container"></div>
-            <script src="{{ site.simple_jekyll_search.src }}"></script>
-            <script>
-            SimpleJekyllSearch({
-                json: '{{ site.simple_jekyll_search.json }}',
-                searchInput: document.getElementById('search-input'),
-                resultsContainer: document.getElementById('results-container')
-            });
-            </script>
-        </div>
-    {% endif %}
-</section>
+{% if site.simple_jekyll_search.enable %}
+<section class="widget widget_search">
+
+    <div class="search-form">
+        <script src="{{ site.simple_jekyll_search.src }}"></script>
+        <script>
+        SimpleJekyllSearch({
+            json: '{{ site.simple_jekyll_search.json }}',
+            searchInput: document.getElementById('search-input'),
+            resultsContainer: document.getElementById('results-container')
+        });
+        </script>
+        <label>
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field" id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}">
+        </label>
+        <button type="submit" class="search-submit">
+            <span class="screen-reader-text">Search</span>
+            <span class="ace-icon ace-icon-search"></span>
+        </button>
+    </div>
+    <div id="results-container"></div>
+    
+</section>  
+{% endif %}

@@ -3,34 +3,54 @@ layout: default
 title: 标签
 ---
 
-<!-- 标签云 -->
+{% include card.html %}
 
-<section  class="tagcloud-section" >
-    <header>所有标签</header>
-    <div class="tagcloud">
-        {% for tag in site.tags %}
-            <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-        {% endfor %}
-    </div>
-</section>
+<div id="ace-content" class="ace-container-shift">
+    <div class="ace-container">
+        <div class="ace-paper-stock">
+            <main class="ace-paper clearfix">
 
-<hr/>
+                <div class="ace-paper-cont clear-mrg">
 
-<!-- 标签列表 -->
-{% for tag in site.tags %}
+                    <!-- START: PAGE CONTENT -->
 
-<section>
-    <header>
-        <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
-    </header>
-    {% for post in tag[1] %}
-    <p>
-        <a href="{{ post.url }} ">
-            <span>{{ post.title }}{{ post.date | date_to_string }}</span>
-        </a>
-    </p>
-    {% endfor %}
-</section>
+                    <header class="page-header padd-box">
+                        <h1 class="title-lg text-upper">{{page.title}}</h1>
+                    </header>
+                    <!-- 标签列表 -->
+                    <div class="pf-wrap">
+                            <div class="pf-filter padd-box">
+                                <button data-filter="*">all</button>
+                                {% for tag in site.tags %}
+                                    <button data-filter=".{{ tag[0] }}">{{ tag[0] }}</button>
+                                {% endfor %}
+                            </div><!-- .pf-filter -->
+                    
+                            <div class="pf-grid">
+                                <div class="pf-grid-sizer"></div><!-- used for sizing -->
+                                {% for tag in site.tags %}
+                    
+                                <section>
+                                    <header>
+                                        <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+                                    </header>
+                                    {% for post in tag[1] %}
+                                    <p>
+                                        <a href="{{ post.url }} ">
+                                            <span>{{ post.title }}{{ post.date | date_to_string }}</span>
+                                        </a>
+                                    </p>
+                                    {% endfor %}
+                                </section>
+                    
+                                {% endfor %}
+                            </div><!-- .pf-grid -->
+                    </div><!-- .pf-wrap -->
+                    <!-- END: PAGE CONTENT -->
 
-{% endfor %}
+                </div><!-- .ace-paper-cont -->
+            </main><!-- .ace-paper -->
+        </div><!-- .ace-paper-stock -->
 
+    </div><!-- .ace-container -->
+</div><!-- #ace-content -->
