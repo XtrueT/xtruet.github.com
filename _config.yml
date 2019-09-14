@@ -10,7 +10,7 @@ permalink: /posts/:categories/:title # 博文目录
 # 在https://fontawesome.com/icons 查看支持的图标
 
 body:
-  enable: true # 开启背景图
+  enable: false # 开启背景图
   bg-style: 'style = " background: url(https://api.dujin.org/bing/1920.php) no-repeat fixed;background-size: 100% 100%;position:relative;opacity:0.9;"'
 
 
