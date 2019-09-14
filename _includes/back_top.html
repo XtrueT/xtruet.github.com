@@ -47,16 +47,20 @@
 
         // 1. 求出offsetHeight
             function xidingEl (){
-                var xidingEl = document.getElementsByClassName("index-card");
-                var nav_top_height = xidingEl.offsetTop;
-                var scroll_top_height = scroll().top;
-                console.log(scroll_top_height);
+                var xidingEl = document.getElementsByName("index-card");
+                if (xidingEl !== undefined) {
+                    var nav_top_height = xidingEl.offsetTop;
+                    var scroll_top_height = scroll().top;
+                    console.log(scroll_top_height);
 
-                // 2.1 判断
-                if(scroll_top_height >= nav_top_height){
-                    xidingEl.style.position="fixed";
-                }else {
-                    xidingEl.style.position = "absolute";
+                    // 2.1 判断
+                    if(scroll_top_height >= nav_top_height){
+                        xidingEl.style.position="fixed";
+                    }else {
+                        xidingEl.style.position = "absolute";
+                    }
+                } else {
+                    
                 }
             };
         window.onscroll = function () {
