@@ -4,35 +4,19 @@ layout: default
 
 
 
-<div id="ace-content" class="ace-container-shift">
-		<div class="ace-container">
-			<div class="ace-paper-stock">
-				<main class="ace-paper clearfix">
-					<div class="ace-paper-cont clear-mrg">
 
-						<!-- START: PAGE CONTENT -->
-						<header class="page-header padd-box">
-							<h1 class="title-lg text-upper">{{page.title}}</h1>
-						</header>
-						<section>
-								<!-- 文章信息 -->
-								{% include post_meta.html %}
-							
-								<!-- 文章内容 -->
-								<div class="post-content">
-									{{ content }}
-								</div>
-								<hr/>
-								<!-- 激励（微信支付宝） -->
-								{% include reward.html %}
-								
-								<!-- 评论 -->
-								{% include valine.html %}
-						</section>
-						<!-- END: PAGE CONTENT -->
-					</div><!-- .ace-paper-cont -->
-				</main><!-- .ace-paper -->
-			</div><!-- .ace-paper-stock -->
-	
-		</div><!-- .ace-container -->
-	</div><!-- #ace-content -->
+<section>
+	<!-- 文章信息 -->
+	{% include post_meta.html %}
+
+	<!-- 文章内容 -->
+	<div class="post-content">
+		{{ content }}
+	</div>
+	<hr />
+	<!-- 激励（微信支付宝） -->
+	{% include reward.html %}
+
+	<!-- 评论 -->
+	{% include valine.html %}
+</section>
