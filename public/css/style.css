@@ -6537,11 +6537,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .post-card-toc{
-    position: fixed;
-    overflow-x: hidden;
-    max-height: 100vh;
-    top: 0px;
-    min-height: 90vh;
+    position: fixed !important;
+    overflow-x: hidden !important;
+    max-height: 100vh !important;
+    top: 0px !important;
+    min-height: 90vh !important;
 } 
 @media (max-width: 767px) {
     .post-card-toc{
