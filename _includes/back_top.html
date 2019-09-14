@@ -46,12 +46,12 @@
          */
 
         // 1. 求出offsetHeight
-            function xidingEl (){
+            function xiding (){
                 var xidingEl = document.getElementsByName("index-card");
                 if (xidingEl !== undefined) {
                     var nav_top_height = xidingEl.offsetTop;
                     var scroll_top_height = scroll().top;
-                    console.log(scroll_top_height);
+                    console.log(xidingEl);
 
                     // 2.1 判断
                     if(scroll_top_height >= nav_top_height){
@@ -62,7 +62,7 @@
         window.onscroll = function () {
 
             // xiding
-            xidingEl();
+            xiding();
             // 已被滚动卷去的上方像素
             var osTop = document.documentElement.scrollTop || document.body.scrollTop;
             // console.log(osTop);
