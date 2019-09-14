@@ -39,6 +39,7 @@
         </footer>
 </article>
 <script>
+
     function scroll() {
         if(window.pageYOffset !== null){
             return {
@@ -62,26 +63,23 @@
     　　return typeof id === "string" ? document.getElementById(id) : null;
 　　}
 
-    $(document).ready(
-        function () {
-            // 1. 求出offsetHeight
-            var to_top_height = $("#index-card").offsetTop;
+    window.onload = function(){
+        // 1. 求出offsetHeight
+        var to_top_height = $("#index-card").offsetTop;
 
-            // 2. 监听窗口滚动
-            window.onscroll = function () {
-                var scroll_top_height = scroll().top;
-                console.log(scroll_top_height);
+        // 2. 监听窗口滚动
+        window.onscroll = function () {
+            var scroll_top_height = scroll().top;
+            console.log(scroll_top_height);
 
-                // 2.1 判断
-                if(scroll_top_height >= to_top_height){
-                    $("#index-card").style.position = "fixed";
-                }else {
-                    $("#index-card").style.position = "absolute";
-                }
+            // 2.1 判断
+            if(scroll_top_height >= to_top_height){
+                $("#index-card").style.position = "fixed";
+            }else {
+                $("#index-card").style.position = "absolute";
             }
         }
-    );
-
+    }
 </script>
 <!-- #ace-card -->
 
