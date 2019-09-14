@@ -6541,7 +6541,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden !important;
     max-height: 100vh !important;
     top: 0px !important;
-    min-height: 90vh !important;
+    height: 100% ;
 } 
 @media (max-width: 767px) {
     .post-card-toc{
