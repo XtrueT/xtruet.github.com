@@ -3,54 +3,26 @@ layout: default
 title: 归档
 ---
 
-<ul>
-    {% for post in site.posts %}
-    
-        {% unless post.next %}
-        <h3>{{ post.date | date: '%Y年' }}</h3>
-        {% else %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-        {% if year != nyear %}
-            <h3>{{ post.date | date: '%Y年' }}</h3>
-        {% endif %}
-        {% endunless %}
-    
-        <li>{{ post.date | date:"%Y年%m月%d日：" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
-
-    {% endfor %}
-</ul>
-
 <section class="section clear-mrg">
     <div class="padd-box-sm clear-mrg">
-        {% for post in site.posts %}
-        {% unless post.next %}
-        <div class="ref-box brd-btm hreview">
-            <div class="ref-info">
-                <div class="ref-author">
-                    <strong>{{ post.date | date: '%Y年' }}</strong>
-                </div>
-        {% else %}
-                {% capture year %}
-                {{ post.date | date: '%Y' }}
-                {% endcapture %}
-                {% capture nyear %}
-                {{ post.next.date | date: '%Y' }}
-                {% endcapture %}
-                {% if year != nyear %}
-                <div class="ref-author">
-                    <strong>{{ post.date | date: '%Y年' }}</strong>
-                </div>
-                {% endif %}
-
-                <div class="ref-cont clear-mrg">
-                    <p>
-                        <li>{{ post.date | date:"%Y-%m-%d:" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
-                    </p>
-                </div>
-            </div>     
-        </div><!-- .ref-box -->
-        {% endunless %}
+            {% for post in site.posts %}
+    
+            {% unless post.next %}
+            <div class="brd-btm hreview">
+                <h3>{{ post.date | date: '%Y年' }}</h3>
+            </div>
+            {% else %}
+            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+            {% if year != nyear %}
+            <div class="brd-btm hreview">
+                    <h3>{{ post.date | date: '%Y年' }}</h3>
+            </div>
+            {% endif %}
+            {% endunless %}
+        
+            <li class="text-left">{{ post.date | date:"%Y-%m-%d:" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+    
         {% endfor %}
     </div><!-- .padd-box-sm -->
 </section><!-- .section -->
