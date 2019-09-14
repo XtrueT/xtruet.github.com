@@ -46,7 +46,7 @@
          */
 
         // 1. 求出offsetHeight
-            function xidingEl (){ () {
+            function xidingEl (){
                 var xidingEl = document.getElementsByClassName("index-card");
                 var nav_top_height = xidingEl.offsetTop;
                 var scroll_top_height = scroll().top;
@@ -58,8 +58,7 @@
                 }else {
                     xidingEl.style.position = "absolute";
                 }
-            }
-        }
+            };
         window.onscroll = function () {
 
             // xiding
