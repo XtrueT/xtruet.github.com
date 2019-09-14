@@ -5,25 +5,6 @@
     border: medium none aliceblue;
     ">Top</button>
 <script>
-    function scroll() {
-        if(window.pageYOffset !== null){
-            return {
-                top: window.pageYOffset,
-                left: window.pageXOffset
-            }
-        }else if(document.compatMode === "CSS1Compat"){ // W3C
-            return {
-                top: document.documentElement.scrollTop,
-                left: document.documentElement.scrollLeft
-            }
-        }else{
-            return {
-                top: document.body.scrollTop,
-                left: document.body.scrollLeft
-            }
-        }  
-    }
-
     window.onload = function () {
         var obtn = document.getElementById("backTopBtn");
         //文档高度
@@ -41,31 +22,8 @@
             client_height = document.body.clientHeight;
         }
 
-        /*
-         *  吸顶函数
-         */
-
-        // 1. 求出offsetHeight
-            function xiding (){
-                var xidingEl = document.getElementById("ace-card");
-                if (xidingEl !== undefined) {
-                    var nav_top_height = xidingEl.offsetTop;
-                    var scroll_top_height = scroll().top;
-                    // console.log(xidingEl);
-
-                    // 2.1 判断
-                    if(scroll_top_height >= nav_top_height){
-                        xidingEl.style.position="fixed";
-                        xidingEl.style.top="0";
-                    }else{
-                        xidingEl.style.position="absolute";
-                    }
-                }
-            };
+        
         window.onscroll = function () {
-
-            // xiding
-            xiding();
             // 已被滚动卷去的上方像素
             var osTop = document.documentElement.scrollTop || document.body.scrollTop;
             // console.log(osTop);
