@@ -5,24 +5,23 @@ title: 归档
 
 <section class="section clear-mrg">
     <div class="padd-box-sm clear-mrg">
-            {% for post in site.posts %}
-    
-            {% unless post.next %}
-            <div class="brd-btm hreview">
-                <h3>{{ post.date | date: '%Y年' }}</h3>
-            </div>
-            {% else %}
-            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-            {% if year != nyear %}
-            <div class="brd-btm hreview">
-                    <h3>{{ post.date | date: '%Y年' }}</h3>
-            </div>
-            {% endif %}
-            {% endunless %}
-        
-            <li class="text-left">{{ post.date | date:"%Y-%m-%d:" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
-    
+        {% for post in site.posts %}
+
+        {% unless post.next %}
+        <hr />
+        <h3>{{ post.date | date: '%Y年' }}</h3>
+        {% else %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% if year != nyear %}
+        <hr />
+        <h3>{{ post.date | date: '%Y年' }}</h3>
+        {% endif %}
+        {% endunless %}
+
+        <li class="text-left">{{ post.date | date:"%Y-%m-%d:" }} 
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
         {% endfor %}
     </div><!-- .padd-box-sm -->
 </section><!-- .section -->

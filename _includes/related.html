@@ -13,7 +13,7 @@
                 {% if post.tags %}
                     <a  rel="category tag"  class="post-category" href="/tags#{{ post.tags }}">{{ post.tags }}</a>
                 {% endif %}
-                <a href="" class="post-comments">{{ post.date | date: "%B %-d, %Y" }}</a>
+                <a href="" class="post-comments">{{ post.date | date:"%Y-%m-%d" }}</a>
             </div>
         </li>
         {% endfor %}
