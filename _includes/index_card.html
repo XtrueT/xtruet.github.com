@@ -1,7 +1,7 @@
-{% if site.sidebar.avatar.enable %}
-<article id="ace-card" class="ace-card bg-primary hidden-sm hidden-xs">
-        
-        <!-- <div class="ace-card-inner text-center">
+
+<article id="ace-card" class="ace-card bg-primary  index-card hidden-sm hidden-xs">
+        {% if site.sidebar.avatar.enable %}
+        <div class="ace-card-inner text-center">
             <img class="avatar avatar-195" src="{{ site.sidebar.avatar.img }}" width="195" height="195"
                 alt="">
             <h1>{{ site.author }}</h1>
@@ -11,8 +11,8 @@
                     <li><a href="{{ s.href }}" title="{{ s.title }}" ><span class="{{ s.class }}"></span></a></li>
                 {% endfor %}
             </ul>
-        </div> -->
-
+        </div>
+        {% endif %}
         <footer class="ace-card-footer">
             <!-- 标签分类 -->
 
@@ -35,10 +35,10 @@
                     <!-- 统计浏览量和访问人数 -->
                     {% include busuanzi.html %}
             </section>
-            <a class="btn btn-lg btn-block btn-thin btn-upper " href="//github.com/XtrueT/xtruet.github.com">View On GitHub</a>
+            <a class=" btn-thin btn-upper " href="//github.com/XtrueT/xtruet.github.com">View On GitHub</a>
         </footer>
 </article>
-{% endif %}
+
 <!-- #ace-card -->
 
 

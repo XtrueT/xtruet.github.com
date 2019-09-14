@@ -6546,3 +6546,8 @@ h1, h2, h3, h4, h5, h6 {
 li{
     list-style: none;
 }
+.index-card{
+    position: fixed;
+    left: 20px;
+    margin-right: 30px;
+}
