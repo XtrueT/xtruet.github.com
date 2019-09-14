@@ -20,7 +20,7 @@
             console.log(osTop);
             if (osTop >= client_height) {
                 obtn.style.display = 'block';
-                obtn.innerText = `Top${osTop*100}%`;
+                obtn.innerText = `Top${osTop /(document.body.scrollHeight-client_height) *100}%`;
             } else {
                 obtn.style.display = 'none';
             }
