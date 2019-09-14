@@ -84,7 +84,6 @@ a {
 }
 
 a:hover {
-
     color: inherit;
     text-decoration: none;
 }
@@ -2750,7 +2749,9 @@ img.aligncenter {
     border: 1px solid #e5e5e5;
     text-decoration: none;
 }
-
+.tagcloud a:hover{
+    color: #5bc0de;
+}
 /* Recent Posts */
 .widget_recent_entries li {
     padding: 25px 0;

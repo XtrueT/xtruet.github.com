@@ -6,6 +6,10 @@
 
         <div id="ace-sidebar-inner">
             
+            {% if page.layout = post %}
+                {% include card.html %}
+            {% elsif %}
+
             <article class="ace-card bg-primary">
                 <div class="ace-card-inner text-center">
                     <div class="ace-card-inner text-center">
@@ -28,12 +32,11 @@
                     </ul>
             </nav><!-- #ace-main-nav-sm -->
 
-            {% include card.html %}
-
             <aside class="widget-area">
                 <!-- 全站搜索  -->
                 {% include search.html %}
             </aside>
 
+            {% endif %}
         </div><!-- #ace-sidebar-inner -->
 </div><!-- #ace-sidebar -->
