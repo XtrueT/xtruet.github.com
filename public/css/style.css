@@ -6543,8 +6543,6 @@ h1, h2, h3, h4, h5, h6 {
     top: 0px !important;
     height: 100% ;
 } 
-@media (max-width: 767px) {
-    .post-card-toc{
-        display: block !important; 
-    }
+li{
+    list-style: none;
 }
