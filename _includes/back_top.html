@@ -3,7 +3,7 @@
     right: 15px;
     padding: 10px;
     border: medium none aliceblue;
-    ">Top</button>
+    "></button>
 <script>
     window.onload = function () {
         var obtn = document.getElementById("backTopBtn");
@@ -29,7 +29,7 @@
             if (osTop >= client_height) {
                 obtn.style.display = 'block';
 
-                obtn.innerText = `Top${((osTop) /(document.body.scrollHeight-client_height) *100).toFixed(1)}%`;
+                obtn.innerText = `&#8593;${((osTop) /(document.body.scrollHeight-client_height) *100).toFixed(1)}%`;
             } else {
                 obtn.style.display = 'none';
             }
