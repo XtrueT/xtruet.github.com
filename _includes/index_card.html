@@ -1,5 +1,5 @@
 
-<article id="index-card" class="ace-card bg-primary  index-card hidden-sm hidden-xs">
+<article id="ace-card" class="ace-card bg-primary  index-card hidden-sm hidden-xs">
         {% if site.sidebar.avatar.enable %}
         <div class="ace-card-inner text-center">
             <img class="avatar avatar-195" src="{{ site.sidebar.avatar.img }}" width="195" height="195"
@@ -39,7 +39,6 @@
         </footer>
 </article>
 <script>
-
     function scroll() {
         if(window.pageYOffset !== null){
             return {
@@ -58,14 +57,12 @@
             }
         }  
     }
-
     function $(id) {
     　　return typeof id === "string" ? document.getElementById(id) : null;
 　　}
-
-    window.onload = function(){
+    window.onload = function () {
         // 1. 求出offsetHeight
-        var to_top_height = $("#index-card").offsetTop;
+        var nav_top_height = $("article.index-card").offsetTop;
 
         // 2. 监听窗口滚动
         window.onscroll = function () {
@@ -73,10 +70,10 @@
             console.log(scroll_top_height);
 
             // 2.1 判断
-            if(scroll_top_height >= to_top_height){
-                $("#index-card").style.position = "fixed";
+            if(scroll_top_height >= nav_top_height){
+                $("article.index-card").style.position="fixed";
             }else {
-                $("#index-card").style.position = "absolute";
+                $("article.index-card").style.position = "absolute";
             }
         }
     }
