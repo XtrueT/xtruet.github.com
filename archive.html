@@ -6,16 +6,30 @@ title: 归档
 <section class="section clear-mrg">
     <div class="padd-box-sm clear-mrg">
         {% for post in site.posts %}
+
         <div class="ref-box brd-btm hreview">
             <div class="ref-info">
+                {% unless post.next %}
                 <div class="ref-author">
-                    <strong>{{ post.date | date_to_string }} </strong>
+                    <strong>{{ post.date | date: '%Y年' }}</strong>
                 </div>
+                {% else %}
+                {% capture year %}
+                {{ post.date | date: '%Y' }}
+                {% endcapture %}
+                {% capture nyear %}
+                {{ post.next.date | date: '%Y' }}
+                {% endcapture %}
+                {% if year != nyear %}
+                <div class="ref-author">
+                    <strong>{{ post.date | date: '%Y年' }}</strong>
+                </div>
+                {% endif %}
+                {% endunless %}
+
                 <div class="ref-cont clear-mrg">
                     <p>
-                        <a href="{{ post.url }} ">
-                            {{ post.title }}
-                        </a>
+                        <li>{{ post.date | date:"%Y-%m-%d:" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
                     </p>
                 </div>
             </div>

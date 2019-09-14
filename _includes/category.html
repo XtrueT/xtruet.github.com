@@ -1,0 +1,27 @@
+<section class="widget widget_categories">
+        <h4 class="widget-title">post categories</h4>
+        <ul>
+            <li class="cat-item"><a href="">Audios</a>5</li>
+            <li class="cat-item"><a href="">Daili Inspiration</a>2</li>
+            <li class="cat-item"><a href="">Freelance</a>27</li>
+            <li class="cat-item"><a href="">Links</a>5</li>
+            <li class="cat-item"><a href="">Mobile</a>2</li>
+            <li class="cat-item"><a href="">Phography</a>27</li>
+        </ul>
+</section>
+{% for tag in site.tags %}
+
+        <section class="pf-grid-item {{ tag[0] }}">
+            <header>
+                <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+            </header>
+            {% for post in tag[1] %}
+            <p>
+                <a href="{{ post.url }} ">
+                    <span>{{ post.title }}——{{ post.date | date_to_string }}</span>
+                </a>
+            </p>
+            {% endfor %}
+        </section>
+
+{% endfor %}

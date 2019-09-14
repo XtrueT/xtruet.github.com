@@ -8,11 +8,11 @@ title: 首页
 <article class="post hentry">
 
     <!-- 文章图 -->
-    {% if post.img %}
+    {% if post.header-img %}
     <div class="post-media">
         <a href="{{ post.url }}" rel="bookmark">
             <figure class="post-figure">
-                <img src="{{ post.img }}" alt="">
+                <img src="{{ post.header-img }}" alt="">
             </figure>
         </a>
     </div>
@@ -32,7 +32,7 @@ title: 首页
                     <span class="screen-reader-text">Posted on </span>
                     <a href="#" rel="bookmark">
                         <time class="post-date published" datetime="2019-09-10T11:33:08+00:00">
-                            {{ post.date | date: "%B %-d, %Y" }} </time>
+                            {{ post.date | date:"%Y-%m-%d"  }} </time>
                     </a>
                 </span>
                 &nbsp;

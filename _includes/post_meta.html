@@ -5,7 +5,7 @@
 <!-- 时间 -->
     {% if site.post.meta.date %}
         <i class="fas fa-calendar-day"></i>
-        {{ page.date | date_to_string }}
+        {{ page.date | date:"%Y-%m-%d" }}
     {% endif %}
 <!-- 字数 -->
     {% if site.post.meta.wordcount.enable %}
