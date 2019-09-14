@@ -16,16 +16,15 @@
         <footer class="ace-card-footer">
             <!-- 标签分类 -->
 
-            <section class="widget widget_categories">
-                    <h4 class="widget-title">post categories</h4>
-                    <ul>
-                        {% for tag in site.tags %}
-                        <li class="cat-item">
+            <section id="tag_cloud-2" class="widget widget_tag_cloud">
+                <h2 class="widget-title">Tags</h2>
+                <div class="tagcloud">
+                    {% for tag in site.tags %}
                         <a href="/tags#{{ tag[0] }}"  rel="{{ tag[1].size }}" class="tag-link-5 tag-link-position-1" title="{{ tag[0] }}"  style="font-size: 1em;">
-                            {{ tag[0] }}</a>{{ tag[1].size }}
-                        </li>
-                        {% endfor %}
-                    </ul>
+                            {{ tag[0] }}
+                        </a>
+                    {% endfor %}
+                </div>
             </section>
             <section class="widget "> 
                     <!-- 统计运行时间格式化 -->

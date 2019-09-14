@@ -10,7 +10,7 @@ title: 标签
     <div class="pf-filter padd-box">
         <button data-filter="*">All</button>
         {% for tag in site.tags %}
-        <button data-filter=".{{ tag[0] }}">{{ tag[0] }}</button>
+        <button data-filter=".{{ tag[0] }}">{{ tag[0] }}<sub>{{tag[1].size}}</sub></button>
         {% endfor %}
     </div><!-- .pf-filter -->
 

@@ -6,14 +6,13 @@ title: 归档
 <section class="section clear-mrg">
     <div class="padd-box-sm clear-mrg">
         {% for post in site.posts %}
-
+            {% unless post.next %}
         <div class="ref-box brd-btm hreview">
             <div class="ref-info">
-                {% unless post.next %}
                 <div class="ref-author">
                     <strong>{{ post.date | date: '%Y年' }}</strong>
                 </div>
-                {% else %}
+            {% else %}
                 {% capture year %}
                 {{ post.date | date: '%Y' }}
                 {% endcapture %}
@@ -25,15 +24,15 @@ title: 归档
                     <strong>{{ post.date | date: '%Y年' }}</strong>
                 </div>
                 {% endif %}
-                {% endunless %}
 
                 <div class="ref-cont clear-mrg">
                     <p>
                         <li>{{ post.date | date:"%Y-%m-%d:" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
                     </p>
                 </div>
-            </div>
+            </div>     
         </div><!-- .ref-box -->
+        {% endunless %}
         {% endfor %}
     </div><!-- .padd-box-sm -->
 </section><!-- .section -->

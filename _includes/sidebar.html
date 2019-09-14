@@ -31,6 +31,18 @@
             <aside class="widget-area">
                 <!-- 全站搜索  -->
                 {% include search.html %}
+                <!-- 统计 -->
+                <section class="widget widget_categories">
+                        <h4 class="widget-title">统计</h4>
+                        <ul>
+                            {% for tag in site.tags %}
+                            <li class="cat-item">
+                            <a href="/tags#{{ tag[0] }}"  rel="{{ tag[1].size }}" class="tag-link-5 tag-link-position-1" title="{{ tag[0] }}"  style="font-size: 1em;">
+                                {{ tag[0] }}</a>{{ tag[1].size }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                </section>
             </aside>
 
         </div><!-- #ace-sidebar-inner --> 
