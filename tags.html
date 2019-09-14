@@ -3,53 +3,35 @@ layout: default
 title: 标签
 ---
 
-{% include index_card.html %}
+<!-- 标签列表 -->
+<div class="pf-wrap">
+    
+    <!-- 标签分类 -->
+    <div class="pf-filter padd-box">
+        <button data-filter="*">All</button>
+        {% for tag in site.tags %}
+        <button data-filter=".{{ tag[0] }}">{{ tag[0] }}</button>
+        {% endfor %}
+    </div><!-- .pf-filter -->
 
-<div id="ace-content" class="ace-container-shift">
-    <div class="ace-container">
-        <div class="ace-paper-stock">
-            <main class="ace-paper clearfix">
+    <!-- 标签过滤内容 -->
+    <div class="pf-grid">
+        <div class="pf-grid-sizer"></div><!-- used for sizing -->
+        {% for tag in site.tags %}
 
-                <div class="ace-paper-cont clear-mrg">
+        <section class="pf-grid-item {{ tag[0] }}">
+            <header>
+                <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+            </header>
+            {% for post in tag[1] %}
+            <p>
+                <a href="{{ post.url }} ">
+                    <span>{{ post.title }}——{{ post.date | date_to_string }}</span>
+                </a>
+            </p>
+            {% endfor %}
+        </section>
 
-                    <!-- START: PAGE CONTENT -->
-
-                    <header class="page-header padd-box">
-                        <h1 class="title-lg text-upper">{{page.title}}</h1>
-                    </header>
-                    <!-- 标签列表 -->
-                    <div class="pf-wrap">
-                            <div class="pf-filter padd-box">
-                                <button data-filter="*">all</button>
-                                {% for tag in site.tags %}
-                                    <button data-filter=".{{ tag[0] }}">{{ tag[0] }}</button>
-                                {% endfor %}
-                            </div><!-- .pf-filter -->
-                    
-                            <div class="pf-grid">
-                                <div class="pf-grid-sizer"></div><!-- used for sizing -->
-                                {% for tag in site.tags %}
-                                <section class="pf-grid-item {{ tag[0] }}">
-                                    <header>
-                                        <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
-                                    </header>
-                                    {% for post in tag[1] %}
-                                    <p>
-                                        <a href="{{ post.url }} ">
-                                            <span>{{ post.title }}{{ post.date | date_to_string }}</span>
-                                        </a>
-                                    </p>
-                                    {% endfor %}
-                                </section>
-                    
-                                {% endfor %}
-                            </div><!-- .pf-grid -->
-                    </div><!-- .pf-wrap -->
-                    <!-- END: PAGE CONTENT -->
-
-                </div><!-- .ace-paper-cont -->
-            </main><!-- .ace-paper -->
-        </div><!-- .ace-paper-stock -->
-
-    </div><!-- .ace-container -->
-</div><!-- #ace-content -->
+        {% endfor %}
+    </div><!-- .pf-grid -->
+</div><!-- .pf-wrap -->

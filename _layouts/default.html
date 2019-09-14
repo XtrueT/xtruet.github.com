@@ -30,8 +30,36 @@
 
 		{% include top_nav.html %}
 		
-		{{ content }}
 		
+		{% if page.layout == "post" %}
+			{% include card.html %}
+		{% else %}
+			{% include index_card.html %}
+		{% endif %}
+		
+		
+		<div id="ace-content" class="ace-container-shift">
+				<div class="ace-container">
+					<div class="ace-paper-stock">
+						<main class="ace-paper clearfix">
+							<div class="ace-paper-cont clear-mrg">
+			
+								<!-- START: PAGE CONTENT -->
+			
+								<header class="page-header padd-box">
+									<h1 class="title-lg text-upper">{{page.title}}</h1>
+								</header>
+
+								{{ content }}
+
+								<!-- END: PAGE CONTENT -->
+			
+							</div><!-- .ace-paper-cont -->
+						</main><!-- .ace-paper -->
+					</div><!-- .ace-paper-stock -->
+				</div><!-- .ace-container -->
+		</div><!-- #ace-content -->
+
 		<!-- #ace-sidebar -->
 		{% include sidebar.html %}
 		

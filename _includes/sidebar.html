@@ -4,10 +4,10 @@
             <span class="ace-icon ace-icon-close"></span>
         </button>
 
-            {% if page.layout == "post" %}
-                {% include card.html %}
-            {% else %}
-            
+        {% if page.layout == "post" %}
+            {% include card.html %}
+        {% else %}
+
         <div id="ace-sidebar-inner">
 
             <article class="ace-card bg-primary">
@@ -37,6 +37,7 @@
                 {% include search.html %}
             </aside>
 
-            {% endif %}
-        </div><!-- #ace-sidebar-inner -->
+        </div><!-- #ace-sidebar-inner --> 
+        
+        {% endif %}
 </div><!-- #ace-sidebar -->
