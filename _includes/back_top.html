@@ -5,6 +5,25 @@
     border: medium none aliceblue;
     ">Top</button>
 <script>
+    function scroll() {
+        if(window.pageYOffset !== null){
+            return {
+                top: window.pageYOffset,
+                left: window.pageXOffset
+            }
+        }else if(document.compatMode === "CSS1Compat"){ // W3C
+            return {
+                top: document.documentElement.scrollTop,
+                left: document.documentElement.scrollLeft
+            }
+        }else{
+            return {
+                top: document.body.scrollTop,
+                left: document.body.scrollLeft
+            }
+        }  
+    }
+
     window.onload = function () {
         var obtn = document.getElementById("backTopBtn");
         //文档高度
@@ -22,14 +41,37 @@
             client_height = document.body.clientHeight;
         }
 
+        /*
+         *  吸顶函数
+         */
+
+        // 1. 求出offsetHeight
+            function xidingEl (){ () {
+                var xidingEl = document.getElementsByClassName("index-card");
+                var nav_top_height = xidingEl.offsetTop;
+                var scroll_top_height = scroll().top;
+                console.log(scroll_top_height);
+
+                // 2.1 判断
+                if(scroll_top_height >= nav_top_height){
+                    xidingEl.style.position="fixed";
+                }else {
+                    xidingEl.style.position = "absolute";
+                }
+            }
+        }
         window.onscroll = function () {
+
+            // xiding
+            xidingEl();
             // 已被滚动卷去的上方像素
             var osTop = document.documentElement.scrollTop || document.body.scrollTop;
             // console.log(osTop);
             if (osTop >= client_height) {
                 obtn.style.display = 'block';
 
-                obtn.innerText = `Top${((osTop) /(document.body.scrollHeight-client_height) *100).toFixed(1)}%`;
+                //距离顶部百分比 
+                //obtn.innerText = `Top${((osTop) /(document.body.scrollHeight-client_height) *100).toFixed(1)}%`;
             } else {
                 obtn.style.display = 'none';
             }
