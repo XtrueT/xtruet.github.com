@@ -17,9 +17,10 @@
         window.onscroll = function () {
 
             var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-            // console.log(osTop);
+            console.log(osTop);
             if (osTop >= client_height) {
                 obtn.style.display = 'block';
+                obtn.innerText = `Top${osTop*100}%`;
             } else {
                 obtn.style.display = 'none';
             }
