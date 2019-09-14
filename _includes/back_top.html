@@ -8,20 +8,28 @@
     window.onload = function () {
         var obtn = document.getElementById("backTopBtn");
         //文档高度
-        var client_height = document.documentElement.clientHeight;
+        var client_height;
         var time = null;
-        var isTop = true,
-            cancelScroll = false;
-        // console.log(client_height);
-        
-        window.onscroll = function () {
+        var isTop = true,cancelScroll = false;
 
+        // document.compatMode
+        // BackCompat：标准兼容模式关闭。浏览器高宽度:document.body.clientWidth；
+
+        // CSS1Compat：标准兼容模式开启。 浏览器高宽度:document.documentElement.clientWidth
+        if (document.compatMode == "CSS1Compat"){
+            client_height = document.documentElement.clientHeight;
+        } else {
+            client_height = document.body.clientHeight;
+        }
+
+        window.onscroll = function () {
+            // 已被滚动卷去的上方像素
             var osTop = document.documentElement.scrollTop || document.body.scrollTop;
             console.log(osTop);
             if (osTop >= client_height) {
                 obtn.style.display = 'block';
-                
-                obtn.innerText = `Top${(osTop-16) /(document.body.scrollHeight-client_height) *100}%`;
+
+                obtn.innerText = `Top${((osTop) /(document.documentElement.scrollHeight-client_height) *100).toFixed(1)}%`;
             } else {
                 obtn.style.display = 'none';
             }
