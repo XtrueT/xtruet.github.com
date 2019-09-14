@@ -58,9 +58,10 @@
         }  
     }
 
-    $(document).ready(function(){return function(){
+    window.onload = function(){
         // 1. 求出offsetHeight
-        var nav_top_height = $("article.index-card").offsetTop;
+        var xidingEl = document.getElementsByClassName("index-card");
+        var nav_top_height = xidingEl.offsetTop;
 
         // 2. 监听窗口滚动
         window.onscroll = function () {
@@ -69,13 +70,12 @@
 
             // 2.1 判断
             if(scroll_top_height >= nav_top_height){
-                $("article.index-card").style.position="fixed";
+                xidingEl.style.position="fixed";
             }else {
-                $("article.index-card").style.position = "absolute";
+                xidingEl.style.position = "absolute";
             }
         }
-    };})
-
+    }
 </script>
 <!-- #ace-card -->
 
