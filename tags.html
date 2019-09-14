@@ -26,7 +26,9 @@ title: 标签
             {% for post in tag[1] %}
             <p>
                 <a href="{{ post.url }} ">
-                    <span>{{ post.title }}<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time></span>
+                    <span>{{ post.title }}
+                        <time datetime="{{ post.date | date:"%Y-%m-%d" }}"><small>[{{ post.date | date:"%Y-%m-%d" }}]</small></time>
+                    </span>
                 </a>
             </p>
             {% endfor %}

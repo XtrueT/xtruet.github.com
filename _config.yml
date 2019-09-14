@@ -127,7 +127,7 @@ post:
     copyright: '<i class="fab fa-creative-commons"></i> <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
   related:
     enable: true
-    title: 相关博文
+    title: 最近
   reward:
     enable: true
     text: 有帮助，激励一下！

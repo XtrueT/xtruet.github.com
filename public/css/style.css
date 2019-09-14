@@ -1752,7 +1752,7 @@ submit
 .ace-mobile.ace-lock-scroll body,
 .ace-mobile.ace-lock-scroll .wrapper {
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
