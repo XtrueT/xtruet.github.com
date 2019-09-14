@@ -68,7 +68,7 @@ template {
 
 /* Links */
 a {
-    color: inherit;
+    color: #5bc0de;
     cursor: pointer;
     text-decoration: underline;
     background-color: transparent;
@@ -84,7 +84,8 @@ a {
 }
 
 a:hover {
-    color: #5bc0de;
+
+    color: inherit;
     text-decoration: none;
 }
 
@@ -2016,7 +2017,6 @@ img.aligncenter {
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
-    background: #000;
     vertical-align: middle;
     padding: 8px 25px;
     display: inline-block;
@@ -2026,10 +2026,6 @@ img.aligncenter {
     -webkit-appearance: none;
     box-shadow: transparent 0 0 0;
     transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-}
-
-.btn:hover, .btn.hover {
-    box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .btn .ace-icon {
@@ -5693,9 +5689,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 }
 
-.post-tags a:hover {
-    box-shadow: rgba(0, 0, 0, 0.117647) -1px 2px 6px, rgba(0, 0, 0, 0.117647) -1px 2px 4px;
-}
 
 /* Post Navigation */
 .post-nav {
@@ -6540,10 +6533,17 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 400ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     z-index: 1200;
 }
+
+
 .post-card-toc{
     position: fixed;
     overflow-x: hidden;
     max-height: 100vh;
     top: 0px;
     min-height: 90vh;
+} 
+@media (max-width: 767px) {
+    .post-card-toc{
+        display: block !important; 
+    }
 }
