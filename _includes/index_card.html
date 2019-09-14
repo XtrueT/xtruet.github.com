@@ -1,5 +1,5 @@
 
-<article id="ace-card" class="ace-card bg-primary  index-card hidden-sm hidden-xs">
+<article id="index-card" class="ace-card bg-primary  index-card hidden-sm hidden-xs">
         {% if site.sidebar.avatar.enable %}
         <div class="ace-card-inner text-center">
             <img class="avatar avatar-195" src="{{ site.sidebar.avatar.img }}" width="195" height="195"
@@ -38,7 +38,51 @@
             <a class=" btn-thin btn-upper " href="//github.com/XtrueT/xtruet.github.com">View On GitHub</a>
         </footer>
 </article>
+<script>
+    function scroll() {
+        if(window.pageYOffset !== null){
+            return {
+                top: window.pageYOffset,
+                left: window.pageXOffset
+            }
+        }else if(document.compatMode === "CSS1Compat"){ // W3C
+            return {
+                top: document.documentElement.scrollTop,
+                left: document.documentElement.scrollLeft
+            }
+        }else{
+            return {
+                top: document.body.scrollTop,
+                left: document.body.scrollLeft
+            }
+        }  
+    }
 
+    function $(id) {
+    　　return typeof id === "string" ? document.getElementById(id) : null;
+　　}
+
+    $(document).ready(
+        function () {
+            // 1. 求出offsetHeight
+            var to_top_height = $("#index-card").offsetTop;
+
+            // 2. 监听窗口滚动
+            window.onscroll = function () {
+                var scroll_top_height = scroll().top;
+                console.log(scroll_top_height);
+
+                // 2.1 判断
+                if(scroll_top_height >= to_top_height){
+                    $("#index-card").style.position = "fixed";
+                }else {
+                    $("#index-card").style.position = "absolute";
+                }
+            }
+        }
+    );
+
+</script>
 <!-- #ace-card -->
 
 
