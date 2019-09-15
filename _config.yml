@@ -70,8 +70,6 @@ sidebar:
     href: /tags
   - title: '<i class="fas fa-archive fa-fw"></i> 归档'
     href: /archive
-  - title: '<i class="fab fa-readme fa-fw"></i> Readme'
-    href: /README
 
 simple_jekyll_search:
   enable: true
