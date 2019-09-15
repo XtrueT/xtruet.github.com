@@ -20,8 +20,6 @@ script: # 需要调用的脚本
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
 - src: /public/js/prism.js
-- src: /public/js/baidu_push.js
-- src: /public/js/avoid_blink.js
 
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
