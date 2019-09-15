@@ -6547,7 +6547,7 @@ li{
     list-style: none;
 }
 .index-card{
-    position: absolute;
+    position: relative;
     left: 20px;
     margin-right: 30px;
 }
