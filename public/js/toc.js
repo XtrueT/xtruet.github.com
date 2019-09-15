@@ -66,7 +66,7 @@
         var highest_level = headers.map(function (_, ele) {
             return get_level(ele);
         }).get().sort()[0];
-        var return_to_top = '<i class="icon-arrow-up back-to-top"> </i>';
+        var return_to_top = '<i class="icon-arrow-up back-to-top">Top</i>';
 
         var level = get_level(headers[0]),
             this_level,

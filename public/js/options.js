@@ -24,7 +24,7 @@ var ace = {
     html: '',
     body: '',
     mobile: '',
-    themeColor: '',
+    themeColor: '3d-thick-dark',
 
     header: {
         head: '',
