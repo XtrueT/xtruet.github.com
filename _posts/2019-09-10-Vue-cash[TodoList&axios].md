@@ -4,7 +4,7 @@ title:      Vue-cash[TodoList&axios]
 subtitle:   学习Vue
 date:       2019-09-10
 author:     霁
-header-img: img/post-bg-ios9-web.jpg
+# header-img: img/post-bg-ios9-web.jpg
 catalog: true
 categories:
 - 学习
