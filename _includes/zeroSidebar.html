@@ -20,11 +20,15 @@
 
         <div class="zero-card-footer">
             {% if page.layout == "post" %}
+
                 {% include toc.html %}
             <!-- 相关博文3个 -->
                 {% include related.html %}
+
             {% else %}
+
                 {% include zeroLinks.html %}
+                
             {% endif %}
         </div>
 
