@@ -22,17 +22,22 @@
         <div class="text-left zero-sidebar-inner">
             <button id="zero-sidebar-close" class="btn btn-icon" onclick="open_close_sidebar()"><i class="fas fa-times"></i></button>
             <div class="sidebar-card">
-                <div class="sidebar-card-one float-left"><img
-                        src="{{ site.sidebar.avatar.img }}"
-                        alt="{{ site.author }}" class="sidebar-img "></div>
-                <div class="sidebar-card-two float-right">
-                    <span class="title ">{{ site.author }}</span>
-                    <p class="sidebar-p">{{ site.sidebar.description }}</p>
-                    <ul class="sidebar-ul">
-                        {% for s in site.sidebar.social %}
-                            <li><a href="{{ s.href }}" title="{{ s.title }}" ><span class="{{ s.class }}"></span></a></li>
-                        {% endfor %}
-                    </ul>
+                <div class="zero-card-body text-center">
+
+                {% if site.sidebar.avatar.enable %}
+                <img
+                    src="{{ site.sidebar.avatar.img }}"
+                    alt="zero" width="128" height="128" class="avatar" style="border-radius: 50%;">
+                {% endif %}
+    
+                <h1>{{ site.author }}</h1>
+                <p>{{ site.sidebar.description }}</p>
+                <div class="zero-card-meta">
+                    {% for s in site.sidebar.social %}
+                        <li><a href="{{ s.href }}" title="{{ s.title }}" ><span class="{{ s.class }}"></span></a></li>
+                    {% endfor %}
+                </div>
+                    
                 </div>
             </div>
             <nav id="zero-nav">

@@ -20,11 +20,11 @@ tags:
 
 根据自带的vue-cli3选择添加vue-router生成的结构
 
-![1568853800261](F:/post_图片/1568853800261.png)
+![uCmu24.png](https://s2.ax1x.com/2019/09/22/uCmu24.png)
 
-![1568853848375](F:/post_图片/1568853848375.png)
+![uCmQM9.png](https://s2.ax1x.com/2019/09/22/uCmQM9.png)
 
-![1568853972863](F:/post_图片/1568853972863.png)
+![uCmGa6.png](https://s2.ax1x.com/2019/09/22/uCmGa6.png)
 
 ### 声明式的路由使用
 
