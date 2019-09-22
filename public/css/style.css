@@ -2030,7 +2030,7 @@ summary {
 }
 
 .primary a {
-    color: rgb(116, 119, 196);
+    color: #c0e3e7;
 }
 
 .primary a:hover,
@@ -2039,17 +2039,17 @@ summary {
     border: none;
 }
 .active{
-    color: rgb(116, 119, 196);
+    color: #c0e3e7;
 }
 #zero-sidebar-nav a.router-link-exact-active{
     border-bottom: none;
-    color: rgb(116, 119, 196);
+    color: #c0e3e7;
 }
 
 
 #zero-links ul>li:hover,
 #zero-links ol>li:hover {
-    border-bottom: 1px solid rgb(116, 119, 196);
+    border-bottom: 1px solid #c0e3e7;
 }
 
 #zero-pagination a {
@@ -2058,11 +2058,11 @@ summary {
 }
 
 #zero-pagination a:hover {
-    color: rgb(116, 119, 196);
+    color: rgb#c0e3e7;
 }
 
 #zero-pagination>li.active a {
-    color: rgb(116, 119, 196);
-    border-bottom: 1px solid rgb(116, 119, 196);
+    color: rgb#c0e3e7;
+    border-bottom: 1px solid #c0e3e7;
 }
 
