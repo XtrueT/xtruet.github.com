@@ -42,20 +42,18 @@
             <div>
                 {% include search.html %}
             </div>
-            <section class="hidden-md hidden-lg">
+            <section class="hidden-md hidden-lg" style="margin-top:20px; ">
                 {% if page.layout == "post" %}
-                    {% include toc.html%}
+                    {% include toc.html %}
                 <!-- 相关博文3个 -->
                     {% include related.html %}
                 {% else %}
                     {% include zeroLinks.html %}
                 {% endif %}
             </section>
-            <section class="widget"> 
+            <section class="widget" style="margin-top:20px; "> 
                 <!-- 统计运行时间 -->
                 {% include time.html %}
-            </section>
-            <section class="widget"> 
                 <!-- 不蒜子统计 -->
                 {% include busuanzi.html %}
             </section>

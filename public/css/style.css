@@ -528,17 +528,11 @@ dfn,
 cite {
     font-style: italic;
 }
-.tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 blockquote {
-    font-size: 2em;
     line-height: 1.2em;
     padding: 1.1em 1.9em;
     position: relative;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 7px;
     width: 100%;
-    max-width: 470px;
     margin: 0 auto 22px;
 }
 

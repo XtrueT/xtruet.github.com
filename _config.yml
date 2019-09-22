@@ -11,21 +11,23 @@ permalink: /posts/:categories/:title # 博文目录
 
 body:
   enable: true # 开启背景图
-  bg-style: 'style = " background: url(https://api.dujin.org/bing/1920.php) no-repeat fixed;background-size: 100% 100%;position:relative;opacity:0.9;"'
+  bg-style: 'style = " background: url(https://imgchr.com/i/uCVXQA) no-repeat fixed;background-size: 100% 100%;position:relative;"'
 
 
 script: # 需要调用的脚本
-- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+- src: /public/js/prism.js
+# - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+- src: https://cdn.bootcss.com/prism/9000.0.1/components/prism-core.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
-- src: /public/js/prism.js
+
 
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
   src:
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
+    - stylesheet: https://cdn.bootcss.com/prism/9000.0.1/themes/prism-okaidia.min.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
     - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
     - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
   plugins:
