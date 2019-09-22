@@ -1443,7 +1443,13 @@ summary {
 	margin-right: 10px;
 	border-right: 1px solid #9a9a9a;
 }
-
+.recent{
+    margin-top:20px; 
+}
+.recent ul>li{
+    margin-top:20px;
+    border-bottom: #e6e6e6 1px solid; 
+}
 .avatar-circle {
 	border-radius: 50%;
 }

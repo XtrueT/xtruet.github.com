@@ -1,8 +1,8 @@
 <!-- 相关博文3个 -->
 {% if site.post.related.enable %}
 
-<section id="recent-posts-3" class="widget widget_recent_entries">
-    <h4 class="widget-title"> {{ site.post.related.title }} </h4>
+<section id="recent-posts-3" class="recent">
+    <h4 class="zero-title text-center"> {{ site.post.related.title }} </h4>
     <ul>
         {% for post in site.related_posts limit:3 %}
         <li>
