@@ -38,9 +38,19 @@
             <nav id="zero-nav">
                 {% include nav.html %}
             </nav>
+
             <div>
                 {% include search.html %}
             </div>
+            <section class="hidden-md hidden-lg">
+                {% if page.layout == "post" %}
+                    {% include toc.html%}
+                <!-- 相关博文3个 -->
+                    {% include related.html %}
+                {% else %}
+                    {% include zeroLinks.html %}
+                {% endif %}
+            </section>
             <section class="widget"> 
                 <!-- 统计运行时间 -->
                 {% include time.html %}

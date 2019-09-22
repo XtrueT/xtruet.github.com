@@ -1,7 +1,7 @@
 <!-- 激励（微信支付宝） -->
 {% if site.post.reward.enable %}
 
-    <div class="reward" style="text-align: center;">
+    <div class="reward" style="text-align: center;margin: 30px;">
         <a
             style="padding: 15px;border: 1px solid black;margin: 10px;"
             id="rewardButton" 
@@ -9,12 +9,12 @@
             onclick="show_reward()">
             {{ site.post.reward.text }}
         </a>
-        <div id="rewardQRs" style="display: none">
+        <div id="rewardQRs" style="display: none;padding: 20px; ">
             <table>
                 <tr>
                     {% for node in site.post.reward.img %}
                         <td id="{{ node.id }}" class="reward_qr">
-                            <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}" width:"250px">
+                            <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}" height="200px">
                         </td>
                     {% endfor %}
                 </tr>
