@@ -1575,8 +1575,6 @@ summary {
 .zero-grid {
 	margin-left: -1px;
 	margin-right: -1px;
-	visibility: hidden;
-	opacity: 0;
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
@@ -2022,15 +2020,19 @@ summary {
 }
 
 .primary {
-    color: #333333;
+    color:#1e1e1e;
 }
 .primary .zero-card-body,
 .primary .sidebar-card{
     background-color: #c0e3e7;
 }
 
-.primary a {
-    color: #c0e3e7;
+.primary a, 
+.active,
+#zero-pagination a:hover,
+#zero-pagination>li.active a ,
+#zero-sidebar-nav a.router-link-exact-active{
+    color: #2598b0;
 }
 
 .primary a:hover,
@@ -2038,12 +2040,9 @@ summary {
     color: initial;
     border: none;
 }
-.active{
-    color: #c0e3e7;
-}
+
 #zero-sidebar-nav a.router-link-exact-active{
     border-bottom: none;
-    color: #c0e3e7;
 }
 
 
@@ -2057,12 +2056,7 @@ summary {
     border-bottom: 1px solid transparent;
 }
 
-#zero-pagination a:hover {
-    color: rgb#c0e3e7;
-}
-
 #zero-pagination>li.active a {
-    color: rgb#c0e3e7;
     border-bottom: 1px solid #c0e3e7;
 }
 

@@ -11,7 +11,7 @@
                     </nav>
                 </div>
                 <div class="zero-col text-right">
-                    <button id="sidebar-bar" class="btn btn-icon" onclick="open_close_sidebar">
+                    <button id="sidebar-bar" class="btn btn-icon" onclick="open_close_sidebar()">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
@@ -20,7 +20,7 @@
     </div>
     <div id="zero-sidebar-nav">
         <div class="text-left zero-sidebar-inner">
-            <button id="zero-sidebar-close" class="btn btn-icon" onclick="open_close_sidebar"><i class="fas fa-times"></i></button>
+            <button id="zero-sidebar-close" class="btn btn-icon" onclick="open_close_sidebar()"><i class="fas fa-times"></i></button>
             <div class="sidebar-card">
                 <div class="sidebar-card-one float-left"><img
                         src="{{ site.sidebar.avatar.img }}"
@@ -51,7 +51,7 @@
             </section>
         </div>
     </div>
-    <div id="zero-sidebar-overlay" style="opacity: 1;" onclick="open_close_sidebar"></div>
+    <div id="zero-sidebar-overlay" style="opacity: 1;" onclick="open_close_sidebar()"></div>
     <script>
     function open_close_sidebar(){
         let sidebar = document.getElementById('zero-sidebar-nav');
