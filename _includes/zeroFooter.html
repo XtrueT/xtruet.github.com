@@ -1,0 +1,14 @@
+{% if site.copyright.enable %}
+<footer id="zero-footer">
+    <div class="zero-container">
+        <div class="zero-footer-cont clear-mrg">
+            <p class="text-center" style="color: black;">
+                {{ site.time | date: '%Y' }}
+                <i class="fas fa-copyright fa-fw"></i>
+                {{ site.author }}
+                {{ site.copyright.text }}
+            </p>
+        </div>
+    </div>
+</footer>
+{% endif %}

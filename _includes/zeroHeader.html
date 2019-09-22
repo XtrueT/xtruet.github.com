@@ -1,0 +1,66 @@
+<header id="zero-header">
+    <div class="zero-header-body clearfix">
+        <div class="zero-container">
+            <div class="zero-row">
+                <div class="zero-col">
+                    <a href="/" class="zero-logo">.XtrueT</a>
+                </div>
+                <div class="zero-col hidden-sm hidden-xs">
+                    <nav id="zero-nav">
+                        {% include nav.html %}
+                    </nav>
+                </div>
+                <div class="zero-col text-right">
+                    <button id="sidebar-bar" class="btn btn-icon" onclick="open_close_sidebar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="zero-sidebar-nav">
+        <div class="text-left zero-sidebar-inner">
+            <button id="zero-sidebar-close" class="btn btn-icon" onclick="open_close_sidebar"><i class="fas fa-times"></i></button>
+            <div class="sidebar-card">
+                <div class="sidebar-card-one float-left"><img
+                        src="{{ site.sidebar.avatar.img }}"
+                        alt="{{ site.author }}" class="sidebar-img "></div>
+                <div class="sidebar-card-two float-right">
+                    <span class="title ">{{ site.author }}</span>
+                    <p class="sidebar-p">{{ site.sidebar.description }}</p>
+                    <ul class="sidebar-ul">
+                        {% for s in site.sidebar.social %}
+                            <li><a href="{{ s.href }}" title="{{ s.title }}" ><span class="{{ s.class }}"></span></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <nav id="zero-nav">
+                {% include nav.html %}
+            </nav>
+            <div>
+                {% include search.html %}
+            </div>
+            <section class="widget"> 
+                <!-- 统计运行时间 -->
+                {% include time.html %}
+            </section>
+            <section class="widget"> 
+                <!-- 不蒜子统计 -->
+                {% include busuanzi.html %}
+            </section>
+        </div>
+    </div>
+    <div id="zero-sidebar-overlay" style="opacity: 1;" onclick="open_close_sidebar"></div>
+</header>
+<script>
+    function open_close_sidebar(){
+        let sidebar = document.getElementById('zero-sidebar-nav');
+        let sidebar_overlay = document.getElementById('zero-sidebar-overlay');
+        let body = document.body;
+        // 反转类名
+        sidebar.classList.toggle('zero-sidebar-opened');
+        sidebar_overlay.classList.toggle('body-overlay');
+        body.classList.toggle('lock-scroll');
+    };
+</script>

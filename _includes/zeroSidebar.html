@@ -1,0 +1,32 @@
+<div id="zero-sidebar" class="hidden-sm hidden-xs">
+    <div id="zero-card">
+        <div class="zero-card-body text-center">
+
+            {% if site.sidebar.avatar.enable %}
+            <img
+                src="{{ site.sidebar.avatar.img }}"
+                alt="zero" width="128" height="128" class="avatar" style="border-radius: 50%;">
+            {% endif %}
+
+            <h1>{{ site.author }}</h1>
+            <p>{{ site.sidebar.description }}</p>
+            <div class="zero-card-meta">
+                {% for s in site.sidebar.social %}
+                    <li><a href="{{ s.href }}" title="{{ s.title }}" ><span class="{{ s.class }}"></span></a></li>
+                {% endfor %}
+            </div>
+            
+        </div>
+
+        <div class="zero-card-footer">
+            {% if page.layout == "post" %}
+            {% include toc.html%}
+            <!-- 相关博文3个 -->
+            {% include related.html %}
+            {% else %}
+                {% include zeroLinks %}
+            {% endif %}
+        </div>
+
+    </div>
+</div>

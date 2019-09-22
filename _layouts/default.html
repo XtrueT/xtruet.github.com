@@ -1,89 +1,47 @@
 ﻿<!DOCTYPE html>
-<html lang="en" class="ace ace-card-on ace-tab-nav-on ace-main-nav-on ace-sidebar-on" data-theme-color="#c0e3e7">
+<html lang="en">
 
 <head>
 	{% include head.html %}
 </head>
 
-<body class="category" {%if site.body.enable %} {{site.body.bg-style}} {% endif %}>
+<body {%if site.body.enable %} {{site.body.bg-style}} {% endif %}>
 	
 	{% include back_top.html %}
 
 	<!-- Scripts -->
-	<script type="text/javascript" src="/public/js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 
-	<!-- <script type="text/javascript" src="/public/js/plugins/highlight/highlight.pack.js"></script> -->
+	<div id="app" class="primary">
+		<div id="layout">
+			{% include zeroHeader.html %}
 
-	<script type="text/javascript" src="/public/js/plugins/jquery.mCustomScrollbar.min.js"></script>
-	<script type="text/javascript" src="/public/js/plugins/isotope.pkgd.min.js"></script>
+			{% include zeroSidebar.html %}
 
-	<script type="text/javascript" src="/public/js/plugins/progressbar.min.js"></script>
-	
-	<script type="text/javascript" src="/public/js/plugins/slick.min.js"></script>
-
-	<script type="text/javascript" src="/public/js/options.js"></script>
-	<script type="text/javascript" src="/public/js/main.js"></script>
-
-	<div class="ace-wrapper">
-
-		{% include top_nav.html %}
-		
-		
-		{% if page.layout == "post" %}
-			{% include card.html %}
-		{% else %}
-			{% include index_card.html %}
-		{% endif %}
-		
-		
-		<div id="ace-content" class="ace-container-shift">
-				<div class="ace-container">
-					<div class="ace-paper-stock">
-						<main class="ace-paper clearfix">
-							<div class="ace-paper-cont clear-mrg">
-			
-								<!-- START: PAGE CONTENT -->
-			
-								<header class="page-header padd-box">
-									<h1 class="title-lg text-upper">{{page.title}}</h1>
+			<div id="zero-content">
+				<div class="zero-container">
+					<div class="zero-paper-stock ">
+						<div class="zero-paper clearfix">
+							<div class="zero-paper-body">
+								<header id="zero-pageHeader">
+									<h1 class="text-upper title">{{page.title}}</h1>
 								</header>
-
 								{{ content }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-								<!-- END: PAGE CONTENT -->
-			
-							</div><!-- .ace-paper-cont -->
-						</main><!-- .ace-paper -->
-					</div><!-- .ace-paper-stock -->
-				</div><!-- .ace-container -->
-		</div><!-- #ace-content -->
+			{% include zeroFooter.html %}
 
-		<!-- #ace-sidebar -->
-		{% include sidebar.html %}
-		
-		<!-- 背景彩带svg -->
-		{% if site.body.enable == false %}
-		<svg id="ace-bg-shape-1" class="hidden-sm hidden-xs" height="519" width="758">
-			<polygon points="0,455,693,352,173,0,92,0,0,71"
-				style="fill:#d98686;stroke:purple;stroke-width:0; opacity: 0.5">
-		</svg>
-
-		<svg id="ace-bg-shape-2" class="hidden-sm hidden-xs" height="536" width="633">
-			<polygon points="0,0,633,0,633,536" style="fill:#c0e3e7;stroke:purple;stroke-width:0" />
-		</svg>
-		{% endif %}
-
+		</div>
 	</div>
-	<!-- .ace-wrapper -->
-
-
-	{% include footer.html %}
-
 
 	{% if page.layout == "post" %}
-	{% for s in site.script %}
-		<script src="{{ s.src }}"></script>
-	{% endfor %}
+		{% for s in site.script %}
+			<script src="{{ s.src }}"></script>
+		{% endfor %}
 	{% endif %}
 </body>
 </html>

@@ -1,13 +1,7 @@
 <!-- 导航 -->
 {% for node in site.sidebar.nav %}
-    <li>
-        <a 
-        {% if page.url == node.href %} 
-            style="color: #5bc0de;
-            border-bottom: 2px solid #5bc0de;" 
-        {% endif %} 
-        href="{{ node.href }}">
-            {{ node.title }}
-        </a>
-    </li>
+    <a  {% if page.url == node.href %} style="color: #5bc0de;border-bottom: 2px solid #5bc0de;" class="router-link-exact-active router-link-active" {% endif %} href="{{ node.href }}">
+        {{ node.title }}
+    </a>
 {% endfor %}
+

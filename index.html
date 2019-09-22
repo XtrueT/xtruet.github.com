@@ -5,77 +5,60 @@ title: 首页
 
 {% for post in paginator.posts %}
 
-<article class="post hentry">
-
-    <!-- 文章图 -->
-    {% if post.header-img %}
-    <div class="post-media">
-        <a href="{{ post.url }}" rel="bookmark">
-            <figure class="post-figure">
-                <img src="{{ post.header-img }}" alt="">
-            </figure>
-        </a>
-    </div>
-    {% endif %}
-
-    <div class="padd-box-sm">
-
-        <!-- 文章信息 -->
-        <header class="post-header text-center">
-
-            <h2 class="post-title entry-title text-upper">
-                <a rel="bookmark" href="{{ post.url }}">{{ post.title }}</a>
-            </h2>
-
-            <div class="post-header-info">
-                <span class="posted-on">
-                    <span class="screen-reader-text">Posted on </span>
-                    <a href="#" rel="bookmark">
-                        <time class="post-date published" datetime="2019-09-10T11:33:08+00:00">
-                            {{ post.date | date:"%Y-%m-%d"  }} </time>
+<div id="zero-list">
+    <div>
+        <!-- 文章图 -->
+        {% if post.header-img %}
+            <div class="zero-listItem-media" v-if="item.headerImg" >
+                    <a href="{{ post.url }}">
+                        <figure class="post-figure">
+                    <img src="{{ post.header-img }} alt="{{ post.title }}">
+                        </figure>
                     </a>
-                </span>
-                &nbsp;
-                <span class="post-author vcard">by
-                    <a class="url fn n" href="#" rel="author">
+            </div>
+        {% endif %}
+
+        <div class="zero-listItem-body">
+
+            <!-- 文章信息 -->
+            <header class="text-center">
+                <h2 class="zero-title text-upper"><a rel="HTML1"
+                        href="{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="zero-listItem-header-info">
+                    <span class="post-date">{{ post.date | date:"%Y-%m-%d"  }}</span><span
+                        class="post-author">
                         {% if post.author %}
                         {{ post.author }}
                         {% else %}
                         {{ site.title }}
                         {% endif %}
-                    </a>
-                </span>
+                    </span></div>
+            </header>
+
+            <!-- 文件部分内容 -->
+            <div class="clearfix">
+                <p>{{ post.content | strip_html | truncate:100 }}</p>
             </div>
 
-        </header>
-
-        <!-- 部分文章内容 -->
-        <div class="post-content entry-content editor clearfix clear-mrg">
-            <p> {{ post.content | strip_html | truncate:100 }} </p>
-        </div>
-
-        <!-- 文章类型 -->
-        <footer class="post-footer">
-            <div class="post-footer-top brd-btm clearfix">
-                <div class="post-footer-info">
-                    <span class="post-cat-links post-tags">
-                        <span class="screen-reader-text">Categories</span>
-                        {% if post.tags %}
-                        <a rel="category tag" href="/tags#{{ post.tags }}">{{ post.tags }}</a>
-                        {% endif %}
+            <!-- 文章标签 -->
+            <footer class="zero-listItem-footer clearfix text-upper ">
+                <div class="footer-left text-center">
+                    <span class="zero-tags">
+                            {% if post.tags %}
+                                {% for tag in post.tags %}
+                                <a rel="category tag" href="/tags#{{ tag }}">{{ tag }}</a>
+                                {% endfor %}
+                            {% endif %}
                     </span>
-                    <!-- <span class="post-line">|</span>
-                        <a href="#" class="post-comments-count">24 comments</a> -->
                 </div>
-                <div class="post-more">
-                    <a href="{{ post.url }}" rel="bookmark">Read More</a>
+                <div class="footer-right text-center">
+                    <a href="{{ post.url }}" rel="bookmark">ReadMore</a></span>
                 </div>
-            </div>
-        </footer>
+            </footer>
 
+        </div>
     </div>
-
-</article><!-- .post -->
+</div>
 
 {% endfor %}
 
@@ -83,12 +66,14 @@ title: 首页
 
 {% if paginator.total_pages > 1 %}
 
-<div class="pagination">
+<ul id="zero-pagination">
 
     {% if paginator.previous_page %}
-    <a class="next page-numbers" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-        <i class="ace-icon ace-icon-chevron-left"></i>
-    </a>
+    <li>
+        <a class="next page-numbers" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <i class="fas fa-angle-left"></i>
+        </a>
+    </li>
     {% else %}
     <!-- <span><i class="ace-icon ace-icon-chevron-left"></i></span> -->
     {% endif %}
@@ -96,24 +81,32 @@ title: 首页
     {% for page in (1..paginator.total_pages) %}
 
     {% if page == paginator.page %}
-    <span class="page-numbers current">{{ page }}</span>
+    <li class="active">
+        <span class="active">{{ page }}</span>
+    </li>
     {% elsif page == 1 %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-numbers">
-        {{ page }}</a>
+    <li>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-numbers">
+            {{ page }}
+        </a>
+    </li>
     {% else %}
-    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
+    <li>
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
         class="page-numbers">{{ page }}</a>
+    </li>
     {% endif %}
 
     {% endfor %}
 
     {% if paginator.next_page %}
-    <a class="next page-numbers" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-        <i class="ace-icon ace-icon-chevron-right"></i></a>
+    <li>
+        <a class="next page-numbers" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+        <i class="fas fa-angle-right"></i></a>
+    </li>
     {% else %}
     <!-- <span><i class="ace-icon ace-icon-chevron-right"></i></span> -->
     {% endif %}
-
-</div><!-- .pagination -->
+</ul><!-- .pagination -->
 
 {% endif %}

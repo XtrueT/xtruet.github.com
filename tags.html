@@ -4,22 +4,22 @@ title: 标签
 ---
 
 <!-- 标签列表 -->
-<div class="pf-wrap">
+<div class="zero-wrap">
     
     <!-- 标签分类 -->
-    <div class="pf-filter padd-box">
+    <div class="zero-filter padd-box">
         <button data-filter="*">All</button>
         {% for tag in site.tags %}
         <button data-filter=".{{ tag[0] }}">{{ tag[0] }}<sup style="color:red">{{tag[1].size}}</sup></button>
         {% endfor %}
-    </div><!-- .pf-filter -->
+    </div>
 
     <!-- 标签过滤内容 -->
-    <div class="pf-grid">
-        <div class="pf-grid-sizer"></div><!-- used for sizing -->
+    <div class="zero-grid">
+        <div class="zero-grid-sizer"></div><!-- used for sizing -->
         {% for tag in site.tags %}
 
-        <section class="pf-grid-item {{ tag[0] }}">
+        <section class="zero-grid-item {{ tag[0] }}">
             <header>
                 <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
             </header>
@@ -35,5 +35,5 @@ title: 标签
         </section>
 
         {% endfor %}
-    </div><!-- .pf-grid -->
-</div><!-- .pf-wrap -->
+    </div>
+</div>

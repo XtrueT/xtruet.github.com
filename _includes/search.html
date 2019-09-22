@@ -4,11 +4,9 @@
 
     <div class="search-form">
         <label>
-            <span class="screen-reader-text">Search for:</span>
             <input type="search" class="search-field" id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}">
         </label>
         <button type="submit" class="search-submit">
-            <span class="screen-reader-text">Search</span>
             <span class="ace-icon ace-icon-search"></span>
         </button>
     </div>    
@@ -27,3 +25,20 @@
     </script>
 </section>  
 {% endif %}
+.search-form .search-field {
+	width: 100%;
+	height: 50px;
+	padding: 15px 45px 15px 15px;
+	border: 0;
+	background: #f3f3f3;
+}
+.search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 14px;
+	border: 0;
+	background: transparent;
+	display: inline-block;
+	vertical-align: middle;
+}
