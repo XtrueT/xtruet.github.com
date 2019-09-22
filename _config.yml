@@ -11,7 +11,7 @@ permalink: /posts/:categories/:title # 博文目录
 
 body:
   enable: true # 开启背景图
-  bg-style: 'style = " background: url(http://tva1.sinaimg.cn/large/007X8olVly1g78pyfa3syj316g0u04qu.jpg) no-repeat fixed;background-size: 100% 100%;position:relative;"'
+  bg-style: 'style = " background: url(https://tva1.sinaimg.cn/large/007X8olVly1g78qdqzpaaj316g0u04qu.jpg) no-repeat fixed;background-size: 100% 100%;position:relative;"'
 
 
 script: # 需要调用的脚本
