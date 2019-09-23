@@ -3,7 +3,7 @@
     $.fn.toc = function (options) {
         var defaults = {
                 noBackToTopLinks: false,
-                title: '<i>目录</i>',
+                title: '<i class="zero-title text-center ">目录</i>',
                 minimumHeaders: 3,
                 headers: 'h1, h2, h3, h4, h5, h6',
                 listType: 'ul', // values: [ol|ul]
