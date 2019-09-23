@@ -1935,7 +1935,7 @@ summary {
 .zero-logo {
     font-size: 26px;
     line-height: 1;
-    color: black !important;
+    color: black ;
     white-space: nowrap;
     text-decoration: none;
     display: inline-block;
@@ -2218,7 +2218,7 @@ summary {
 #zero-nav a.router-link-exact-active {
     color:initial;
     /* 显示边框不造成其他nav 兄弟元素的抖动 */
-    border-bottom: 2px solid rgb(116, 119, 196);
+    border-bottom: 2px solid #2598b0;
 }
 
 #zero-sidebar-nav nav{
@@ -2352,12 +2352,16 @@ summary {
 #zero-pagination a:hover,
 #zero-pagination>li.active a ,
 #zero-sidebar-nav a.router-link-exact-active{
-    color: #2598b0 !important;
+    color: #2598b0;
 }
-.primary .zero-header-body a,
-.primary .zero-header-body button{
-    color: #fff !important;
+
+@media (min-width:993px) {
+    .primary .zero-header-body a,
+    .primary .zero-header-body button{
+        color: #fff !important;
+    }
 }
+
 
 .primary a:hover,
 .primary a:active {
