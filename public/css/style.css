@@ -1935,7 +1935,7 @@ summary {
 .zero-logo {
     font-size: 26px;
     line-height: 1;
-    color: black ;
+    color: black !important;
     white-space: nowrap;
     text-decoration: none;
     display: inline-block;
@@ -2363,7 +2363,7 @@ summary {
 }
 @media (max-width:993px){
     .zero-logo{
-        color: #000;
+        color: #000 !important;
     }
 }
 
