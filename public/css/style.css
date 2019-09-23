@@ -2354,7 +2354,8 @@ summary {
 #zero-sidebar-nav a.router-link-exact-active{
     color: #2598b0 !important;
 }
-.primary .zero-header-body{
+.primary .zero-header-body a,
+.primary .zero-header-body button{
     color: #fff !important;
 }
 
