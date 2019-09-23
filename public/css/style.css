@@ -2344,7 +2344,7 @@ summary {
 }
 .primary .zero-card-body,
 .primary .sidebar-card{
-    background-color: #c0e3e7;
+    background-color: #c0e3e7 !important;
 }
 
 .primary a, 
@@ -2352,7 +2352,10 @@ summary {
 #zero-pagination a:hover,
 #zero-pagination>li.active a ,
 #zero-sidebar-nav a.router-link-exact-active{
-    color: #2598b0;
+    color: #2598b0 !important;
+}
+.primary .zero-header-body{
+    color: #fff !important;
 }
 
 .primary a:hover,

@@ -44,13 +44,30 @@
                 {% include nav.html %}
             </nav>
 
-            <div>
+            <div style="margin-top:20px; ">
                 {% include search.html %}
             </div>
             <section class="hidden-md hidden-lg" style="margin-top:20px; ">
+                
+                {% if site.jekyll_table_of_contents.enable %}
+                <div id="toc1" 
+                style="display: block;
+                line-height: initial;
+                list-style: none;
+                text-align: left;color: whitesmoke">
+                </div>
+                <script src="{{ site.jekyll_table_of_contents.src }}"></script>
+                <script>
+                    $(document).ready(function () {
+                        $('#toc1').toc();
+                    });
+                </script>
+                {% endif %}
+                {% include related.html %}
+
                 {% include zeroLinks.html %}
             </section>
-            <section class="widget" style="margin-top:20px; "> 
+            <section class="widget" style="margin-top:20px;margin-bottom: 20px;"> 
                 <!-- 统计运行时间 -->
                 {% include time.html %}
                 <!-- 不蒜子统计 -->
