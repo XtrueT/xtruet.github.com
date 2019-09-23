@@ -2202,7 +2202,7 @@ summary {
 /* nav */
 
 #zero-nav {
-    padding: 30px;
+    /* padding: 30px; */
     font-size: 1em;
     line-height: 1em;
     text-align: right;
@@ -2359,6 +2359,11 @@ summary {
     .primary .zero-header-body a,
     .primary .zero-header-body button{
         color: #fff !important;
+    }
+}
+@media (max-width:993px){
+    .zero-logo{
+        color: #000;
     }
 }
 
