@@ -1780,7 +1780,11 @@ summary {
     padding: 20px;
 }
 .zero-card-footer {
-	padding: 40px 35px;
+    padding: 40px 35px;
+    position: sticky;
+    z-index: 99;
+    overflow: visible;
+    top:0;
 }
 .zero-card-meta {
     margin: 22px -15px 0;
