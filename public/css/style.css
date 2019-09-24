@@ -2424,7 +2424,7 @@ summary {
 }
 .archive-list li{
     list-style: none;
-    padding: 5px;
+    padding: 5px 5px 5px 20px;
     border-left: 1px solid #ccc;
 }
 
