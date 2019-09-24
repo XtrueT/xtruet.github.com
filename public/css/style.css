@@ -1753,7 +1753,7 @@ summary {
     margin-right: auto;
 }
 
-#zero-backTop{
+.zero-backTop{
     position: fixed;
     bottom: 20px;
     right: 15px;
@@ -1764,27 +1764,10 @@ summary {
     text-align: center;
     border: none;
 }
-#zero-backTop::before{
-    color: black;
-    content: "";
-    width: 0;   
-    height: 0;   
-    border-left: 10px solid transparent; 
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid rgb(0, 0, 0); 
-    font-size: 0;  
-    line-height: 0; 
-}
+
 /* card */
 .zero-card-body {
     padding: 20px;
-}
-.zero-card-footer {
-    padding: 40px 35px;
-    position: sticky;
-    z-index: 99;
-    overflow: visible;
-    top:0;
 }
 .zero-card-meta {
     margin: 22px -15px 0;
@@ -2225,9 +2208,7 @@ summary {
     border-bottom: 2px solid #2598b0;
 }
 
-#zero-sidebar-nav nav{
-    display: none;
-}
+
 
 @media (max-width: 768px) {
 
@@ -2316,10 +2297,10 @@ summary {
         margin-left: 20px;
         height: 100%;
         box-shadow: -4px 7px 15px 1px rgba(118, 95, 91, 0.34);
-        /* position: sticky; */
+        position: sticky;
         z-index: 99;
         overflow: visible;
-        /* top:0; */
+        top:0;
 	}
 }
 
@@ -2327,13 +2308,13 @@ summary {
     display: block;
     /* 设置宽度，防止出现滚动条造成布局浮动 */
     position: relative;
-    width: 100%;
+    width: 100vw;
 }
 #app{
 	/* 使用overflow出现了sticky 失效 */
 	/* 隐藏水平滚动条 */
-    /* overflow-x:hidden; */
-    margin-left: calc(100vw - 100%);
+    overflow-x:hidden;
+    /* margin-left: calc(100vw - 100%); */
 }
 
 
@@ -2398,6 +2379,23 @@ summary {
     border-bottom: 1px solid #c0e3e7;
 }
 
+.backtop {
+	background-color:#c0e3e7;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:16px 11px;
+	text-decoration:none;
+}
+.backtop:hover {
+	background-color:#2598b0;
+}
+
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
 ::-webkit-scrollbar {
     width: 9px;
@@ -2417,4 +2415,28 @@ summary {
     -webkit-border-radius: 2em;
     -moz-border-radius: 2em;
     border-radius: 2em
+}
+/* archive list */
+
+.archive-list{
+    padding: 10px;
+    border: 1px solid #fff;
+}
+.archive-list li{
+    list-style: none;
+    padding: 5px;
+    border-left: 1px solid #ccc;
+}
+
+.archive-list li::before{
+    content: '';
+    display: inline-block;
+    width: 6px;
+    position: absolute;
+    height: 6px;
+    left: 16px;
+    margin-top: 7px;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    background: #2598b0;
 }
