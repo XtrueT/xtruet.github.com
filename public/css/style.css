@@ -2232,6 +2232,16 @@ summary {
     #zero-sidebar-nav nav>a:hover{
         color: initial;
     }
+    #zero-header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 72px;
+        z-index: 1000;
+    }
+    #zero-content{
+        margin-top: 72px;
+    }
 }
 #zero-pageHeader{
 	margin-left: 3.4%;
