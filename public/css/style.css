@@ -2316,10 +2316,10 @@ summary {
         margin-left: 20px;
         height: 100%;
         box-shadow: -4px 7px 15px 1px rgba(118, 95, 91, 0.34);
-        position: sticky;
+        /* position: sticky; */
         z-index: 99;
         overflow: visible;
-        top:0;
+        /* top:0; */
 	}
 }
 
