@@ -22,7 +22,7 @@ title: README
 
 由[jekyll/jekyll](https://github.com/jekyll/jekyll)驱动，感谢。
 
-
+[A cross-browser library of CSS animations. As easy to use as an easy thing.](http://daneden.github.io/animate.css) 
 使用了[jsdelivr](https://www.jsdelivr.com/)提供的CDN加速服务，感谢。
 
 使用了[bootcdn](https://www.bootcdn.cn/)提供的CDN加速服务，感谢。
@@ -57,12 +57,14 @@ title: README
   - [x] 首页整改
   - [x] 文章分页
   - [ ] 引入每日必应图作为网页背景图 ps： 太慢了已经删除
+  - [x] 添加动画效果
 
 ## 历程
 
 ### 正在进行 v3.0.3
 
 #### TodoList
+
 - [ ] 原生重写目录插件修改样式使之可以在多设备上使用
 - [x] 统一 js 和 图标 
 - [x] 界面调整
@@ -70,12 +72,13 @@ title: README
   - [x] sidebar搜索分离
   - [x] 首页整改
   - [x] 文章分页
-  - [x] 引入每日必应图作为网页背景图
+  - [ ] 引入每日必应图作为网页背景图
   - [x] 统计每个Tag 的文章数
   - [x] 添加个人信息页面
 
 #### 已知bug
 - prism js  选中代码失效了
+- 其他的一些浏览器兼容问题
 
 ### 2019-09-22 v3.0.2
 
