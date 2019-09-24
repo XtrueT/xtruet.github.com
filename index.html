@@ -3,11 +3,14 @@ layout: default
 title: 首页
 ---
 
-{% for post in paginator.posts %}
+
 
 <div id="zero-list">
-    <div>
+    {% for post in paginator.posts %}
+    <article class="zero-postItem">
+
         <!-- 文章图 -->
+
         {% if post.header-img %}
             <div class="zero-listItem-media" v-if="item.headerImg" >
                     <a href="{{ post.url }}">
@@ -55,58 +58,52 @@ title: 首页
                     <a href="{{ post.url }}" rel="bookmark">ReadMore</a></span>
                 </div>
             </footer>
-
         </div>
-    </div>
+    </article>
+    {% endfor %}
+        <!-- 分页链接 -->
+
+    {% if paginator.total_pages > 1 %}
+
+    <ul id="zero-pagination">
+
+        {% if paginator.previous_page %}
+        <li>
+            <a class="next page-numbers" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                <i class="fas fa-angle-left"></i>
+            </a>
+        </li>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+
+        {% if page == paginator.page %}
+        <li class="active">
+            <span class="active">{{ page }}</span>
+        </li>
+        {% elsif page == 1 %}
+        <li>
+            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-numbers">
+                {{ page }}
+            </a>
+        </li>
+        {% else %}
+        <li>
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
+            class="page-numbers">{{ page }}</a>
+        </li>
+        {% endif %}
+
+        {% endfor %}
+
+        {% if paginator.next_page %}
+        <li>
+            <a class="next page-numbers" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <i class="fas fa-angle-right"></i></a>
+        </li>
+        {% endif %}
+    </ul>
+
+    {% endif %}
 </div>
 
-{% endfor %}
-
-<!-- 分页链接 -->
-
-{% if paginator.total_pages > 1 %}
-
-<ul id="zero-pagination">
-
-    {% if paginator.previous_page %}
-    <li>
-        <a class="next page-numbers" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-            <i class="fas fa-angle-left"></i>
-        </a>
-    </li>
-    {% else %}
-    <!-- <span><i class="ace-icon ace-icon-chevron-left"></i></span> -->
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-
-    {% if page == paginator.page %}
-    <li class="active">
-        <span class="active">{{ page }}</span>
-    </li>
-    {% elsif page == 1 %}
-    <li>
-        <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" class="page-numbers">
-            {{ page }}
-        </a>
-    </li>
-    {% else %}
-    <li>
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
-        class="page-numbers">{{ page }}</a>
-    </li>
-    {% endif %}
-
-    {% endfor %}
-
-    {% if paginator.next_page %}
-    <li>
-        <a class="next page-numbers" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-        <i class="fas fa-angle-right"></i></a>
-    </li>
-    {% else %}
-    <!-- <span><i class="ace-icon ace-icon-chevron-right"></i></span> -->
-    {% endif %}
-</ul><!-- .pagination -->
-
-{% endif %}
