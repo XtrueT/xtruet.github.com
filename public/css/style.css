@@ -2210,7 +2210,7 @@ summary {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 993px) {
 
     #zero-nav a {
         margin-left: 10px;
@@ -2431,12 +2431,24 @@ summary {
 .archive-list li::before{
     content: '';
     display: inline-block;
-    width: 6px;
+    width: 10px;
     position: absolute;
-    height: 6px;
-    left: 16px;
+    height: 10px;
+    left: 31px;
     margin-top: 7px;
-    border: 1px solid #e6e6e6;
     border-radius: 50%;
-    background: #2598b0;
+    background: #abc2d3;
+}
+@media (max-width:993px){
+    .archive-list li::before{
+        content: '';
+        display: inline-block;
+        width: 10px;
+        position: absolute;
+        height: 10px;
+        left: 7px;
+        margin-top: 7px;
+        border-radius: 50%;
+        background: #abc2d3;
+    }
 }
