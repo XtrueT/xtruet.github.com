@@ -16,7 +16,6 @@ title: 标签
 
     <!-- 标签过滤内容 -->
     <div class="zero-grid" id="zero-filterItem">
-        <div class="zero-grid-sizer"></div><!-- used for sizing -->
         {% for tag in site.tags %}
 
         <section class="zero-grid-item {{ tag[0] }}">
@@ -49,9 +48,6 @@ title: 标签
                 }else if(data_filter==='*') {
                     $("#zero-filterItem").children().removeClass("hidden").fadeIn();
                     return $(this).addClass("active");
-                }else if(data_filter!=='*' && $(this).hasClass("active")){
-                    $("#zero-filter button").first().addClass('active');
-                    return $("#zero-filterItem").children().removeClass("hidden").fadeIn();
                 }
             });
         });
