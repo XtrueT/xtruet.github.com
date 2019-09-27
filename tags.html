@@ -41,10 +41,12 @@ title: 标签
             $('#zero-filter').children().click(function(){
                 // 获取自定义的属性
                 var date = $(this).attr("data-filter");
-                if(date!=="*"){
-                    $("#zero-filterItem").children().not(date).toggleClass("hidden");
+                if(date!=="*" && !$(this).hasClass("active")){
+                    $("#zero-filterItem").children().not(date).toggleClass("hidden").fadeOut();
+                    return $(this).toggleClass("active");
+                }else{
+                    return $(this).toggleClass("active");
                 }
-                return $(this).toggleClass("active");
             });
         });
     </script>
