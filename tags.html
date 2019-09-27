@@ -40,11 +40,11 @@ title: 标签
         $(document).ready(function () {
             $('#zero-filter').children().click(function(){
                 // 获取自定义的属性
-                let date = $(this).attr(data-filter);
+                var date = $(this).attr("data-filter");
                 if(date!=="*"){
                     $("#zero-filterItem").children().not(date).css("display","none");
                 }
-            });
+            }).addClass("active");
         });
     </script>
 </div>
