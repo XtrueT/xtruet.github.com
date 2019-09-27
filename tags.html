@@ -41,6 +41,9 @@ title: 标签
             $('#zero-filter').children().click(function(){
                 // 获取自定义的属性
                 var data_filter = $(this).attr("data-filter");
+                if (data_filter!==$("#zero-filter").children().has("button.active")) {
+                    $("#zero-filter").children().has("button.active").removeClass("active");
+                }
                 if(data_filter!=='*' && !$(this).hasClass("active")){
                     $("#zero-filterItem").children().filter(data_filter).removeClass("hidden").fadeIn();
                     $("#zero-filterItem").children().not(data_filter).addClass("hidden").fadeOut();
@@ -48,9 +51,9 @@ title: 标签
                 }else if(data_filter==='*') {
                     $("#zero-filterItem").children().removeClass("hidden").fadeIn();
                     return $(this).addClass("active");
-                }
-                if (data_filter!==$("#zero-filter").children().has("button.active")) {
-                    $("#zero-filter").children().has("button.active").removeClass("active");
+                }else if(data_filter!=='*' && $(this).hasClass("active")){
+                    $("#zero-filter button").first().addClass('active');
+                    return $("#zero-filterItem").children().removeClass("hidden").fadeIn();
                 }
             });
         });
