@@ -8,7 +8,7 @@ title: 标签
     
     <!-- 标签分类 -->
     <div class="zero-filter padd-box" id="zero-filter"> 
-        <button data-filter="*">All</button>
+        <button data-filter="*" class="active">All</button>
         {% for tag in site.tags %}
         <button data-filter=".{{ tag[0] }}">{{ tag[0] }}<sup style="color:red">{{tag[1].size}}</sup></button>
         {% endfor %}
@@ -40,11 +40,12 @@ title: 标签
         $(document).ready(function () {
             $('#zero-filter').children().click(function(){
                 // 获取自定义的属性
-                var date = $(this).attr("data-filter");
-                if(date!=="*" && !$(this).hasClass("active")){
-                    $("#zero-filterItem").children().not(date).toggleClass("hidden").fadeOut();
+                var data_filter = $(this).attr("data-filter");
+                if(data_filter!=='*' && !$(this).hasClass("active")){
+                    $("#zero-filterItem").children().filter(data_filter).removeClass("hidden").fadeIn();
+                    $("#zero-filterItem").children().not(data_filter).addClass("hidden").fadeOut();
                     return $(this).toggleClass("active");
-                }else{
+                }else if(data_filter==='*') {
                     return $(this).toggleClass("active");
                 }
             });
