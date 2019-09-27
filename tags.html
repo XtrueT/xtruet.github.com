@@ -42,9 +42,10 @@ title: 标签
                 // 获取自定义的属性
                 var date = $(this).attr("data-filter");
                 if(date!=="*"){
-                    $("#zero-filterItem").children().not(date).css("display","none");
+                    $("#zero-filterItem").children().not(date).toggleClass("hidden");
                 }
-            }).addClass("active");
+                return $(this).toggleClass("active");
+            });
         });
     </script>
 </div>
