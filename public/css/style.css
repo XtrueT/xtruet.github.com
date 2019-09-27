@@ -584,7 +584,7 @@ tt,
 var,
 pre,
 samp {
-    font-size: 0.85em !important;
+    font-size: 1em;
     font-family: monospace, monospace;
 }
 
