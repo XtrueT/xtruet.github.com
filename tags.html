@@ -41,9 +41,7 @@ title: 标签
             $('#zero-filter').children().click(function(){
                 // 获取自定义的属性
                 var data_filter = $(this).attr("data-filter");
-                if (data_filter!==$("#zero-filter").children().has("button.active")) {
-                    $("#zero-filter").children().has("button.active").removeClass("active");
-                }
+                $("#zero-filter").children().removeClass("active");
                 if(data_filter!=='*' && !$(this).hasClass("active")){
                     $("#zero-filterItem").children().filter(data_filter).removeClass("hidden").fadeIn();
                     $("#zero-filterItem").children().not(data_filter).addClass("hidden").fadeOut();
