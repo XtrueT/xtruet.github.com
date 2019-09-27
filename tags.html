@@ -7,7 +7,7 @@ title: 标签
 <div class="zero-wrap">
     
     <!-- 标签分类 -->
-    <div class="zero-filter padd-box">
+    <div class="zero-filter padd-box" id="zero-filter"> 
         <button data-filter="*">All</button>
         {% for tag in site.tags %}
         <button data-filter=".{{ tag[0] }}">{{ tag[0] }}<sup style="color:red">{{tag[1].size}}</sup></button>
@@ -15,7 +15,7 @@ title: 标签
     </div>
 
     <!-- 标签过滤内容 -->
-    <div class="zero-grid">
+    <div class="zero-grid" id="zero-filterItem">
         <div class="zero-grid-sizer"></div><!-- used for sizing -->
         {% for tag in site.tags %}
 
@@ -36,4 +36,15 @@ title: 标签
 
         {% endfor %}
     </div>
+    <script>
+        $(document).ready(function () {
+            $('#zero-filter').children().click(function(){
+                // 获取自定义的属性
+                let date = $(this).attr(data-filter);
+                if(date!=="*"){
+                    $("#zero-filterItem").children().not(date).css("display","none");
+                }
+            });
+        });
+    </script>
 </div>
