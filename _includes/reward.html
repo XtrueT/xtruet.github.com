@@ -9,7 +9,8 @@
             onclick="show_reward()">
             {{ site.post.reward.text }}
         </a>
-        <div id="rewardQRs" style="display: none;padding: 20px; ">
+        <div id="rewardQRs" style="display: none;padding: 20px;flex-wrap: wrap;
+        justify-content: center; ">
             {% for node in site.post.reward.img %}
                 <td id="{{ node.id }}" class="reward_qr">
                     <img id="{{ node.id }}_qr" src="{{ node.src }}" alt="{{ site.author }}{{ node.id }}" height="200px">
