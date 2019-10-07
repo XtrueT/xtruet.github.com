@@ -2336,9 +2336,10 @@ summary {
 .primary .zero-card-body,
 .primary .sidebar-card{
     background-color: #c0e3e7 !important;
+    color: #333;
 }
 
-.primary, 
+.post-content a,
 .active,
 #zero-pagination a:hover,
 #zero-pagination>li.active a ,
@@ -2361,7 +2362,7 @@ summary {
 
 .primary a:hover,
 .primary a:active {
-    color: initial;
+    color: #2598b0;
     border: none;
 }
 
