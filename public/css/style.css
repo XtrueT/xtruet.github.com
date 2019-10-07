@@ -1760,7 +1760,7 @@ summary {
 
 /* card */
 .zero-card-body {
-    padding: 20px;
+    padding-top: 20px;
 }
 .zero-card-meta {
     margin: 22px -15px 0;
