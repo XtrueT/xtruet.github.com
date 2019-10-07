@@ -11,9 +11,11 @@
             </a>
             <div class="post-category-comment">
                 {% if post.tags %}
-                    <a  rel="category tag"  class="post-category" href="/tags#{{ post.tags }}">{{ post.tags }}</a>
+                {% for tag in post.tags %}
+                <a rel="category tag" class="post-category" href="/tags#{{ tag }}">{{ tag }}</a>
+                {% endfor %}
                 {% endif %}
-                <a href="" class="post-comments">{{ post.date | date:"%Y-%m-%d" }}</a>
+                <a href="#" class="post-comments">{{ post.date | date:"%Y-%m-%d" }}</a>
             </div>
         </li>
         {% endfor %}
