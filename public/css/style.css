@@ -2192,6 +2192,7 @@ summary {
 #zero-nav a {
     margin-left: 30px;
     display: inline-block;
+    padding-bottom: 4px;
     /* 预先添加透明边框 */
     border-bottom: 2px solid transparent;
 }
@@ -2329,20 +2330,20 @@ summary {
     background-color: #c0e3e7;
 }
 
-.primary {
-    color:#1e1e1e;
+.primary a{
+    color:#212121 !important;
 }
 .primary .zero-card-body,
 .primary .sidebar-card{
     background-color: #c0e3e7 !important;
 }
 
-.primary a, 
+.primary, 
 .active,
 #zero-pagination a:hover,
 #zero-pagination>li.active a ,
 #zero-sidebar-nav a.router-link-exact-active{
-    color: #2598b0;
+    color: #2598b0 !important;
 }
 
 @media (min-width:993px) {
@@ -2402,8 +2403,8 @@ summary {
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
 ::-webkit-scrollbar {
-    width: 9px;
-    height: 9px
+    width: 5px;
+    height: 5px
 }
 /*定义滚动条轨道*/ 
 ::-webkit-scrollbar-track {
