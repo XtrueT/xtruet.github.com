@@ -2051,7 +2051,7 @@ summary {
 .zero-sidebar-inner {
     /* 隐藏滚动条 */
     height: 100%;
-    padding: 0 13px;
+    padding: 0 20px;
     overflow: auto;
     margin-top: 20px;
 }
