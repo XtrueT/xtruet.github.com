@@ -11,7 +11,7 @@ permalink: /posts/:categories/:title # 博文目录
 
 body:
   enable: true # 开启背景图
-  bg-style: 'style = " background: url(https://tva1.sinaimg.cn/large/007X8olVly1g78qdqzpaaj316g0u04qu.jpg) no-repeat fixed;background-size: 100% 100%;position:relative;"'
+  bg-style: 'style = " background: url(https://tva1.sinaimg.cn/large/007X8olVly1g7pr4rvwo4j31ft0u07wi.jpg) no-repeat fixed;background-size: 100% 100%;position:relative;"'
 
 
 script: # 需要调用的脚本
@@ -45,7 +45,7 @@ sidebar:
   avatar: # 侧边栏显示的头像
     enable: true
     img: https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/pp.1.cd298366.xLed3zwhuhnRsSFcnjqzJQ.jpg?1567248569
-  description: 玉树临风
+  description: 是风动啊~
   social:
   - title: 2640272466@qq.com # email
     href: mailto:2640272466@qq.com
