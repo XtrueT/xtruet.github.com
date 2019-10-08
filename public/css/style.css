@@ -1891,10 +1891,6 @@ summary {
 }
 
 /* header */
-#zero-header{
-    overflow: hidden;
-    -webkit-overflow-scrolling: touch;
-}
 .zero-container {
     width: 100%;
     max-width: 940px;
