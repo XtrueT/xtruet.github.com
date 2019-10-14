@@ -54,7 +54,7 @@ tags:
    
    {% raw %}
    
-   {% comment %} 这里是各种包含奇怪花括号 {{{0}}} 的地方 {% endcomment %}
+   {% comment %} 这里是各种包含奇怪花括号 {{{0}}} 的地方 进行了转义 {% endcomment %}
 
 ```jsx
 import React ,{Component } from 'react';
@@ -97,7 +97,7 @@ class AuthRouter extends Component{
 export default withRouter(AuthRouter);
 ```
 
-{% endraw %}
+
 
 具体使用：
 
@@ -462,6 +462,8 @@ export default withRouter(LoginForm);
 值得注意的是`react-router v4+`需要使用`withRouter`进行转换组件才能拿到
 
 `history` ，退出类似；
+
+{% endraw %}
 
 ### 结语
 
