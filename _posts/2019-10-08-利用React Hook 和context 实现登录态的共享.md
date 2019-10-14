@@ -73,13 +73,13 @@ class AuthRouter extends Component{
                             return <Component {...props}/>
                         }else{
                             Toast.info("你还没有登录！")
-                            return <Redirect to={{
+                            //return <Redirect to={{
                                 pathname:'/login',
                                 // 保存切换到登录页前的地址
                                 state:{
                                     from:props.location.pathname
                                 }
-                            }}/>
+                            //}}/>
                         }
                     }
                 }
