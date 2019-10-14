@@ -51,6 +51,10 @@ tags:
 5. 包括不是从公共组件来的URL访问，将要访问的地址 pathname保存在location的state里
 
    提供给登录组件进行返回到要访问的页面。
+   
+   {% raw %}
+   
+   {% comment %} 这里是各种包含奇怪花括号 {{{0}}} 的地方 {% endcomment %}
 
 ```jsx
 import React ,{Component } from 'react';
@@ -73,6 +77,9 @@ class AuthRouter extends Component{
                             return <Component {...props}/>
                         }else{
                             Toast.info("你还没有登录！")
+                            
+
+
                             //return <Redirect to={{
                                 pathname:'/login',
                                 // 保存切换到登录页前的地址
@@ -89,6 +96,8 @@ class AuthRouter extends Component{
 }
 export default withRouter(AuthRouter);
 ```
+
+{% endraw %}
 
 具体使用：
 
