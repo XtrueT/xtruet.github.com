@@ -1,5 +1,6 @@
 <div id="zero-sidebar" class="animated slideInLeft hidden-sm hidden-xs">
     <div id="zero-card">
+	    {% if page.layout != "post" %}
         <div class="zero-card-body text-center">
 
             {% if site.sidebar.avatar.enable %}
@@ -17,7 +18,7 @@
             </div>
             
         </div>
-
+        {% endif %}
         <div class="zero-card-footer">
             {% if page.layout == "post" %}
 
