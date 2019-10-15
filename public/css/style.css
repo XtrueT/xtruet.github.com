@@ -2306,15 +2306,15 @@ summary {
 }
 
 #layout{
-    display: block;
+    /* display: block; */
     /* 设置宽度，防止出现滚动条造成布局浮动 */
-    position: relative;
-    width: 100vw;
+    /* position: relative; */
+    /* width: 100vw; */
 }
 #app{
 	/* 使用overflow出现了sticky 失效 */
 	/* 隐藏水平滚动条 */
-    overflow-x:hidden;
+    /* overflow-x:hidden; */
     /* margin-left: calc(100vw - 100%); */
 }
 
