@@ -1773,7 +1773,7 @@ summary {
 }
 .zero-card-footer{
     background: #fff;
-    padding: 10px 20px;
+    padding: 10px;
 }
 
 /* content */
@@ -2300,6 +2300,7 @@ summary {
         z-index: 99;
         top: 0;
         overflow: hidden;
+        min-height:100vh;
     }
     #zero-sidebar #zero-card{
         height: 100%;
@@ -2313,7 +2314,7 @@ summary {
     /* display: block; */
     /* 设置宽度，防止出现滚动条造成布局浮动 */
     /* position: relative; */
-    	width: 100%;
+    width: 100%;
 	flex: auto;
 	min-height:100vh;
 }
