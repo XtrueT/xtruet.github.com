@@ -2301,6 +2301,7 @@ summary {
         top: 0;
         overflow: hidden;
         min-height:100vh;
+        opacity: 0.8 !important;
     }
     #zero-sidebar #zero-card{
         height: 100%;
