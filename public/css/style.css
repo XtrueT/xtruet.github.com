@@ -2051,19 +2051,19 @@ summary {
     height: 100%;
     margin-top: 20px;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     margin-right: -20px;
 }
 .zero-sidebar-inner {
     padding-left: 10px;
-    padding-right: 30px;
+    padding-right: 10px;
 }
-@media (min-width:992px){
+/* @media (min-width:992px){
     .zero-sidebar-inner {
         padding-left: 10px;
         padding-right: 10px;
     }
-}
+} */
 
 .body-overlay {
     position: fixed;
