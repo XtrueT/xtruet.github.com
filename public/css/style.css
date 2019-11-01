@@ -2037,7 +2037,7 @@ summary {
 }
 #zero-sidebar-close{
     top: 0px;
-    left: -10px;
+    left: 0;
     width: 35px;
     height: 35px;
     position: absolute;
