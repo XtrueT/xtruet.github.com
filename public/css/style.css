@@ -2036,12 +2036,11 @@ summary {
     transform: translate(0, 0);
 }
 #zero-sidebar-close{
-    top: 10px;
-    left: -40px;
+    top: 0px;
+    left: -10px;
     width: 35px;
     height: 35px;
     position: absolute;
-    background: #fff;
     vertical-align: middle;
     font-size: 15px;
     line-height: 35px;
