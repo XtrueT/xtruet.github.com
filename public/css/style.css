@@ -2017,6 +2017,7 @@ summary {
     max-width: 320px;
     height: 100%;
     z-index: 10000;
+    overflow: hidden;
     position: fixed;
     background-color: #fff;
     padding: 13px 0;
@@ -2049,9 +2050,20 @@ summary {
 .zero-sidebar-inner {
     /* 隐藏滚动条 */
     height: 100%;
-    padding: 0 20px;
-    overflow: auto;
     margin-top: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-right: -20px;
+}
+.zero-sidebar-inner {
+    padding-left: 10px;
+    padding-right: 30px;
+}
+@media (min-width:992px){
+    .zero-sidebar-inner {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .body-overlay {
