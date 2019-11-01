@@ -2313,7 +2313,7 @@ summary {
     /* display: block; */
     /* 设置宽度，防止出现滚动条造成布局浮动 */
     /* position: relative; */
-    /* width: 100vw; */
+    	width: 100%;
 	flex: auto;
 	min-height:100vh;
 }
