@@ -1894,7 +1894,6 @@ summary {
 /* header */
 .zero-container {
     width: 100%;
-    max-width: 940px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -1982,7 +1981,7 @@ summary {
         top:0;
         margin-left: 350px;
         height: 76px;
-        margin-right: 110px;
+        margin-right: 60px;
         margin-bottom: 10px;
     }
     .zero-header-body{
@@ -2083,6 +2082,12 @@ summary {
     height: 100%;
     overflow: hidden;
     position: relative;
+}
+@media (min-width:992px){
+    .lock-scroll{
+        /* 抵消滚动条消失的移动 */
+        padding-right: 17px;
+    }
 }
 .sidebar-card{
     margin-bottom: 35px;
