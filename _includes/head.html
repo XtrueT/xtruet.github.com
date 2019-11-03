@@ -13,6 +13,8 @@
     </title>
 
 	<link rel="shortcut icon" href="/favicon.ico">
+	<!-- PWA -->
+	<link rel="manifest" href="/manifest.json">
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
@@ -27,11 +29,20 @@
 	
 	<!-- Scripts -->
 	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-	
-	<!-- <script>
-		window.addEventListener("load", () => {
-			document.querySelector("#zero-content").classList.add("animated","fadeInDown");
-			document.querySelector("#zero-sidebar").classList.add("animated","fadeInDown");
+	<script>
+		if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/sw.js', { scope: '' }).then(function(reg) {
+		if(reg.installing) {
+			console.log('Service worker installing');
+		} else if(reg.waiting) {
+			console.log('Service worker installed');
+		} else if(reg.active) {
+			console.log('Service worker active');
+		}
+		}).catch(function(error) {
+		// registration failed
+		console.log('Registration failed with ' + error);
 		});
-	</script> -->
+		}
+	</script>
 
