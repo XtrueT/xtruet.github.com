@@ -1,6 +1,6 @@
 const APP_PREFIX = 'XTRUET';
 
-const VERSION = 'v_3.0.0';
+const VERSION = 'v_1.0.0';
 
 const CACHE_NAME = APP_PREFIX + VERSION;
 
@@ -37,7 +37,7 @@ this.addEventListener('fetch', function(event) {
     caches.match(event.request).then(function() {
       return fetch(event.request).then(function(response) {
         return caches.open(CACHE_NAME).then(function(cache) {
-          cache.put(event.request.url, response.clone());
+          // cache.put(event.request.url, response.clone());
           return response;
         });  
       });
