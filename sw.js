@@ -1,6 +1,6 @@
 const APP_PREFIX = 'XTRUET';
 
-const VERSION = 'v_3.0.1';
+const VERSION = 'v_3.0.0';
 
 const CACHE_NAME = APP_PREFIX + VERSION;
 
@@ -35,7 +35,7 @@ self.addEventListener('install',(e)=>{
 this.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function() {
-      return fetch(event.request.url).then(function(response) {
+      return fetch(event.request).then(function(response) {
         return caches.open(CACHE_NAME).then(function(cache) {
           cache.put(event.request.url, response.clone());
           return response;
