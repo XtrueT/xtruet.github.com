@@ -66,6 +66,7 @@ title: README
 
 #### TodoList
 
+- [ ] 根据报告完善性能和辅助功能
 - [ ] 原生重写目录插件修改样式使之可以在多设备上使用
 - [x] 统一 js 和 图标 
 - [x] 界面调整
@@ -80,6 +81,11 @@ title: README
 #### 已知bug
 
 - 其他的一些浏览器兼容问题
+
+### 2019-11-01 v3.0.4
+
+- 简单支持PWA
+- 使用lighthouse分析博客，[查看分析报告](https://xtruet.github.io//report.html)
 
 ### 2019-09-25 v3.0.3
 
