@@ -2088,7 +2088,7 @@ summary {
 @media (min-width:992px){
     .lock-scroll{
         /* 抵消滚动条消失的移动 */
-        padding-right: 17px;
+        /* padding-right: 17px; */
     }
 }
 .sidebar-card{
