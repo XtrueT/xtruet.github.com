@@ -2343,12 +2343,6 @@ summary {
     margin-right: -20px;
     padding-right: 20px;
 }
-@media(min-width:992px){
-    #layout{
-        margin-right: -40px;
-        padding-right: 20px;
-    }
-}
 #app{
 	/* 使用overflow出现了sticky 失效 */
 	/* 隐藏水平滚动条 */
@@ -2365,7 +2359,7 @@ summary {
 	display: flex;
 }
 .lock-scroll #app {
-    height: 100%;
+    height: auto;
 }
 
 /* theme */
