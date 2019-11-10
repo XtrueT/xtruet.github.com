@@ -2088,7 +2088,7 @@ summary {
 @media (min-width:992px){
     .lock-scroll{
         /* 抵消滚动条消失的移动 */
-        /* padding-right: 17px; */
+        padding-right: 17px;
     }
 }
 .sidebar-card{
@@ -2341,7 +2341,13 @@ summary {
     min-height:100vh;
     overflow-y: scroll;
     margin-right: -20px;
-    /* padding-right: 20px; */
+    padding-right: 20px;
+}
+@media(min-width:992px){
+    #layout{
+        margin-right: -40px;
+        padding-right: 20px;
+    }
 }
 #app{
 	/* 使用overflow出现了sticky 失效 */
@@ -2358,7 +2364,9 @@ summary {
 	display: -ms-flexbox;
 	display: flex;
 }
-
+.lock-scroll #app {
+    height: 100%;
+}
 
 /* theme */
 
