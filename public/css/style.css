@@ -2324,11 +2324,10 @@ summary {
         top: 0;
         overflow: hidden;
         min-height:100vh;
-        opacity: 0.8 !important;
     }
     #zero-sidebar #zero-card{
         height: 100%;
-        overflow-y: auto;
+        overflow-y: scroll;
         margin-right: -20px;
         overflow-x: hidden;
     }
@@ -2386,7 +2385,7 @@ summary {
 @media (min-width:993px) {
     .primary .zero-header-body a,
     .primary .zero-header-body button{
-        color: #fff !important;
+        color: #333 !important;
     }
 }
 @media (max-width:993px){
