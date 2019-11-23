@@ -17,7 +17,6 @@ body:
 script: # 需要调用的脚本
 - src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
-- src: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
 - src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
 - src: /public/js/prism.js
 
@@ -26,7 +25,6 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
   enable: true
   src:
     - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.css
     - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
   plugins:
     line_numbers: true

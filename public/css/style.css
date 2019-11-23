@@ -610,13 +610,11 @@ kbd {
 
 pre {
     color: #333;
-    line-height: 1.42857143;
+    line-height: 1.42857143 !important;
     display: block;
-    padding: 10px;
+    padding: 10px !important;
     margin-bottom: 22px;
     background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     overflow: auto;
     overflow-wrap: break-word;
     word-wrap: break-word;
