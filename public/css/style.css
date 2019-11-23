@@ -2128,7 +2128,10 @@ summary {
 	margin-bottom: 30px;
 }
 #zero-links ul{
-    display: block;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
     list-style: none;
 	padding: 0;
 	margin-left: 0;
@@ -2138,7 +2141,7 @@ summary {
 #zero-links ol>li{
     display: block;
     margin: 10px;
-    border-bottom: 1px solid #eeee;
+    border-bottom: 1px solid #000;
 }
 #zero-list {
     margin-bottom: 20px;
