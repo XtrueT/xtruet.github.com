@@ -15,10 +15,58 @@
     outline: 0;
 }
 
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+/* ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px
+} */
+/*定义滚动条轨道*/
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    background-color: #abc2d3;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #eee;
+    letter-spacing: .03em;
+    color: #222;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font: 400 14px/1.6 -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* 修改图片加载失败样式 */
 img {
     display: block;
-    min-height: 50px;
     position: relative;
     overflow: hidden;
     /* 隐藏Firefox alt文字 */
@@ -73,6 +121,12 @@ audio {
     max-width: 100%;
 }
 
+main {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
 /* post */
 .post-date {
     display: inline-block;
@@ -92,6 +146,9 @@ audio {
     content: "]";
 }
 
+.content{
+    width: 100%;
+}
 /* tagFilter */
 .zero-filter {
     margin-bottom: 25px;
@@ -190,27 +247,6 @@ audio {
     background-color: #2598b0;
 }
 
-/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
-/* ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px
-} */
-/*定义滚动条轨道*/
-::-webkit-scrollbar-track {
-    background-color: transparent;
-    -webkit-border-radius: 2em;
-    -moz-border-radius: 2em;
-    border-radius: 2em
-}
-
-/*定义滑块 内阴影+圆角*/
-::-webkit-scrollbar-thumb {
-    background-color: #abc2d3;
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
-    -webkit-border-radius: 2em;
-    -moz-border-radius: 2em;
-    border-radius: 2em
-}
 
 /* archive list */
 
@@ -252,33 +288,6 @@ audio {
     }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    background: #eee;
-    letter-spacing: .03em;
-    color: #222;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    font: 400 14px/1.6 -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
 
 .box {
     display: flex;
@@ -308,6 +317,7 @@ a {
 
 .header {
     position: sticky;
+    z-index: 999;
     top: 0;
     max-width: 768px;
     height: 50px;
@@ -355,8 +365,7 @@ a {
     height: 40px;
     z-index: 2;
     border: 2px solid #fff;
-    background-color:
-        #fff;
+    background-color: #fff;
     overflow: hidden;
     display: block;
     cursor: pointer;
@@ -441,12 +450,7 @@ a {
     transform: rotate(360deg)
 }
 
-main {
-    max-width: 768px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
+
 
 .main-inner {
     padding: 20px;

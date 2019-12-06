@@ -6,7 +6,8 @@
 <body>
     <header class="box header box-shadow">
         <nav class="box nav">
-            <h1 class="title">首页</h1>
+            <h1 class="title">{{page.title}}</h1>
+            {% include search.html %}
             <span class="logo">
                 <input id="menu" class="toggle" type="checkbox"/>
                 <label for="menu" class="avatar">
