@@ -3,108 +3,71 @@ layout: default
 title: 首页
 ---
 
-
-
-<div id="zero-list">
+<section class="box main-inner box-shadow">
     {% for post in paginator.posts %}
-    <article class="zero-postItem">
-
+    <article class="post">
         <!-- 文章图 -->
-
         {% if post.header-img %}
-            <div class="zero-listItem-media">
-                    <a href="{{ post.url }}">
-                        <figure class="post-figure" style="display: flex;
-                        justify-content: center;">
-                            <img src="{{ post.header-img }}" alt="{{ post.title }}">
-                        </figure>
-                    </a>
+            <div class="media">
+                <a href="{{ post.url }}">
+                    <figure class="post-figure" style="display: flex; justify-content: center;">
+                        <img src="{{ post.header-img }}" alt="{{ post.title }}">
+                    </figure>
+                </a>
             </div>
         {% endif %}
-
-        <div class="zero-listItem-body">
-
             <!-- 文章信息 -->
-            <header class="text-center">
-                <h2 class="zero-title text-upper"><a rel="HTML1"
-                        href="{{ post.url }}">{{ post.title }}</a></h2>
-                <div class="zero-listItem-header-info">
-                    <span class="post-date">{{ post.date | date:"%Y-%m-%d"  }}</span><span
-                        class="post-author">
-                        {% if post.author %}
-                        {{ post.author }}
-                        {% else %}
-                        {{ site.title }}
-                        {% endif %}
-                    </span></div>
-            </header>
-
-            <!-- 文件部分内容 -->
-            <div class="clearfix">
-                <p>{{ post.content | strip_html | truncate:100 }}</p>
-            </div>
-
-            <!-- 文章标签 -->
-            <footer class="zero-listItem-footer clearfix text-upper ">
-                <div class="footer-left text-center">
-                    <span class="zero-tags">
-                            {% if post.tags %}
-                                {% for tag in post.tags %}
-                                <a rel="category tag" href="/tags#{{ tag }}">{{ tag }}</a>
-                                {% endfor %}
+            <header class="box post-header">
+                <h2 class="post-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+                <div class="post-info">
+                        <span class="post-date">{{ post.date | date:"%Y-%m-%d"  }}</span>
+                        <span class="post-author">
+                            {% if post.author %}
+                                {{ post.author }}
+                                {% else %}
+                                {{ site.title }}
                             {% endif %}
-                    </span>
+                        </span>
+                        <span class="post-tags"> 
+                            {% if post.tags %}
+                            {% for tag in post.tags %}
+                                <a rel="category tag" href="/tags#{{ tag }}">{{ tag }}</a>
+                            {% endfor %}
+                            {% endif %}
+                        </span>
                 </div>
-                <div class="footer-right text-center">
-                    <a href="{{ post.url }}" rel="bookmark">ReadMore</a></span>
-                </div>
-            </footer>
-        </div>
+            </header>
+            <!-- 文件部分内容 -->
+            <section>
+                <p>
+                    {{ post.content | strip_html | truncate:100 }}
+                </p>
+            </section>
+            <!-- 文章标签 -->
+            <footer class="box post-footer"></footer>
     </article>
     {% endfor %}
         <!-- 分页链接 -->
-
     {% if paginator.total_pages > 1 %}
-
-    <ul id="zero-pagination">
-
+    <ul class="box pagination">
         {% if paginator.previous_page %}
         <li>
-            <a class="next page-numbers" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-                <i class="fas fa-angle-left"></i>
+            <a  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="News">
+                News
             </a>
         </li>
         {% endif %}
-
-        {% for page in (1..paginator.total_pages) %}
-
-        {% if page == paginator.page %}
-        <li class="active">
-            <span class="active">{{ page }}</span>
-        </li>
-        {% elsif page == 1 %}
-        <li>
-            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-numbers">
-                {{ page }}
-            </a>
-        </li>
-        {% else %}
-        <li>
-            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
-            class="page-numbers">{{ page }}</a>
-        </li>
-        {% endif %}
-
-        {% endfor %}
-
         {% if paginator.next_page %}
         <li>
-            <a class="next page-numbers" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-            <i class="fas fa-angle-right"></i></a>
+            <a  href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }} " title="Olders">
+                Olders
+            </a>
         </li>
         {% endif %}
     </ul>
 
     {% endif %}
-</div>
+</section>
 

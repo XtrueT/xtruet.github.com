@@ -4,16 +4,11 @@ title: NotFound
 ---
 {% if site.notfound.404page.enable %}
 
-<section class="section clear-mrg">
-    <div class="padd-box-sm clear-mrg">
-        
-        <div class="container">
-            <img src="{{site.notfound.404page.src}}" alt="" />
-            <a href="{{ site.notfound.404page.home }}">
-                <span class="subheading">{{ site.notfound.404page.description  }}</span>
-            </a>
-        </div>
-    </div><!-- .padd-box-sm -->
-</section><!-- .section -->
+<section class="box main-inner box-shadow">
+    <img src="{{site.notfound.404page.src}}" alt="404" />
+    <a href="{{ site.notfound.404page.home }}">
+        <span class="subheading">{{ site.notfound.404page.description  }}</span>
+    </a>
+</section>
 
 {% endif %}
