@@ -1,7 +1,6 @@
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<meta name="description" content="{{ site.description }}|{{page.title}}">
 	<meta name="keywords"  content="{{ site.keyword }}">
 
@@ -13,22 +12,16 @@
     </title>
 
 	<link rel="shortcut icon" href="/favicon.ico">
+
 	<!-- PWA -->
 	<link rel="manifest" href="/manifest.json">
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-
-	<!-- Icon Fonts -->
-	<link href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
-
 	<!-- Styles -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 	<link href="/public/css/style.css" rel="stylesheet">
-	
+
 	<!-- Scripts -->
 	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
 	<script>
 		if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function(reg) {

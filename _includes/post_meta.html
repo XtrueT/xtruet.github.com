@@ -4,28 +4,16 @@
     <p class="post-header-info">
 <!-- 时间 -->
     {% if site.post.meta.date %}
-        <i class="fas fa-calendar-day"></i>
+        <i>Time：</i>
         {{ page.date | date:"%Y-%m-%d" }}
     {% endif %}
 <!-- 字数 -->
     {% if site.post.meta.wordcount.enable %}
-        <i class="fas fa-file-word"></i>
+        <i>Words：</i>
         {{ page.content | strip_html | strip_newlines | remove: " " | size }}
         {{ site.post.meta.wordcount.unit }}
     {% endif %}
-<!-- 阅读用时 -->
-    {% if site.post.meta.readtime.enable %}
-        <i class="fas fa-coffee"></i>
-        {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: site.post.meta.readtime.divided_by | plus: 1 }}
-        {{ site.post.meta.readtime.unit }}
-    {% endif %}
 <!-- 署名 -->
-    {% if site.post.meta.visitor.enable %}
-        <span id="{{ page.url }}" class="leancloud-visitors" data-flag-title="{{ page.title }}">
-            <i class="far fa-eye"></i>
-            <span class="leancloud-visitors-count">{{ site.post.meta.visitor.unit }}</span>
-        </span>
-    {% endif %}
         {{ site.post.meta.copyright }}
     </p>
 

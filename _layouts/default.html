@@ -1,36 +1,39 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
 	{% include head.html %}
 </head>
+<body>
+    <header class="box header box-shadow">
+        <nav class="box nav">
+            <h1 class="title">首页</h1>
+            <span class="logo">
+                <input id="menu" class="toggle" type="checkbox"/>
+                <label for="menu" class="avatar">
+                    <img src="{{site.avatar}}" alt="{{site.author}}"/>
+                </label>
+                <label class="mask" for="menu"></label>
+                <ul class="box-shadow menu">
+					{% for node in site.nav %}
+                    <li>
+						<a  {% if page.url == node.href %}  class="active" {% endif %}  
+							href="{{ node.href }}">
+							{{ node.title }}
+						</a>
+					</li>
+					{% endfor %}
+                </ul>
+            </span>
+        </nav>
+    </header>
 
-<body {%if site.body.enable %} {{site.body.bg-style}} {% endif %}>
+    <main>
+		{{ content }}
+    </main>
 
-	<div id="app" class="primary">
-		<div id="layout">
-			{% include zeroHeader.html %}
-
-			{% include zeroSidebar.html %}
-
-			<div id="zero-content" class="animated fadeIn">
-				<div class="zero-container">
-					<div class="zero-paper clearfix">
-						<div class="zero-paper-body">
-							<header id="zero-pageHeader">
-								<h1 class="title">{{page.title}}</h1>
-							</header>
-							{{ content }}
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="hidden-sm hidden-xs">
-				{% include zeroFooter.html %}
-			</div>
-		</div>
-	</div>
-
+    <footer class="box footer">
+        <small> {{ site.author }} &copy; {{ site.time | date: '%Y' }} <a href="//github.com/XtrueT">view on Github</a> </small>
+    </footer>
 	{% include back_top.html %}
 
 	{% if page.layout == "post" %}
@@ -38,6 +41,5 @@
 			<script src="{{ s.src }}"></script>
 		{% endfor %}
 	{% endif %}
-
 </body>
 </html>

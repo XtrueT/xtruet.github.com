@@ -2,12 +2,12 @@ title: XTRUET
 url: http://xtruet.github.io
 #baseurl: '' # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/public`前也要加，即`/your_baseurl/public`。这一项结尾不要有'/'
 author: 霁
+avatar: https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/pp.1.cd298366.xLed3zwhuhnRsSFcnjqzJQ.jpg?1567248569
 description: 霁的博客 | 一眼离花的博客 | XtrueT的博客
 keyword: "XtrueT的博客,Android,HTML,windows"
 paginate: 5
 permalink: /posts/:categories/:title # 博文目录
 
-# 在https://fontawesome.com/icons 查看支持的图标
 
 body:
   enable: false # 开启背景图
@@ -39,34 +39,17 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
         innerHTML: 选中
 
 
-sidebar:
-  avatar: # 侧边栏显示的头像
-    enable: true
-    img: https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/pp.1.cd298366.xLed3zwhuhnRsSFcnjqzJQ.jpg?1567248569
-  description: 是风动啊~
-  social:
-  - title: 2640272466@qq.com # email
-    href: mailto:2640272466@qq.com
-    class: 'fas fa-envelope fa-fw'
-  - title: 2640272466 # qq
-    class: 'fab fa-qq fa-fw'
-  - title: XRF2640272466 # weixin
-    class: 'fab fa-weixin fa-fw'
-  - title: github # email
-    href: //github.com/XtrueT
-    class: 'fab fa-github fa-fw'
-
-  nav:
-  - title: '<i class="fas fa-home fa-fw"></i> 首页'
-    href: /
-  - title: '<i class="fas fa-id-badge fa-fw"></i> 关于'
-    href: /README
-  - title: '<i class="fas fa-comments fa-fw"></i> 留言'
-    href: /comments
-  - title: '<i class="fas fa-tags fa-fw"></i> 标签'
-    href: /tags
-  - title: '<i class="fas fa-archive fa-fw"></i> 归档'
-    href: /archive
+nav:
+- title: '首页'
+  href: /
+- title: '关于'
+  href: /README
+- title: '<留言'
+  href: /comments
+- title: '标签'
+  href: /tags
+- title: '归档'
+  href: /archive
 
 simple_jekyll_search:
   enable: true
@@ -79,32 +62,6 @@ jekyll_table_of_contents:
   # src: //cdn.jsdelivr.net/gh/ghiculescu/jekyll-table-of-contents/toc.js
   src: /public/js/toc.js
 
-busuanzi:
-  enable: true
-  src: //cdn.jsdelivr.net/npm/busuanzi/bsz.pure.mini.js
-  page_pv: # 页面访问量
-    alert: <i class="fas fa-eye fa-fw"></i>
-    unit: 次
-  site_pv: # 站点访问量
-    alert: <i class="fas fa-paw fa-fw"></i>
-    unit: 枚
-  site_uv: # 访客量
-    alert: <i class="fas fa-user-friends fa-fw"></i>
-    unit: 人
-
-run_time:
-  enable: true
-  start_time: '01/08/2019 11:03:56'
-  alert: <i class="fas fa-cog fa-spin fa-fw"></i>
-  day: 天
-  hour: 时
-  minute: 分
-  second: 秒
-
-copyright:
-  enable: false
-  text: <a href="//github.com/XtrueT/xtruet.github.com">View on GitHub</a>
-
 post:
   meta:
     enable: true
@@ -112,20 +69,10 @@ post:
     wordcount:
       enable: true
       unit: 字
-    readtime:
-      enable: true
-      unit: 分
-      divided_by: 300
-    visitor: # 需要开启valine的visitor选项使之开始计数; 可能会和busuanzi统计的有出入
-      enable: true
-      unit: 次
-    copyright: '<i class="fab fa-creative-commons"></i> <a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
-  related:
-    enable: true
-    title: 最近
+    copyright: '<a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
   reward:
     enable: true
-    text: 有帮助，激励一下！
+    text: 打赏！
     img: # 万一真的有人打赏呢~
     - id: wechat
       src: /public/image/wechatpay.png
