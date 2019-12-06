@@ -27,11 +27,7 @@ title: README
 
 使用了[bootcdn](https://www.bootcdn.cn/)提供的CDN加速服务，感谢。
 
-使用了[<i class="fab fa-font-awesome"></i>fontawesome-free](https://fontawesome.com/)提供的免费图标库，感谢。
-
 留言和阅读量系统基于[Valine](https://valine.js.org/)和[LeanCloud](https://leancloud.cn/)，感谢。
-
-使用了[不蒜子](http://busuanzi.ibruce.info/)页面统计，感谢。
 
 博文目录插件在[ghiculescu/jekyll-table-of-contents](https://github.com/ghiculescu/jekyll-table-of-contents)基础上修改，感谢。
 
@@ -81,6 +77,11 @@ title: README
 #### 已知bug
 
 - 其他的一些浏览器兼容问题
+
+### 2019-11-01 v3.0.5
+- 修改为极简版
+- 加快渲染速度
+- 更加语义化
 
 ### 2019-11-01 v3.0.4
 

@@ -16,9 +16,8 @@
                 <label class="mask" for="menu"></label>
                 <ul class="box-shadow menu">
 					{% for node in site.nav %}
-                    <li>
-						<a  {% if page.url == node.href %}  class="active" {% endif %}  
-							href="{{ node.href }}">
+                    <li {% if page.url == node.href %}  class="active" {% endif %} >
+						<a href="{{ node.href }}">
 							{{ node.title }}
 						</a>
 					</li>

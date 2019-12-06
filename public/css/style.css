@@ -122,7 +122,6 @@ audio {
 }
 
 hr{
-    width: 100%;
     margin: 20px;
 }
 main {
@@ -150,17 +149,12 @@ main {
     content: "]";
 }
 
-.content{
+.content,.post{
     width: 100%;
 }
 /* tagFilter */
 .zero-filter {
     margin-bottom: 25px;
-}
-
-.padd-box {
-    margin-left: 3.4%;
-    margin-right: 3.4%;
 }
 
 .zero-grid.loaded {
@@ -218,7 +212,7 @@ main {
 .widget_search{
     margin-left: 50px;
 }
-#result-container{
+#results-container{
 	list-style: none;
 	background: #f3f3f3;
 	position: absolute;
@@ -264,6 +258,18 @@ main {
 }
 #toc i{
     border-bottom: 1px solid #eee;
+}
+@media(max-width:768px){
+    #toc{
+        display: flex;
+        top: 80px;
+        right: 20px;
+        justify-content: center;
+        flex-direction: column;
+        background: #fff;
+        overflow: auto;
+        padding: 20px;
+    }
 }
 .backtop {
     background-color: #c0e3e7;
