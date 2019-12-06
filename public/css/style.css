@@ -121,6 +121,10 @@ audio {
     max-width: 100%;
 }
 
+hr{
+    width: 100%;
+    margin: 20px;
+}
 main {
     max-width: 768px;
     width: 100%;
@@ -210,14 +214,31 @@ main {
 }
 
 /* search */
-.search-form .search-field {
-    width: 100%;
-    height: 50px;
-    padding: 15px 45px 15px 15px;
-    border: 0;
-    background: #f3f3f3;
-}
 
+.widget_search{
+    margin-left: 50px;
+}
+#result-container{
+	list-style: none;
+	background: #f3f3f3;
+	position: absolute;
+	height: 200px;
+    overflow-y: auto;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    -o-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+.search-form .search-field {
+	width: 100%;
+	padding: 5px;
+	border: none;
+	border-bottom: #000 solid 2px;
+}
 .search-form .search-submit {
     position: absolute;
     top: 0;
@@ -229,6 +250,21 @@ main {
     vertical-align: middle;
 }
 
+#toc{
+	display: flex;
+	position: fixed;
+	top: 80px;
+	right: 20px;
+	justify-content: center;
+	flex-direction: column;
+	background: #fff;
+	height: 200px;
+	overflow: auto;
+	padding: 20px;
+}
+#toc i{
+    border-bottom: 1px solid #eee;
+}
 .backtop {
     background-color: #c0e3e7;
     -moz-border-radius: 30px;
@@ -330,7 +366,8 @@ main {
 .footer {
     border-top: 2px solid #fff;
     text-align: center;
-    width: 100%;
+    max-width: 768px;
+    margin: auto;
     height: 120px;
     color: #a4acb7;
     background-color: #1c2b40;
@@ -350,19 +387,19 @@ main {
 }
 
 .logo {
-    position: absolute;
-    top: -5px;
-    right: 0px;
-    width: 40px;
-    height: 40px;
-    z-index: 2
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 2;
+}
+.logo,.avatar img {
+	width: 40px;
+	height: 40px;
 }
 
 .avatar img {
     transition: transform .3s, -webkit-transform .3s;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
     z-index: 2;
     border: 2px solid #fff;
     background-color: #fff;
@@ -403,7 +440,7 @@ main {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     width: 160px;
-    border-radius: 2px 25px 2px 2px
+    border-radius: 2px 35px 2px 2px
 }
 
 .menu li {

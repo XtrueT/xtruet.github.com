@@ -3,18 +3,13 @@ layout: default
 ---
 
 <section class="box box-shadow main-inner">
-	<!-- 文章信息 -->
 	{% include post_meta.html %}
 	{% include toc.html %}
-	<!-- 文章内容 -->
-	<div class="post-content">
-		{{ content }}
-	</div>
-	<hr/>
 	<div class="content">
+	{{ content }}
+	<hr/>
 	<!-- 激励（微信支付宝） -->
 	{% include reward.html %}
-
 	<!-- 评论 -->
 	{% include valine.html %}
 	</div>
