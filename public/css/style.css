@@ -375,13 +375,17 @@ main {
     text-align: center;
     width: 100px;
     overflow: hidden;
+    min-height: 70px;
     background: #1c2b40;
 }
-.post-figure p span{
+.post-figure p div{
     text-align: center;
     width: 100px;
     overflow: hidden;
     color: #fff;
+    transform: rotate(-20deg);
+    text-align: center;
+    font-size: 19px;
 }
 
 .post:hover{
