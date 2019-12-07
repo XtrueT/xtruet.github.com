@@ -6,18 +6,18 @@
 <body>
     <header class="box header box-shadow">
         <nav class="box nav">
-            <h1 class="title">{{page.title}}</h1>
+            <h1 class="title" title="{{page.title}}">{{page.title}}</h1>
             {% include search.html %}
             <span class="logo">
-                <input id="menu" class="toggle" type="checkbox"/>
+                <input id="menu" role="checkbox" class="toggle" type="checkbox" aria-label="打开菜单（open menu）"/>
                 <label for="menu" class="avatar">
                     <img src="{{site.avatar}}" alt="{{site.author}}"/>
                 </label>
                 <label class="mask" for="menu"></label>
-                <ul class="box-shadow menu">
+                <ul class="box-shadow menu"  role="menubar">
 					{% for node in site.nav %}
-                    <li {% if page.url == node.href %}  class="active" {% endif %} >
-						<a href="{{ node.href }}">
+                    <li  role="menuitem" {% if page.url == node.href %}  class="active" {% endif %} tabindex="0">
+						<a href="{{ node.href }}" title="{{ node.title }}" tabindex="0">
 							{{ node.title }}
 						</a>
 					</li>

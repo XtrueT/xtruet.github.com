@@ -5,23 +5,31 @@ title: 首页
 
 <section class="box main-inner box-shadow">
     {% for post in paginator.posts %}
-    <article class="post">
+    <article class="box post">
 
             <!-- 文章信息 -->
             <header class="box post-header">
+                <!-- 文章图 -->
+                {% if post.header-img %}
+                    <div class="post-media">
+                        <a href="{{ post.url }}">
+                            <figure class="box post-figure">
+                                <img src="{{ post.header-img }}" alt="{{ post.title }}">
+                            </figure>
+                        </a>
+                    </div>
+                    {% else %}
+                    <div class="post-media">
+                        <a href="{{ post.url }}">
+                            <figure class="box post-figure">
+                                <p title="{{ post.title }}">{{ post.title }}</p>
+                            </figure>
+                        </a>
+                    </div>
+                {% endif %}
                 <h2 class="post-title">
                     <a href="{{ post.url }}">{{ post.title }}</a>
                 </h2>        
-                <!-- 文章图 -->
-            {% if post.header-img %}
-                <div class="post-media">
-                    <a href="{{ post.url }}">
-                        <figure class="post-figure" style="display: flex; justify-content: center;">
-                            <img src="{{ post.header-img }}" alt="{{ post.title }}">
-                        </figure>
-                    </a>
-                </div>
-            {% endif %}
             </header>
             <footer>                
                 <p class="post-info">
@@ -49,14 +57,14 @@ title: 首页
     <ul class="box pagination">
         {% if paginator.previous_page %}
         <li>
-            <a  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="News">
+            <a  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="News" tabindex="0">
                 News
             </a>
         </li>
         {% endif %}
         {% if paginator.next_page %}
         <li>
-            <a  href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }} " title="Olders">
+            <a  href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }} " title="Olders" tabindex="0">
                 Olders
             </a>
         </li>

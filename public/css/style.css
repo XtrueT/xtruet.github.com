@@ -349,6 +349,9 @@ main {
     padding: 10px;
     border-left: 5px #eee solid;
     margin: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 110px;
 }
 
 .post-header {
@@ -365,7 +368,14 @@ main {
     width: 100px;
     overflow: hidden;
 }
-
+.post-figure{
+    justify-content: center;
+}
+.post-figure p{
+    text-align: center;
+    overflow: hidden;
+    background: #1c2b40;
+}
 .post:hover{
     border-left: 5px solid #7c7a7a;
 }
