@@ -63,6 +63,12 @@ li {
 a {
     text-decoration: none;
 }
+a{
+    color: #333;
+}
+a:hover{
+    color: #000;
+}
 
 /* 修改图片加载失败样式 */
 img {
@@ -210,7 +216,7 @@ main {
 /* search */
 
 .widget_search{
-    margin-left: 50px;
+    margin-left: 30px;
 }
 #results-container{
 	list-style: none;
@@ -394,12 +400,16 @@ main {
 }
 
 .nav .title {
-    margin-left: 30px;
-    height: 40px;
-    font-size: 24px;
-    text-align: center;
+	margin-left: 10px;
+	height: 40px;
+	font-size: 24px;
+	text-align: center;
+	text-overflow: ellipsis;
+	letter-spacing: normal;
+	max-width: 360px;
+	overflow: hidden;
+	white-space: nowrap;
 }
-
 .logo {
 	position: absolute;
 	top: 0px;
@@ -512,25 +522,26 @@ main {
 }
 
 .post {
-    padding: 10px;
+	padding: 10px;
+	border-left: 5px #eee solid;
+    margin: 10px;
 }
 
 .post-header {
     align-items: center;
+    justify-content: space-between;
 }
 
 .post-info {
     color: #969696;
     margin-left: 20px;
 }
-
-.post-footer {
-    padding: 10px;
-    border-bottom: 2px solid #e6e6e6;
+.post-media{
+    width: 100px;
+    overflow: hidden;
 }
-
-.post:hover .post-footer {
-    border-bottom: 2px solid #7c7a7a;
+.post:hover .post {
+    border-left: 5px solid #7c7a7a;
 }
 
 .pagination {
@@ -566,7 +577,9 @@ main {
         top: 0;
         margin: 0;
     }
-
+    .nav .title{
+        max-width: 120px;
+    }
     .footer {
         margin: 0;
     }

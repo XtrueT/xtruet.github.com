@@ -3,10 +3,11 @@ layout: default
 ---
 
 <section class="box box-shadow main-inner">
-	{% include post_meta.html %}
-	{% include toc.html %}
 	<div class="content">
-	{{ content }}
+	<header>{{page.title}}</header>
+		{% include post_meta.html %}
+		{% include toc.html %}
+		{{ content }}
 	<hr/>
 	<!-- 激励（微信支付宝） -->
 	{% include reward.html %}
