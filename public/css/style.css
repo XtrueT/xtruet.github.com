@@ -385,7 +385,7 @@ main {
     text-align: center;
     width: 100px;
     overflow: hidden;
-    min-height: 70px;
+    height: 70px;
     background: #1c2b40;
 }
 
@@ -522,7 +522,8 @@ main {
     justify-content: center;
     flex-direction: column;
     background: #fff;
-    height: 200px;
+    height: 250px;
+    min-width: 200px;
     overflow: auto;
     padding: 20px;
     -webkit-border-radius: 2px;
