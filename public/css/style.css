@@ -185,8 +185,16 @@ main {
     max-width: 768px;
     margin: auto;
     height: 120px;
-    color: #a4acb7;
+    color: #fff;
     background-color: #1c2b40;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.content a {
+    color: #1c2b40;
 }
 
 .nav {
@@ -368,17 +376,20 @@ main {
     width: 100px;
     overflow: hidden;
 }
-.post-figure{
+
+.post-figure {
     justify-content: center;
 }
-.post-figure p{
+
+.post-figure div {
     text-align: center;
     width: 100px;
     overflow: hidden;
     min-height: 70px;
     background: #1c2b40;
 }
-.post-figure p div{
+
+.post-figure div p {
     text-align: center;
     width: 100px;
     overflow: hidden;
@@ -388,7 +399,7 @@ main {
     font-size: 19px;
 }
 
-.post:hover{
+.post:hover {
     border-left: 5px solid #7c7a7a;
 }
 
@@ -452,14 +463,6 @@ main {
     clear: both;
 }
 
-@media (min-width: 768px) {
-
-    .zero-grid-item,
-    .zero-grid-sizer {
-        width: 50%;
-    }
-}
-
 .zero-filter button {
     opacity: 0.54;
     font-size: 18px;
@@ -479,7 +482,7 @@ main {
 
 #results-container {
     list-style: none;
-    background: #f3f3f3;
+    background: #f3f3f3 !important;
     position: absolute;
     height: 200px;
     overflow-y: auto;
@@ -629,5 +632,13 @@ main {
 
     .post-header {
         flex-flow: wrap;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .zero-grid-item,
+    .zero-grid-sizer {
+        width: 50%;
     }
 }
