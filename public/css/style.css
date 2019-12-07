@@ -373,9 +373,17 @@ main {
 }
 .post-figure p{
     text-align: center;
+    width: 100px;
     overflow: hidden;
     background: #1c2b40;
 }
+.post-figure p span{
+    text-align: center;
+    width: 100px;
+    overflow: hidden;
+    color: #fff;
+}
+
 .post:hover{
     border-left: 5px solid #7c7a7a;
 }
