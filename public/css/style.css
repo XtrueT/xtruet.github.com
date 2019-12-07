@@ -588,7 +588,7 @@ main {
         width: 10px;
         position: absolute;
         height: 10px;
-        left: 7px;
+        left: 5px;
         margin-top: 7px;
         border-radius: 50%;
         background: #abc2d3;
@@ -597,6 +597,8 @@ main {
     #toc {
         display: flex;
         position: relative;
+        top: 0;
+        right: 0;
         justify-content: center;
         flex-direction: column;
         background: #fff;

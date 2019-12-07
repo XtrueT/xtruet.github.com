@@ -4,7 +4,9 @@ layout: default
 
 <section class="box box-shadow main-inner">
 	<div class="content">
-	<header>{{page.title}}</header>
+	<header>
+		<h2>{{page.title}}</h2>
+	</header>
 		{% include post_meta.html %}
 		{% include toc.html %}
 		{{ content }}
