@@ -8,9 +8,6 @@ title: 首页
     <article class="box post">
             <!-- 文章信息 -->
             <header class="box post-header">
-                <h2 class="post-title">
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                </h2> 
                 {% if post.header-img %}
                     <div class="post-media">
                         <a href="{{ post.url }}" title="{{ post.title }}">
@@ -19,7 +16,10 @@ title: 首页
                             </figure>
                         </a>
                     </div>
-                {% endif %}       
+                {% endif %}  
+                <h2 class="post-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2> 
             </header>
             <footer>                
                 <p class="post-info">
@@ -48,15 +48,15 @@ title: 首页
     <ul class="box pagination">
         {% if paginator.previous_page %}
         <li>
-            <a  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="News" tabindex="0">
-                News
+            <a  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Newer" tabindex="0">
+                Newer
             </a>
         </li>
         {% endif %}
         {% if paginator.next_page %}
         <li>
-            <a  href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }} " title="Olders" tabindex="0">
-                Olders
+            <a  href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }} " title="Older" tabindex="0">
+                Older
             </a>
         </li>
         {% endif %}

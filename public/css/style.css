@@ -161,6 +161,7 @@ main,
 .header {
     position: sticky;
     z-index: 999;
+    position: -webkit-sticky; 
     top: 0;
     max-width: 768px;
     height: 50px;
@@ -265,7 +266,7 @@ main,
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     width: 160px;
-    border-radius: 2px 35px 2px 2px
+    border-radius: 2px 25px 2px 2px
 }
 
 .menu li {
@@ -360,6 +361,7 @@ main,
 .post-header {
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .post-info {
@@ -368,7 +370,6 @@ main,
 }
 
 .post-media {
-    width: 100px;
     overflow: hidden;
 }
 
@@ -490,12 +491,9 @@ main,
 }
 
 #toc {
-    display: flex;
     position: fixed;
     top: 80px;
     right: 20px;
-    justify-content: center;
-    flex-direction: column;
     background: #fff;
     height: 250px;
     min-width: 200px;

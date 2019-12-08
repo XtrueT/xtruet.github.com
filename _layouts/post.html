@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="box box-shadow main-inner">
-	<div class="content">
+	<article class="content">
 	<header>
 		<h2>{{page.title}}</h2>
 	</header>
@@ -11,9 +11,27 @@ layout: default
 		{% include toc.html %}
 		{{ content }}
 	<hr/>
+	<ul class="box pagination">
+		{% if page.previous.url %}
+		<li class="previous">
+			<a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.previous.title}}">
+			Previous<br>
+			<span>{{page.previous.title}}</span>
+			</a>
+		</li>
+		{% endif %}
+		{% if page.next.url %}
+		<li class="next">
+			<a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.next.title}}">
+			Next<br>
+			<span>{{page.next.title}}</span>
+			</a>
+		</li>
+		{% endif %}
+	</ul>
 	<!-- 激励（微信支付宝） -->
 	{% include reward.html %}
 	<!-- 评论 -->
 	{% include valine.html %}
-	</div>
+	</article>
 </section>
