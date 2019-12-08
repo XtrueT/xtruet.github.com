@@ -1,16 +1,10 @@
 <!-- 全站搜索 -->
 {% if site.simple_jekyll_search.enable %}
 <section class="widget widget_search">
-
     <div class="search-form">
-        <label>
-            <input type="search" class="search-field" id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}">
-        </label>
-        <button type="submit" class="search-submit">
-            <!-- <span class="ace-icon ace-icon-search"></span> -->
-        </button>
+        <input type="search" class="search-field" id="search-input" placeholder="{{ site.simple_jekyll_search.placeholder }}">
     </div>    
-    <div id="results-container" style="list-style: none;background: #f3f3f3;margin-top: 5px;"> </div>
+    <div id="results-container"></div>
     <script src="{{ site.simple_jekyll_search.src }}"></script>
     <script>
     SimpleJekyllSearch({

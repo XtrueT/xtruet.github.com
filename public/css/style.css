@@ -138,7 +138,6 @@ main {
     max-width: 768px;
     width: 100%;
     margin: 0 auto;
-    min-height: 100vh;
 }
 
 .box {
@@ -381,24 +380,6 @@ main {
     justify-content: center;
 }
 
-.post-figure div {
-    text-align: center;
-    width: 100px;
-    overflow: hidden;
-    height: 70px;
-    background: #1c2b40;
-}
-
-.post-figure div p {
-    text-align: center;
-    width: 100px;
-    overflow: hidden;
-    color: #fff;
-    transform: rotate(-20deg);
-    text-align: center;
-    font-size: 19px;
-}
-
 .post:hover {
     border-left: 5px solid #7c7a7a;
 }
@@ -430,6 +411,23 @@ main {
 /* tagFilter */
 .zero-filter {
     margin-bottom: 25px;
+    border-bottom: 2px#eee solid;
+    padding: 30px;
+    justify-content: space-between;
+    flex-flow: wrap;
+    align-items: baseline;
+}
+.zero-filter button {
+    border: 1px #555 solid;
+    padding: 5px;
+    background:transparent;
+    cursor: pointer;
+    text-align: center;
+}
+.zero-filter .active,
+.zero-filter button:hover {
+    background: #1c2b40;
+    color: #fff;
 }
 
 .zero-grid.loaded {
@@ -463,16 +461,7 @@ main {
     clear: both;
 }
 
-.zero-filter button {
-    opacity: 0.54;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 27px;
-    margin: 0 40px 0 0;
-    border: 0;
-    padding: 0;
-    background: transparent;
-}
+
 
 /* search */
 

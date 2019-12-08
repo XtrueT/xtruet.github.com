@@ -19,14 +19,6 @@ title: 首页
                             </figure>
                         </a>
                     </div>
-                    {% else %}
-                    <div class="post-media">
-                        <a href="{{ post.url }}" title="{{ post.title }}">
-                            <figure class="box post-figure">
-                                <div><p>{{ post.title }}</p></div>
-                            </figure>
-                        </a>
-                    </div>
                 {% endif %}       
             </header>
             <footer>                
@@ -50,6 +42,7 @@ title: 首页
             </footer>
     </article>
     {% endfor %}
+
         <!-- 分页链接 -->
     {% if paginator.total_pages > 1 %}
     <ul class="box pagination">

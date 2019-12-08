@@ -8,8 +8,8 @@ title: 标签
     <div class="content">
     
     <!-- 标签分类 -->
-    <div class="zero-filter padd-box" id="zero-filter"> 
-        <button data-filter="*" class="active">All</button>
+    <div class="zero-filter box" id="zero-filter"> 
+        <button data-filter="*" class="active">All<sup style="color:red">{{site.posts.size}}</sup></button>
         {% for tag in site.tags %}
         <button data-filter=".{{ tag[0] }}">{{ tag[0] }}<sup style="color:red">{{tag[1].size}}</sup></button>
         {% endfor %}
