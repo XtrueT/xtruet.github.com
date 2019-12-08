@@ -47,6 +47,7 @@ body {
     height: 100%;
     width: 100%;
 }
+
 body {
     background: #eee;
     letter-spacing: .03em;
@@ -55,16 +56,20 @@ body {
     overflow-x: hidden;
     font: 400 14px/1.6 -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
+
 li {
     list-style: none;
 }
+
 a {
     text-decoration: none;
     color: #333;
 }
+
 a:hover {
     color: #000;
 }
+
 /* 修改图片加载失败样式 */
 img {
     display: block;
@@ -74,10 +79,12 @@ img {
     color: transparent;
     text-align: center;
 }
+
 img:not([src]) {
     /* 隐藏Chrome alt文字以及银色边框 */
     visibility: hidden;
 }
+
 img::before {
     /* 淡蓝色占位背景 */
     content: "Break";
@@ -91,6 +98,7 @@ img::before {
     background-color: rgb(230, 230, 230);
     /* border: 2px dotted rgb(200, 200, 200); */
 }
+
 img::after {
     /* 黑色alt信息条 */
     content: "\f127"attr(alt) " 加载失败 ";
@@ -107,9 +115,11 @@ img::after {
     transition: transform .2s;
     visibility: visible;
 }
+
 img:hover::after {
     transform: translateY(0);
 }
+
 img,
 iframe,
 video,
@@ -159,6 +169,7 @@ main,
 }
 
 .header {
+    position: -ms- relative;
     position: -webkit-sticky;
     position: sticky;
     z-index: 999;
@@ -188,6 +199,7 @@ main,
 .content a {
     color: #146be6e0;
 }
+
 .content a:hover {
     color: #222;
 }
@@ -407,27 +419,33 @@ main,
     content: "]";
 }
 
-.post-tags a{
-    background-color:#7b7b7b;
+.post-tags a {
+    background-color: #7b7b7b;
     padding: 1px 5px;
     cursor: pointer;
     color: #fff;
     margin: 0 5px;
 }
 
-.post-urls{
+.post-urls {
     width: 100%;
     padding: 0 10px;
     flex-flow: column;
 }
-.previous,.next{
+
+.previous,
+.next {
     padding: 5px;
     flex: auto;
-    background-color:#1c2b40;
+    background-color: #1c2b40;
     border-radius: 3px;
     margin: 10px;
 }
-.previous a,.next a{
+
+.previous a,
+.next a,
+.previous a:hover,
+.next a:hover {
     color: #fff;
     display: block;
 }
@@ -441,15 +459,17 @@ main,
     flex-flow: wrap;
     align-items: baseline;
 }
+
 .zero-filter button {
     border: 1px #555 solid;
     padding: 5px;
-    background:transparent;
+    background: transparent;
     cursor: pointer;
     text-align: center;
     border-radius: 2px;
     margin: 2px 5px;
 }
+
 .zero-filter .active,
 .zero-filter button:hover {
     background: #1c2b40;
@@ -533,7 +553,8 @@ main,
 #toc i {
     border-bottom: 1px solid #eee;
 }
-#rewardButton{
+
+#rewardButton {
     cursor: pointer;
     padding: 15px;
     background: transparent !important;
@@ -543,10 +564,12 @@ main,
     -webkit-border-radius: 2px;
     border-radius: 2px;
 }
-#rewardButton:hover{
-    background:#1c2b40 !important;
+
+#rewardButton:hover {
+    background: #1c2b40 !important;
     color: #fff !important;
 }
+
 .backtop {
     background-color: #1c2b40;
     -moz-border-radius: 2px;
@@ -643,6 +666,7 @@ main,
 }
 
 @media (min-width: 768px) {
+
     .zero-grid-item,
     .zero-grid-sizer {
         width: 50%;
