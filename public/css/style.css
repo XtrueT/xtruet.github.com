@@ -169,7 +169,7 @@ main,
 }
 
 .header {
-    position: -ms- relative;
+    -ms-position: relative;
     position: -webkit-sticky;
     position: sticky;
     z-index: 999;
