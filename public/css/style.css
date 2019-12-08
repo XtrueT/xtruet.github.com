@@ -398,12 +398,10 @@ main,
     content: "]";
 }
 
-.post-tags{
+.post-tags a{
     background-color:#7b7b7b;
     padding: 1px 5px;
     cursor: pointer;
-}
-.post-tags a{
     color: #fff;
     margin: 0 5px;
 }
@@ -519,8 +517,9 @@ main,
 #rewardButton{
     cursor: pointer;
     padding: 15px;
-    background:transparent;
+    background: transparent !important;
     border: 1px #1c2b40 solid;
+    color: #222;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;

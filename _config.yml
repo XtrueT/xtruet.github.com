@@ -5,13 +5,8 @@ author: 霁
 avatar: https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/pp.1.cd298366.xLed3zwhuhnRsSFcnjqzJQ.jpg?1567248569
 description: 霁的博客 | 一眼离花的博客 | XtrueT的博客
 keyword: "XtrueT的博客,Android,HTML,windows"
-paginate: 5
+paginate: 8
 permalink: /posts/:categories/:title # 博文目录
-
-
-body:
-  enable: false # 开启背景图
-  bg-style: 'style = " background: url(https://ae01.alicdn.com/kf/Hb70dbc4687de416199bb2b295704957f0.png) no-repeat fixed;background-size: 100% 100%;position:relative;"'
 
 
 script: # 需要调用的脚本
@@ -72,7 +67,7 @@ post:
     copyright: '<a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
   reward:
     enable: true
-    text: 打赏！
+    text: 奖励一下
     img: # 万一真的有人打赏呢~
     - id: wechat
       src: /public/image/wechatpay.png
