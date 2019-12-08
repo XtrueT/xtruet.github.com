@@ -47,7 +47,6 @@ body {
     height: 100%;
     width: 100%;
 }
-
 body {
     background: #eee;
     letter-spacing: .03em;
@@ -56,23 +55,16 @@ body {
     overflow-x: hidden;
     font: 400 14px/1.6 -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
-
 li {
     list-style: none;
 }
-
 a {
     text-decoration: none;
-}
-
-a {
     color: #333;
 }
-
 a:hover {
     color: #000;
 }
-
 /* 修改图片加载失败样式 */
 img {
     display: block;
@@ -82,12 +74,10 @@ img {
     color: transparent;
     text-align: center;
 }
-
 img:not([src]) {
     /* 隐藏Chrome alt文字以及银色边框 */
     visibility: hidden;
 }
-
 img::before {
     /* 淡蓝色占位背景 */
     content: "Break";
@@ -101,7 +91,6 @@ img::before {
     background-color: rgb(230, 230, 230);
     /* border: 2px dotted rgb(200, 200, 200); */
 }
-
 img::after {
     /* 黑色alt信息条 */
     content: "\f127"attr(alt) " 加载失败 ";
@@ -118,11 +107,9 @@ img::after {
     transition: transform .2s;
     visibility: visible;
 }
-
 img:hover::after {
     transform: translateY(0);
 }
-
 img,
 iframe,
 video,
@@ -135,7 +122,6 @@ hr {
 }
 
 main {
-    max-width: 768px;
     width: 100%;
     margin: 0 auto;
 }
@@ -166,6 +152,12 @@ main {
     background: #ffffff;
 }
 
+main,
+.header,
+.footer {
+    max-width: 768px;
+}
+
 .header {
     position: sticky;
     z-index: 999;
@@ -193,7 +185,10 @@ main {
 }
 
 .content a {
-    color: #1c2b40;
+    color: #146be6e0;
+}
+.content a:hover {
+    color: #222;
 }
 
 .nav {
@@ -335,7 +330,7 @@ main {
     padding: 5px;
     flex: auto;
     text-align: center;
-    background: #eee;
+    background-color: #1c2b40;
     border-radius: 3px;
 }
 
@@ -349,6 +344,7 @@ main {
 
 .pagination li a {
     display: block;
+    color: #fff;
 }
 
 /* post */
@@ -402,6 +398,15 @@ main {
     content: "]";
 }
 
+.post-tags{
+    background-color:#7b7b7b;
+    padding: 1px 5px;
+    cursor: pointer;
+}
+.post-tags a{
+    color: #fff;
+    margin: 0 5px;
+}
 .content,
 .post {
     width: 100%;
@@ -413,7 +418,6 @@ main {
     margin-bottom: 25px;
     border-bottom: 2px#eee solid;
     padding: 30px;
-    justify-content: space-between;
     flex-flow: wrap;
     align-items: baseline;
 }
@@ -423,18 +427,13 @@ main {
     background:transparent;
     cursor: pointer;
     text-align: center;
+    border-radius: 2px;
+    margin: 2px 5px;
 }
 .zero-filter .active,
 .zero-filter button:hover {
     background: #1c2b40;
     color: #fff;
-}
-
-.zero-grid.loaded {
-    visibility: visible;
-    opacity: 1;
-    position: relative;
-    height: 140.2px;
 }
 
 .zero-grid {
@@ -471,7 +470,7 @@ main {
 
 #results-container {
     list-style: none;
-    background: #f3f3f3 !important;
+    background: #fff !important;
     position: absolute;
     height: 200px;
     overflow-y: auto;
@@ -490,17 +489,6 @@ main {
     padding: 5px;
     border: none;
     border-bottom: #000 solid 2px;
-}
-
-.search-form .search-submit {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 14px;
-    border: 0;
-    background: transparent;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 #toc {
@@ -528,23 +516,34 @@ main {
 #toc i {
     border-bottom: 1px solid #eee;
 }
-
+#rewardButton{
+    cursor: pointer;
+    padding: 15px;
+    background:transparent;
+    border: 1px #1c2b40 solid;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+#rewardButton:hover{
+    background:#1c2b40 !important;
+    color: #fff !important;
+}
 .backtop {
-    background-color: #c0e3e7;
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
+    background-color: #1c2b40;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 16px;
+    color: #fff;
     padding: 16px 11px;
     text-decoration: none;
 }
 
 .backtop:hover {
-    background-color: #2598b0;
+    opacity: 0.8;
+    background-color: #1c2b40;
 }
 
 
@@ -626,7 +625,6 @@ main {
 }
 
 @media (min-width: 768px) {
-
     .zero-grid-item,
     .zero-grid-sizer {
         width: 50%;
