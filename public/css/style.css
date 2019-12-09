@@ -265,7 +265,7 @@ main,
     pointer-events: none;
     list-style: none;
     position: absolute;
-    top: 0;
+    top: -5px;
     right: 0;
     z-index: 1;
     background-color: #fff;
@@ -281,7 +281,7 @@ main,
 
 .menu li {
     position: relative;
-    border-bottom: 1px solid #323232
+    border-bottom: 1px solid #969696
 }
 
 .menu li:last-child {
@@ -502,13 +502,14 @@ main,
 
 .widget_search {
     margin-left: 30px;
+    position: relative;
 }
 
 #results-container {
     list-style: none;
     background: #fff !important;
     position: absolute;
-    height: 200px;
+    max-height: 200px;
     overflow-y: auto;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -518,6 +519,13 @@ main,
     -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
     -o-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    word-break: break-word;
+}
+#results-container li {
+    border-bottom: 1px solid #969696
+}
+#results-container li {
+    border-bottom: 1px solid #969696
 }
 
 .search-form .search-field {
@@ -529,6 +537,7 @@ main,
 
 #toc {
     position: fixed;
+    word-break: break-word;
     top: 80px;
     right: 20px;
     background: #fff;
