@@ -88,15 +88,14 @@ img:not([src]) {
 img::before {
     /* 淡蓝色占位背景 */
     content: "Break";
-    color: black;
+    color: #fff;
     position: absolute;
     text-align: justify;
     left: 0;
     width: 100%;
     height: 100%;
     visibility: visible;
-    background-color: rgb(230, 230, 230);
-    /* border: 2px dotted rgb(200, 200, 200); */
+    background-color:#323232;
 }
 
 img::after {
@@ -107,8 +106,8 @@ img::after {
     left: 0;
     bottom: 0;
     line-height: 30px;
-    background-color: rgba(24, 44, 56, 0.5);
-    color: white;
+    background-color: #323232;
+    color: #fff;
     font-size: 14px;
     transform: translateY(100%);
     /* 来点过渡动画效果 */
@@ -169,7 +168,6 @@ main,
 }
 
 .header {
-    -ms-position: relative;
     position: -webkit-sticky;
     position: sticky;
     z-index: 999;
@@ -189,7 +187,7 @@ main,
     margin: auto;
     height: 120px;
     color: #fff;
-    background-color: #1c2b40;
+    background-color: #323232;
 }
 
 .footer a {
@@ -270,20 +268,20 @@ main,
     top: 0;
     right: 0;
     z-index: 1;
-    background-color: #505050;
+    background-color: #fff;
     opacity: 0;
     overflow: hidden;
     -webkit-transform-origin: calc(100% - 20px) 20px;
     transform-origin: calc(100% - 20px) 20px;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
     width: 160px;
-    border-radius: 2px 25px 2px 2px
+    border-radius: 2px 2px 2px 2px
 }
 
 .menu li {
     position: relative;
-    border-bottom: 1px solid #7c7a7a
+    border-bottom: 1px solid #323232
 }
 
 .menu li:last-child {
@@ -299,10 +297,8 @@ main,
 .menu li a {
     -webkit-transition: all .3s;
     transition: all .3s;
-    color: #c8c8c8;
     display: block;
     overflow: hidden;
-    text-decoration: none;
     padding-left: 15px;
     height: 50px;
     line-height: 50px;
@@ -315,8 +311,8 @@ main,
 
 .toggle:checked~.menu {
     pointer-events: auto;
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
     opacity: 1;
 }
 
@@ -343,7 +339,7 @@ main,
     padding: 5px;
     flex: auto;
     text-align: center;
-    background-color: #1c2b40;
+    background-color: #323232;
     border-radius: 3px;
 }
 
@@ -398,7 +394,7 @@ main,
 }
 
 .post:hover {
-    border-left: 5px solid #7c7a7a;
+    border-left: 5px solid #323232;
 }
 
 .post-date {
@@ -437,7 +433,7 @@ main,
 .next {
     padding: 5px;
     flex: auto;
-    background-color: #1c2b40;
+    background-color: #323232;
     border-radius: 3px;
     margin: 10px;
 }
@@ -454,14 +450,14 @@ main,
 /* tagFilter */
 .zero-filter {
     margin-bottom: 25px;
-    border-bottom: 2px#eee solid;
+    border-bottom: 2px #eee solid;
     padding: 30px;
     flex-flow: wrap;
     align-items: baseline;
 }
 
 .zero-filter button {
-    border: 1px #555 solid;
+    border: 1px #323232 solid;
     padding: 5px;
     background: transparent;
     cursor: pointer;
@@ -472,7 +468,7 @@ main,
 
 .zero-filter .active,
 .zero-filter button:hover {
-    background: #1c2b40;
+    background: #323232;
     color: #fff;
 }
 
@@ -528,7 +524,7 @@ main,
     width: 100%;
     padding: 5px;
     border: none;
-    border-bottom: #000 solid 2px;
+    border-bottom: #323232 solid 2px;
 }
 
 #toc {
@@ -558,7 +554,7 @@ main,
     cursor: pointer;
     padding: 15px;
     background: transparent !important;
-    border: 1px #1c2b40 solid;
+    border: 1px #323232 solid;
     color: #222;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -566,12 +562,12 @@ main,
 }
 
 #rewardButton:hover {
-    background: #1c2b40 !important;
+    background: #323232 !important;
     color: #fff !important;
 }
 
 .backtop {
-    background-color: #1c2b40;
+    background-color: #323232;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -584,7 +580,7 @@ main,
 
 .backtop:hover {
     opacity: 0.8;
-    background-color: #1c2b40;
+    background-color: #323232;
 }
 
 
@@ -599,7 +595,7 @@ main,
 .archive-list li {
     list-style: none;
     padding: 5px 5px 5px 20px;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #323232;
 }
 
 .archive-list li::before {
@@ -608,50 +604,35 @@ main,
     width: 10px;
     position: absolute;
     height: 10px;
-    left: 6px;
+    left: 5px;
     margin-top: 7px;
     border-radius: 50%;
-    background: #abc2d3;
+    background: #323232;
 }
 
-@media (max-width:993px) {
-    .archive-list li::before {
-        content: '';
-        display: inline-block;
-        width: 10px;
-        position: absolute;
-        height: 10px;
-        left: 5px;
-        margin-top: 7px;
-        border-radius: 50%;
-        background: #abc2d3;
+@media(max-width:480px){
+    .nav .title {
+        max-width: 120px;
     }
-
+}
+@media (max-width:993px) {
     #toc {
-        display: flex;
         position: relative;
         top: 0;
         right: 0;
-        justify-content: center;
-        flex-direction: column;
         background: #fff;
         overflow: auto;
         padding: 20px;
     }
 }
 
-@media(max-width:468px) {
+@media(max-width:768px) {
     .header {
         width: 100%;
         position: fixed;
         top: 0;
         margin: 0;
     }
-
-    .nav .title {
-        max-width: 120px;
-    }
-
     .footer {
         margin: 0;
     }
