@@ -628,7 +628,7 @@ main,
         max-width: 120px;
     }
 }
-@media (max-width:993px) {
+@media (max-width:1024px) {
     #toc {
         position: relative;
         top: 0;
