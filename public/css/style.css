@@ -524,8 +524,12 @@ main,
 #results-container li {
     border-bottom: 1px solid #969696
 }
-#results-container li {
-    border-bottom: 1px solid #969696
+#results-container li a {
+    display: block;
+}
+#results-container li a:hover{
+    background: #323232;
+    color: #fff;
 }
 
 .search-form .search-field {
