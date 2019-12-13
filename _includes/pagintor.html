@@ -34,12 +34,12 @@
             {% if paginator.previous_page %}
             {% assign _href = __return %}
             <li><a class="button button--secondary button--circle" href="{{ _href }}">
-                previous
+                «
                 </a></li>
             {% else %}
             <li>
                 <div class="button button--secondary button--circle disabled">
-                    <i class="fas fa-angle-left"></i>
+                    «
                 </div>
             </li>
             {% endif %}
@@ -60,7 +60,7 @@
             {% else %}
             {% if _n0 and _n1 %}
             {% if page > 1 and page < _n0 %}
-            {% if page == 2 %}<li><span class="pagination__omit"><i class="fas fa-ellipsis-h"></i></span></li>
+            {% if page == 2 %}<li><span class="pagination__omit">···</span></li>
             {% endif %}
             {% elsif page > _n1 and page < _length %}
             {% if page == _length_mimus_one %}<li><span class="pagination__omit">···</span></li>{% endif %}
@@ -83,15 +83,14 @@
             {% endfor %}
 
             {% if paginator.next_page %}
-            {% include snippets/prepend-baseurl.html path=paginator.next_page_path %}
             {% assign _href = __return %}
             <li><a class="button button--secondary button--circle" href="{{ _href }}">
-                next
+                »
                 </a></li>
             {% else %}
             <li>
                 <div class="button button--secondary button--circle disabled">
-                    next
+                    »
                 </div>
             </li>
             {% endif %}
