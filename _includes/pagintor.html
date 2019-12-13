@@ -2,7 +2,6 @@
 <div class="pagination">
     {% assign _post_count = site.posts | size %}
     {% assign _page_count = paginator.total_pages %}
-    <p>Total-Posts：{{_post_count}} / Total-Pages：{{_page_count}} </p>
     <ul class="box">
         {% assign _max_show = 5 %}
         {% assign _max_show_modulo_two = _max_show | modulo: 2 %}
