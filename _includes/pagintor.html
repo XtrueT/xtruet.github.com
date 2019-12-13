@@ -1,11 +1,8 @@
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
-
-    {% assign _locale_statistics = __return %}
-
     {% assign _post_count = site.posts | size %}
     {% assign _page_count = paginator.total_pages %}
-    <p>{{ _locale_statistics | replace: '[POST_COUNT]', _post_count | replace: '[PAGE_COUNT]', _page_count }}</p>
+    <p>Total-Posts：{{_post_count}} / Total-Pages：{{_page_count}} </p>
     <ul class="box">
         {% assign _max_show = 5 %}
         {% assign _max_show_modulo_two = _max_show | modulo: 2 %}
@@ -33,7 +30,7 @@
         {% if paginator.previous_page %}
         {% assign _href = __return %}
         <li>
-            <a href="{{ _href }}" title="previous" tabindex="0">
+            <a href="{{ paginator.previous_page_path }}" title="previous" tabindex="0">
                 «
             </a>
         </li>
@@ -77,14 +74,14 @@
         {% assign _href = __return %}
         <li>
             <a class="button button--secondary button--circle"
-                href="{{ _href | replace: ':num', page }}"><span>{{ page }}</span></a>
+                href="{{ site.paginate_path | replace: ':num', page }}"><span>{{ page }}</span></a>
         </li>
         {% endif %}
         {% else %}
         {% assign _href = __return %}
         <li>
             <a class="button button--secondary button--circle"
-                href="{{ _href | replace: ':num', page }}"><span>{{ page }}</span></a>
+                href="{{ site.paginate_path | replace: ':num', page }}"><span>{{ page }}</span></a>
         </li>
         {% endif %}
         {% endif %}
@@ -93,7 +90,7 @@
         {% if paginator.next_page %}
         {% assign _href = __return %}
         <li>
-            <a href="{{ _href }}" title="next" tabindex="0">
+            <a href="{{ paginator.next_page_path }}" title="next" tabindex="0">
                 »
             </a>
         </li>

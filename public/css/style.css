@@ -639,6 +639,9 @@ main,
     .nav .title {
         max-width: 120px;
     }
+    .pagination {
+        width: 100%;
+    }
 }
 @media (max-width:993px) {
     #toc {
