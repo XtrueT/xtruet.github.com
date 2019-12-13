@@ -43,25 +43,8 @@ title: 首页
     </article>
     {% endfor %}
 
-        <!-- 分页链接 -->
-    {% if paginator.total_pages > 1 %}
-    <ul class="box pagination">
-        {% if paginator.previous_page %}
-        <li>
-            <a  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Newer" tabindex="0">
-                Newer
-            </a>
-        </li>
-        {% endif %}
-        {% if paginator.next_page %}
-        <li>
-            <a  href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }} " title="Older" tabindex="0">
-                Older
-            </a>
-        </li>
-        {% endif %}
-    </ul>
+    <!-- 分页链接 -->
     {% include pagintor.html %}
-    {% endif %}
+    
 </section>
 

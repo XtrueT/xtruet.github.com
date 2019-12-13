@@ -330,17 +330,27 @@ main,
 }
 
 .pagination {
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+    width: 50%;
 }
 
 .pagination li {
     padding: 5px;
     flex: auto;
     text-align: center;
-    background-color: #323232;
+    border: 1px #323232 solid;
     border-radius: 3px;
+}
+.disabled{
+    cursor: not-allowed;
+    background-color: #969696;
+}
+
+.pagination li:hover ,li.current{
+    background-color: #323232;
+    color: #fff;
+}
+.pagination li:hover a,li.current a{
+    color: #fff;
 }
 
 .pagination li+li {
@@ -353,9 +363,9 @@ main,
     opacity: 0.8;
 }
 
-.pagination li a {
+.pagination li a,
+.pagination li span {
     display: block;
-    color: #fff;
 }
 
 /* post */
