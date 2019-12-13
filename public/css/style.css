@@ -342,7 +342,6 @@ main,
 }
 .disabled{
     cursor: not-allowed;
-    background-color: #969696;
 }
 
 .pagination li:hover ,li.current{
