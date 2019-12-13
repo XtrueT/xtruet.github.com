@@ -506,6 +506,7 @@ main,
 }
 
 #results-container {
+    width: 100%;
     list-style: none;
     background: #fff !important;
     position: absolute;
@@ -527,8 +528,10 @@ main,
 #results-container li a {
     display: block;
 }
-#results-container li a:hover{
+#results-container li:hover{
     background: #323232;
+}
+#results-container li:hover a{
     color: #fff;
 }
 
@@ -660,7 +663,9 @@ main,
 }
 
 @media (min-width: 768px) {
-
+    .widget_search {
+        width: 330px;
+    }
     .zero-grid-item,
     .zero-grid-sizer {
         width: 50%;
