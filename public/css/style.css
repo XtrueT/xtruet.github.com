@@ -334,10 +334,8 @@ main,
 }
 
 .pagination li {
-    padding: 5px;
-    flex: auto;
+    flex: 1;
     text-align: center;
-    border: 1px #323232 solid;
     border-radius: 3px;
 }
 .disabled{
