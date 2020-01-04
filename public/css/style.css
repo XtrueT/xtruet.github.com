@@ -331,6 +331,8 @@ main,
 
 .pagination {
     width: 50%;
+    padding: 20px;
+    margin-top: 50px;
 }
 
 .pagination li {
@@ -343,7 +345,7 @@ main,
 }
 
 .pagination li:hover ,li.current{
-    background-color: #323232;
+    background-color: #888;
     color: #fff;
 }
 .pagination li:hover a,li.current a{
