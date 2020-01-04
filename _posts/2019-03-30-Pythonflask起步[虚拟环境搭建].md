@@ -17,7 +17,11 @@ tags:
 
  使用自带 python -m venv +{创建的文件名} 命令
 
-    python -m venv 
+```bash
+python -m venv 
+```
+比如创建一个 env_1
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190330162542429.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDAyOTc4NQ==,size_16,color_FFFFFF,t_70)
 
 #### 成功创建
