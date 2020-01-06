@@ -685,3 +685,138 @@ main,
         width: 50%;
     }
 }
+
+
+.github-themes a {
+    color: #4183C4;
+}
+
+.github-themes h1,
+.github-themes h2, 
+.github-themes h3,
+.github-themes h4,
+.github-themes h5,
+.github-themes h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+
+.github-themes h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+
+.github-themes h2 {
+    padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+.github-themes h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+
+.github-themes h4 {
+    font-size: 1.25em;
+}
+
+.github-themes h5 {
+    font-size: 1em;
+}
+
+.github-themes h6 {
+    font-size: 1em;
+    color: #777;
+}
+
+.github-themes p,
+.github-themes blockquote,
+.github-themes ul,
+.github-themes ol,
+.github-themes dl,
+.github-themes table {
+    margin: 0.8em 0;
+}
+
+.github-themes li>ol,
+.github-themes li>ul {
+    margin: 0 0;
+}
+
+.github-themes hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.github-themes li p.first {
+    display: inline-block;
+}
+
+.github-themes ul,
+.github-themes ol {
+    padding-left: 30px;
+}
+
+.github-themes ul:first-child,
+.github-themes ol:first-child {
+    margin-top: 0;
+}
+
+.github-themes ul:last-child,
+.github-themes ol:last-child {
+    margin-bottom: 0;
+}
+
+.github-themes table {
+    padding: 0;
+    word-break: initial;
+}
+
+.github-themes table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+.github-themes table tr:nth-child(2n),
+.github-themes thead {
+    background-color: #f8f8f8;
+}
+
+.github-themes table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+.github-themes table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+.github-themes table tr th:first-child,
+.github-themes table tr td:first-child {
+    margin-top: 0;
+}
+
+.github-themes table tr th:last-child,
+.github-themes table tr td:last-child {
+    margin-bottom: 0;
+}
