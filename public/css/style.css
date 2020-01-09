@@ -557,7 +557,7 @@ main,
     top: 80px;
     right: 20px;
     background: #fff;
-    height: 250px;
+    max-height: 70vh;
     min-width: 200px;
     width: 100%;
     max-width: 240px;
