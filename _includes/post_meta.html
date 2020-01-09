@@ -4,16 +4,17 @@
     <p class="post-info">
 <!-- 时间 -->
     {% if site.post.meta.date %}
-        <i>Time：</i>
+        <i>撰写时间：</i>
         {{ page.date | date:"%Y-%m-%d" }}
     {% endif %}
 <!-- 字数 -->
     {% if site.post.meta.wordcount.enable %}
-        <i>Words：</i>
+        <i>总共：</i>
         {{ page.content | strip_html | strip_newlines | remove: " " | size }}
         {{ site.post.meta.wordcount.unit }}
     {% endif %}
 <!-- 署名 -->
+        <i>转载请注明：</i>
         {{ site.post.meta.copyright }}
     </p>
 
