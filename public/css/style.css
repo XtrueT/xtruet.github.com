@@ -559,7 +559,8 @@ main,
     background: #fff;
     height: 250px;
     min-width: 200px;
-    max-width: 220px;
+    width: 100%;
+    max-width: 240px;
     overflow: auto;
     padding: 20px;
     -webkit-border-radius: 2px;
@@ -768,7 +769,7 @@ main,
 
 .github-themes ul,
 .github-themes ol {
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 .github-themes ul:first-child,
