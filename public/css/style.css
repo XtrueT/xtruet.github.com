@@ -687,6 +687,9 @@ main,
     }
 }
 
+.github-themes {
+    overflow-x: auto;
+}
 
 .github-themes a {
     color: #4183C4;
@@ -748,6 +751,10 @@ main,
     margin: 0.8em 0;
 }
 
+.github-themes blockquote{
+    overflow-x: auto;
+}
+
 .github-themes li>ol,
 .github-themes li>ul {
     margin: 0 0;
@@ -784,6 +791,7 @@ main,
 
 .github-themes table {
     padding: 0;
+    border-collapse: collapse;
     word-break: initial;
 }
 
