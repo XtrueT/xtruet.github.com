@@ -49,7 +49,7 @@ body {
 }
 
 body {
-    background: #eee;
+    background: #f2f2f5;
     letter-spacing: .03em;
     color: #222;
     overflow-y: scroll;
@@ -142,14 +142,14 @@ main {
 }
 
 .box-shadow {
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    -o-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    -ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    -o-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
 }
 
 .header,
@@ -161,9 +161,7 @@ main {
     background: #ffffff;
 }
 
-main,
-.header,
-.footer {
+main{
     max-width: 768px;
 }
 
@@ -181,7 +179,6 @@ main,
 }
 
 .footer {
-    border-top: 2px solid #fff;
     text-align: center;
     max-width: 768px;
     margin: auto;
@@ -563,14 +560,14 @@ main,
     max-width: 240px;
     overflow: auto;
     padding: 20px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    -o-box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    -ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    -o-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
 }
 
 #toc i {
@@ -595,9 +592,9 @@ main,
 
 .backtop {
     background-color: #323232;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
     display: inline-block;
     cursor: pointer;
     color: #fff;
