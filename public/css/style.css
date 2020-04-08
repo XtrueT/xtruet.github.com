@@ -341,8 +341,9 @@ main{
 }
 
 .pagination li:hover ,li.current{
-    background-color: #888;
+    background-color: #323232;
     color: #fff;
+	opacity: 0.8;
 }
 .pagination li:hover a,li.current a{
     color: #fff;
@@ -371,12 +372,12 @@ main{
 }
 
 .post {
-    padding: 10px;
-    border-left: 5px #eee solid;
-    margin: 10px;
+    padding: 18px;
+    border-left: 5px #efefef dotted;
     justify-content: space-between;
-    flex-direction: column;
-    min-height: 110px;
+    flex-flow: row wrap;
+	opacity:0.9;
+    /* min-height: 110px; */
 }
 
 .post-header {
@@ -399,7 +400,8 @@ main{
 }
 
 .post:hover {
-    border-left: 5px solid #323232;
+    /* border-left: 5px solid #323232; */
+	opacity:1;
 }
 
 .post-date {
