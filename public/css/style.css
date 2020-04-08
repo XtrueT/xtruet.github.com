@@ -393,10 +393,13 @@ main{
 
 .post-media {
     overflow: hidden;
+	margin-right: 10px;
 }
 
 .post-figure {
     justify-content: center;
+	max-width:100px;
+	overflow:hidden;
 }
 
 .post:hover {
