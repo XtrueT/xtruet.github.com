@@ -87,14 +87,14 @@ def process_data(row):
 ```python
 @app.route('/initData')
 def initData():
+    b = table.batch()
     try:
-        with table.batch(transaction=True) as b:
-            for i in range(1200):
-                b.put(f'rev_{i}',{'client_info:name':f'huawei{i}','client_info:data':'xyz','client_info:sensor_data':'xxxx'})
-            b.send()
-            raise ValueError("Something went wrong!")
-    except ValueError:
-        pass
+        for i in range(1000):
+            b.put(f'rev_{i}',{'client_info:name':f'huawei_{i}','client_info:data':'xyz','client_info:sensor_data':'xxxx'})
+    except ValueError as e:
+        return 'init data fail'
+    else:
+        b.send()
     return 'init data success'
 
 # 所有数据
