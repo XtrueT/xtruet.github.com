@@ -840,12 +840,12 @@ main{
 	min-width: 1000px;
 	z-index: -10;
 	zoom: 1;
-	background-color: #fff;
+	background-color: #f2f5c3;
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	background-position: center 0;
-	background-image: url(/public/image/bg.jpeg);
+	/* background-image: url(/public/image/bg.jpeg); */
 }
 
