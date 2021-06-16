@@ -8,9 +8,12 @@
         <nav class="box nav">
             <h1 class="title" title="{{page.title}}">{{page.title}}</h1>
             {% include search.html %}
-            <span class="logo">
+            <span class="logo" title="菜单">
                 <input id="menu" role="checkbox" class="toggle" type="checkbox" aria-label="打开菜单（open menu）"/>
-                <label for="menu" class="avatar">
+                <label for="menu" class="avatar" style="display: flex;flex-direction: column-reverse;">
+			<i style="position: relative;left: -52px;top: -25px;z-index: -10;">
+			    <a href="https://resume.github.io/?xtruet" title="简历">Mr.Miao</a>
+			</i>
                     <img src="{{site.avatar}}" alt="{{site.author}}"/>
                 </label>
                 <label class="mask" for="menu"></label>
