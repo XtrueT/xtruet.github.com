@@ -55,7 +55,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -231,7 +231,7 @@ main {
     transition: transform .3s, -webkit-transform .3s;
     border-radius: 50%;
     z-index: 2;
-    border: 2px solid #fff;
+    border: 2px solid #ddd;
     background-color: #fff;
     overflow: hidden;
     display: block;
@@ -386,7 +386,7 @@ main {
 }
 
 .post-info {
-    color: #222;
+    color: #ddd;
 }
 
 .post-media {
@@ -441,7 +441,6 @@ main {
 .next {
     padding: 5px;
     flex: auto;
-    background-color: #323232;
     border-radius: 0px;
     margin: 10px;
 }
@@ -450,7 +449,7 @@ main {
 .next a,
 .previous a:hover,
 .next a:hover {
-    color: #fff;
+    color: #222;
     display: block;
 }
 
@@ -565,11 +564,11 @@ main {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
-    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
-    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
-    -ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
-    -o-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+    -webkit-box-shadow: -1px 0px 0px 0px rgb(0 0 0 / 30%);
+    -moz-box-shadow: -1px 0px 0px 0px rgb(0 0 0 / 30%);
+    -ms-box-shadow: -1px 0px 0px 0px rgb(0 0 0 / 30%);
+    -o-box-shadow: -1px 0px 0px 0px rgb(0 0 0 / 30%);
+    box-shadow: -1px 0px 0px 0px rgb(0 0 0 / 30%);
 }
 
 #toc i {
