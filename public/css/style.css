@@ -386,12 +386,13 @@ main {
 }
 
 .post-info {
-    color: #ddd;
+    color: #555;
+    font-size: smaller;
 }
 
 .post-media {
     overflow: hidden;
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 .post-figure {
