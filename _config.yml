@@ -10,20 +10,20 @@ permalink: /posts/:categories/:title # 博文目录
 
 
 script: # 需要调用的脚本
-- src: //cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
-- src: //cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
-- src: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
+- src: https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js
+- src: https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+- src: https://cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.min.js
 - src: /public/js/prism.js
 
 
 PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己定制，我这里只导入了三个自己喜欢的插件。
   enable: true
   src:
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
-    - stylesheet: //cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
+    - stylesheet: https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css # 在https://github.com/PrismJS/prism/tree/master/themes 内查看可用主题，或者也可以搜一些第三方主题
+    - stylesheet: https://cdn.jsdelivr.net/npm/prismjs/plugins/toolbar/prism-toolbar.css
   plugins:
     line_numbers: true
-    autoloader: //cdn.jsdelivr.net/npm/prismjs/components/ # 根据语言自动加载的高亮插件
+    autoloader: https://cdn.jsdelivr.net/npm/prismjs/components/ # 根据语言自动加载的高亮插件
     toolbar:
       show_language:
         enable: false
@@ -48,7 +48,7 @@ nav:
 
 simple_jekyll_search:
   enable: true
-  src: //cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
+  src: https://cdn.jsdelivr.net/npm/simple-jekyll-search/dest/simple-jekyll-search.min.js
   placeholder: 搜索
   json: /public/simple-jekyll-search/search.json
 
@@ -64,7 +64,7 @@ post:
     wordcount:
       enable: true
       unit: 字
-    copyright: '<a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
+    copyright: '<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">BY-SA 4.0</a>（除特别声明或转载文章外）'
   reward:
     enable: true
     text: 奖励一下
@@ -76,7 +76,7 @@ post:
 
 valine:
   enable: true
-  src: //cdn.jsdelivr.net/npm/valine
+  src: https://cdn.jsdelivr.net/npm/valine
   appId: SrzzGzdqbBXFOBE3ia8dVAnc-gzGzoHsz
   appKey: 0L9sFb0zNzyK7dRMunmGxbhx
   notify: true # 评论回复邮件提醒
