@@ -4,7 +4,7 @@
 	{% include head.html %}
 </head>
 <body>
-    <header class="box header box-shadow">
+    <header class="box header">
         <nav class="box nav">
             <h1 class="title" title="{{page.title}}">{{page.title}}</h1>
             {% include search.html %}
@@ -34,8 +34,8 @@
 		{{ content }}
     </main>
 
-    <footer class="box footer box-shadow">
-        <small> {{ site.author }} &copy; {{ site.time | date: '%Y' }} <a href="//github.com/XtrueT">view on Github</a> Power by github pages jekyll </small>
+    <footer class="box footer">
+        <small> {{ site.author }} &copy; {{ site.time | date: '%Y' }} <a href="https://github.com/XtrueT">view on Github</a></small>
     </footer>
 	{% include back_top.html %}
 
