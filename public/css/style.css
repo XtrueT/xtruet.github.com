@@ -315,7 +315,7 @@ main {
 }
 
 .main-inner {
-    padding: 20px;
+    padding: 10px;
     background: #fff;
     justify-content: center;
     flex-flow: column;
