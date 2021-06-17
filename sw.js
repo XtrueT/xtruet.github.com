@@ -1,6 +1,6 @@
 const APP_PREFIX = 'XTRUET';
 
-const VERSION = 'v_1.0.1';
+const VERSION = 'v_1.0.2';
 
 const CACHE_NAME = APP_PREFIX + VERSION;
 
@@ -12,8 +12,7 @@ const URLS = [
   '/public/image/alipay.png',
   '/public/image/wechatpay.png',
   '/public/image/404.jpg',
-  '/public/simple-jekyll-search/search.json',
-  '/public/image/bg.jpeg'
+  '/public/simple-jekyll-search/search.json'
 ]
 
 // 缓存资源
