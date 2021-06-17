@@ -374,15 +374,17 @@ main {
     justify-content: space-between;
     flex-flow: row wrap;
 	opacity:0.9;
+	flex-flow: column;
     /* min-height: 110px; */
 }
 
 .post-header {
     align-items: center;
-    justify-content: space-between;
+    
     flex-wrap: wrap;
 	min-width:50%;
 	max-width:380px;
+	margin-bottom: 20px;
 }
 
 .post-info {
@@ -402,8 +404,9 @@ main {
 }
 
 .post:hover {
-    /* border-left: 5px solid #323232; */
-	opacity:1;
+    border-left: 5px solid #323232;
+    opacity: 0.8;
+    background: #21202012;
 }
 
 .post-date {
@@ -425,12 +428,17 @@ main {
 }
 
 .post-tags a {
-    background-color: #7b7b7b;
     padding: 1px 5px;
     cursor: pointer;
-    color: #fff;
+    border-radius: 5px;
+    border: #ddd solid 1px;
     margin: 0 5px;
 }
+.post-tag a:hover {
+	background-color: #7b7b7b;
+	color: #fff; 
+}
+    
 
 .post-urls {
     width: 100%;
