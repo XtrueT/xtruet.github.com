@@ -115,8 +115,8 @@
 	        headers.each(function(_,header){
 		    var h_offsetTop = $(header).offsetTop;
 			if (h_offsetTop > scrollTop) {
-				continue
-            }
+				continue;
+            		}
 			if (!topE) {
 				topE = $(header);
 			} else if (h_offsetTop >= topE.offsetTop) {
@@ -128,7 +128,7 @@
 		    console.log(topE);
             var link = "#" + fixedEncodeURIComponent(topE.id);
             $('#toc a[href="' + link + '"]').addClass("active");
-	   }});
+	}});
         
     };
 })(jQuery);
