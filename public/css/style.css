@@ -854,3 +854,7 @@ main {
 	/* background-image: url(/public/image/bg.jpeg); */
 }
 
+#toc a.active{
+    color: #222;
+    font-weight: bold;
+}
