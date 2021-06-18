@@ -116,6 +116,7 @@
 		$(".clickable-header").each(function(_,header){
 		tocHeaders.push(header);
 		});
+		console.log(tocHeaders);
 		for (e in tocHeaders){
 			var h_offsetTop = e.offsetTop;
 			if (h_offsetTop > scrollTop) {
@@ -126,6 +127,7 @@
 			} 
 		}
     	if (tocE) {
+		console.log(tocE);
         	$("#toc a").removeClass("active");
         	var link = "#" + fixedEncodeURIComponent(tocE.id);
         	$('#toc a[href="' + link + '"]').addClass("active");
