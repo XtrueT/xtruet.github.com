@@ -114,8 +114,8 @@
             var topE = null;
 	        headers.each(function(_,header){
 		    var h_offsetTop = $(header).offsetTop;
-			if (h_offsetTop > scrollTop) {
-				continue;
+			if (!topE && (h_offsetTop > scrollTop)) {
+				topE = $(header);
             		}
 			if (!topE) {
 				topE = $(header);
