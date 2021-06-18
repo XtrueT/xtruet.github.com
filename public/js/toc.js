@@ -110,25 +110,27 @@
         
         
         $(window).bind("scroll", function() {
-            var scrollTop = $(this).scrollTop();
-            var topE = null;
-	        headers.each(function(_,header){
-		    var h_offsetTop = $(header).offsetTop;
+    		var scrollTop = $(this).scrollTop();
+    		var tocE = null;
+		var tocHeaders = [];
+		$(".clickable-header").each(function(_,header){
+		tocHeaders.push(header);
+		});
+		for (e in tocHeaders){
+			var h_offsetTop = e.offsetTop;
 			if (h_offsetTop > scrollTop) {
-				return false;
-            		}
-			if (!topE) {
-				topE = $(header);
-			} else if (h_offsetTop >= topE.offsetTop) {
-				topE = $(header);
-			}
-	    });
-        if (topE) {
-            $("#toc a").removeClass("active");
-		    console.log(topE);
-            var link = "#" + fixedEncodeURIComponent(topE.id);
-            $('#toc a[href="' + link + '"]').addClass("active");
-	}});
+			continue;
+        		}
+			if (!tocE||(h_offsetTop >= tocE.offsetTop)) {
+			tocE = e;
+			} 
+		}
+    	if (tocE) {
+        	$("#toc a").removeClass("active");
+        	var link = "#" + fixedEncodeURIComponent(tocE.id);
+        	$('#toc a[href="' + link + '"]').addClass("active");
+	}
+	});
         
     };
 })(jQuery);
