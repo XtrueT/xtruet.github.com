@@ -119,7 +119,7 @@
 		//console.log(tocHeaders);
 		for (index in tocHeaders){
 			var e = tocHeaders[index];
-			var h_offsetTop = e.offsetTop-160;
+			var h_offsetTop = e.offsetTop-20;
 			if (h_offsetTop > scrollTop) {
 			continue;
         		}
