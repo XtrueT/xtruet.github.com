@@ -116,10 +116,10 @@
 		$(".clickable-header").each(function(_,header){
 		tocHeaders.push(header);
 		});
-		console.log(tocHeaders);
+		//console.log(tocHeaders);
 		for (index in tocHeaders){
 			var e = tocHeaders[index];
-			var h_offsetTop = e.offsetTop;
+			var h_offsetTop = e.offsetTop-200;
 			if (h_offsetTop > scrollTop) {
 			continue;
         		}
@@ -130,7 +130,7 @@
 			}
 		}
     	if (tocE) {
-		console.log(tocE);
+		// console.log(tocE);
         	$("#toc a").removeClass("active");
         	var link = "#" + fixedEncodeURIComponent(tocE.id);
         	$('#toc a[href="' + link + '"]').addClass("active");
