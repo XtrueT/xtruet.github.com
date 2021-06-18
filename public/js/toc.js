@@ -2,8 +2,8 @@
 (function ($) {
     $.fn.toc = function (options) {
         var defaults = {
-                noBackToTopLinks: false,
-                title: '<i style="color: black;">目录</i>',
+                noBackToTopLinks: true,
+                title: '<i>目录</i>',
                 minimumHeaders: 3,
                 headers: 'h1, h2, h3, h4, h5, h6',
                 listType: 'ul', // values: [ol|ul]
@@ -107,5 +107,28 @@
         }
 
         render[settings.showEffect]();
+        
+        
+        $(window).bind("scroll", function() {
+            var scrollTop = $(this).scrollTop();
+            var topE = null;
+	        headers.each(function(_,header){
+		    var h_offsetTop = $(header).offsetTop;
+			if (h_offsetTop > scrollTop) {
+				continue
+            }
+			if (!topE) {
+				topE = $(header);
+			} else if (h_offsetTop >= topE.offsetTop) {
+				topE = $(header);
+			}
+	    });
+        if (topE) {
+            $("#toc a").removeClass("active");
+		    console.log(topE);
+            var link = "#" + fixedEncodeURIComponent(topE.id);
+            $('#toc a[href="' + link + '"]').addClass("active");
+	   }});
+        
     };
 })(jQuery);
