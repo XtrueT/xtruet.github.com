@@ -117,14 +117,17 @@
 		tocHeaders.push(header);
 		});
 		console.log(tocHeaders);
-		for (e in tocHeaders){
+		for (index in tocHeaders){
+			var e = tocHeaders[index];
 			var h_offsetTop = e.offsetTop;
 			if (h_offsetTop > scrollTop) {
 			continue;
         		}
-			if (!tocE||(h_offsetTop >= tocE.offsetTop)) {
-			tocE = e;
-			} 
+			if (!tocE) {
+				tocE = e;
+			} else if (h_offsetTop >= tocE.offsetTop) {
+				tocE = e;
+			}
 		}
     	if (tocE) {
 		console.log(tocE);
