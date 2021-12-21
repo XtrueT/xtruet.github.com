@@ -652,7 +652,7 @@ main {
         width: 100%;
     }
 }
-@media (max-width:993px) {
+@media (max-width:1024px) {
     #toc {
         position: relative;
         top: 0;
@@ -663,7 +663,6 @@ main {
         max-width: 100%;
     }
 }
-
 @media(max-width:768px) {
     .header {
         width: 100%;
