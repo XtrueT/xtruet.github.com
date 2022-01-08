@@ -27,15 +27,13 @@ tags:
 yum install -y wget
 ```
 
-#### 更换软件源
+### 更换软件源
 
 ```bash
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
 ```
-
-
 
 ### 配置静态ip
 
@@ -343,6 +341,26 @@ DEV01 DEV02    作为 namenode datanode
 
 DEV03 				作为datanode
 
+### 概述
+
+#### (1) 为什么会有Hadoop HA机制?
+
+HA：High Available，高可用 在Hadoop 2.0之前，在HDFS集群中NameNode存在单点故障 (SPOF：A Single Point of Failure) 对于只有一个NameNode的集群，如果NameNode机器出现故障(比如宕机或是软件、硬件升级)，那么整个集群将无法使用，直到NameNode重新启动
+
+#### (2) 如何解决?
+
+HDFS的HA功能通过配置Active/Standby两个NameNode 实现在集群中对NameNode的热备来解决上述问题。
+
+如果出现故障，如机器崩溃或机器需要升级维护，这时可通过此种方式将NameNode很快的切换到另外一台机器。
+
+在一个典型的HDFS(HA)集群中，使用多台单独的机器配置为 NameNode，在任何时间点，确保多个NameNode中只有一个处于 Active状态，其他的处在Standby状态。
+
+其中ActiveNameNode负责集群中的所有客户端操作，StandbyNameNode仅仅充当备机，保证一旦ActiveNameNode出现问题能够快速切换。
+
+为了能够实时同步Active和Standby两个NameNode的元数据信息（editlog），需提供一个共享存储系统，可以是NFS、QJM（Quorum Journal Manager）或者Zookeeper，ActiveNamenode将数据写入共享存储系统，而Standby监听该系统，一旦发现有新数据写入，则读取这些数据，并加载到自己内存中，以保证自己内存状态与 ActiveNameNode保持基本一致，如此这般，在紧急情况下 standby便可快速切为 activenamenode。
+
+为了实现快速切换，Standby节点获取集群的最新文件块信息也是很有必要的。为了实现这一目标，DataNode需要配置所有NameNode的位置，并同时给他们发送文件块信息以及心跳检测。
+
 | 主机名 | ip             | NameNode | DataNode | Yarn | ZooKeeper | JournalNode |
 | ------ | -------------- | -------- | -------- | ---- | --------- | ----------- |
 | DEV01  | 192.168.137.10 | 是       | 是       | 是   | 是        | 是          |
@@ -356,26 +374,18 @@ hadoop version
 cd /home/soft/hadoop-3.1.3/etc/hadoop/
 ```
 
-hadoop-env.sh
 
-core-site.xml
 
-hdfs-site.xml
-
-mapred-site.xml
-
-yarn-site.xml
-
-workers
-
-hadoop-env.sh	脚本中要用到的环境变量，以运行hadoop
-		mapred-env.sh	脚本中要用到的环境变量，以运行mapreduce(覆盖hadoop-env.sh中设置的变量)
-		yarn-env.sh		脚本中要用到的环境变量，以运行YARN(覆盖hadoop-env.sh中设置的变量)
-		core.site.xml	Hadoop Core的配置项，例如HDFS,MAPREDUCE,YARN中常用的I/O设置等
-		hdfs-site.xml	Hadoop守护进程的配置项，包括namenode和datanode等
-		mapred-site.xml	MapReduce守护进程的配置项，包括job历史服务器
-		yarn-site.xml	Yarn守护进程的配置项，包括资源管理器和节点管理器
-		workers	具体运行datanode和节点管理器的主机名称
+| FILE            | DESC                                                         |
+| --------------- | :----------------------------------------------------------- |
+| hadoop-env.sh   | 脚本中要用到的环境变量，以运行hadoop                         |
+| mapred-env.sh   | 脚本中要用到的环境变量，以运行mapreduce(覆盖hadoop-env.sh中设置的变量) |
+| yarn-env.sh     | 脚本中要用到的环境变量，以运行YARN(覆盖hadoop-env.sh中设置的变量) |
+| core.site.xml   | Hadoop Core的配置项，例如HDFS,MAPREDUCE,YARN中常用的I/O设置等 |
+| hdfs-site.xml   | Hadoop守护进程的配置项，包括namenode和datanode等             |
+| mapred-site.xml | MapReduce守护进程的配置项，包括job历史服务器                 |
+| yarn-site.xml   | Yarn守护进程的配置项，包括资源管理器和节点管理器             |
+| workers         | 具体运行datanode和节点管理器的主机名称                       |
 
 #### hadoop-env.sh
 
@@ -396,23 +406,23 @@ export HDFS_ZKFC_USER=root
 #### core-site.xml
 
 ```xml
- 		<!--ns1可随意-->
-		<property>
-                <name>fs.defaultFS</name>
-                <value>hdfs://ns1</value>
-        </property>
-        <property>
-                <name>io.file.buffer.size</name>
-                <value>131072</value>
-        </property>
-        <property>
-                <name>hadoop.tmp.dir</name>
-                <value>file:/home/files/hadoop-files/temp/</value>
-        </property>
-        <property>
-                <name>ha.zookeeper.quorum</name>
-                <value>DEV01:2181,DEV02:2181,DEV03:2181</value>
-        </property>
+<!--ns1可随意-->
+<property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://ns1</value>
+</property>
+<property>
+    <name>io.file.buffer.size</name>
+    <value>131072</value>
+</property>
+<property>
+    <name>hadoop.tmp.dir</name>
+    <value>file:/home/files/hadoop-files/temp/</value>
+</property>
+<property>
+    <name>ha.zookeeper.quorum</name>
+    <value>DEV01:2181,DEV02:2181,DEV03:2181</value>
+</property>
 ```
 
 #### hdfs-site.xml
@@ -643,38 +653,34 @@ scp -r /home/soft/hadoop-3.1.3/ DEV03:/home/soft/
 ### 创建配置中的文件夹
 
 ```bash
+mkdir -p /home/files/hadoop-files/journaldata
+mkdir -p /home/files/hadoop-files/temp
 
- mkdir -p /home/files/hadoop-files/journaldata
- mkdir -p /home/files/hadoop-files/temp
-
- tree /home/files/hadoop-files/
+tree /home/files/hadoop-files/
 ```
 
 ### 启动步骤
 
 ```bash
- # 关闭防火墙
- systemctl stop firewalld.service
+# 确认zk已经启动
+zkServer.sh status
+# 1.启动 jnnode
+# DEV01 and DEV02
+hdfs --daemon start journalnode
+# 2.DEV01(active namenode)
+hdfs namenode -format
+hdfs zkfc -formatZK
+hdfs --daemon start namenode
+# 3.DEV02(Standby namenode)
+# 等待DEV01启动namenode后执行，不然会出错（name 同步不过来）
+hdfs namenode -bootstrapStandby
+# 可查看dfs下有没有生成name文件夹
  
- # 确认zk已经启动
- zkServer.sh status
- # 初始化
- # DEV01 and DEV02
- hdfs --daemon start journalnode
- # DEV01(active namenode)
- hdfs namenode -format
- hdfs zkfc -formatZK
- hdfs --daemon start namenode
- # DEV02(Standby namenode)
- # 等待DEV01启动namenode后执行，不然会出错（name 同步不过来）
- hdfs namenode -bootstrapStandby
- # 可查看dfs下有没有生成name文件夹
- 
- # 上述都操作完DEV01执行 stop-all.sh
- stop-all.sh
+# 上述都操作完DEV01执行 stop-all.sh
+stop-all.sh
   
- # 上述都操作完DEV01执行 start-all.sh
- start-all.sh
+# 上述都操作完DEV01执行 start-all.sh
+start-all.sh
 ```
 
 ### 一些错误及解决方法
