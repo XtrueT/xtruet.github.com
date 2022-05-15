@@ -501,6 +501,9 @@ main {
     padding: 1px;
     width: 100%;
 }
+.zero-grid-item p {
+    padding: 5px;
+}
 
 .zero-grid::before,
 .zero-grid::after {

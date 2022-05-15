@@ -4,7 +4,7 @@ url: http://xtruet.github.io
 author: 霁
 avatar: https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/pp.1.cd298366.xLed3zwhuhnRsSFcnjqzJQ.jpg?1567248569
 description: 霁的博客 | Mr.Miao 的博客 | XtrueT 的博客
-keyword: "XtrueT的博客,Android,HTML,windows"
+keyword: "XtrueT的博客"
 paginate: 12
 permalink: /posts/:categories/:title # 博文目录
 
@@ -37,8 +37,6 @@ PrismJS: # 代码高亮插件，可以在https://prismjs.com/download.html自己
 nav:
 - title: '首页'
   href: /
-- title: '关于'
-  href: /README
 - title: '留言'
   href: /comments
 - title: '标签'
